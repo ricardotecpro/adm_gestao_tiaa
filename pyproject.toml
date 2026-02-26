@@ -1,7 +1,7 @@
 [project]
-name = "ads_gestao_tecnologia_informacao_aplicada"
+name = "adm_gestao_tiaa"
 version = "1.0.0"
-description = "ads_gestao_tecnologia_informacao_aplicada"
+description = "Tecnologia da Informação Aplicada a Administração"
 authors = [
     {name = "Ricardo Tec Pro", email = "ricardotecpro@hotmail.com"}
 ]

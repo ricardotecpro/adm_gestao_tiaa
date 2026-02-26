@@ -1,18 +1,35 @@
-# Exercícios 01 - Introdução a Microsserviços 🧩
+# Exercícios 01 - Análise de Sistema ERP 📊
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Definição**: Explique com suas palavras o que é um microsserviço.
-2.  **Diferenciação**: Cite 3 desvantagens de um sistema Monolítico em relação a uma arquitetura de Microsserviços.
+1. **Definição de ERP**: Explique com suas palavras o que é um Sistema ERP (Enterprise Resource Planning) e cite suas três principais características.
 
-## 🟡 Médios
+2. **Benefícios vs. Sistemas Isolados**: Cite 3 principais benefícios de implementar um ERP em comparação com o uso de sistemas isolados para cada departamento da empresa.
 
-3.  **Cenário**: Uma startup de delivery começou com um monólito e agora está sofrendo para atualizar o sistema de pagamentos sem quebrar o rastreamento de pedidos. Qual vantagem dos microsserviços resolveria esse problema? Justifique.
-4.  **Conectividade**: O que é uma API e por que ela é fundamental na integração de sistemas distribuídos?
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Implementação de ERP - Caso Prático**: Uma empresa de médio porte (50 funcionários) que trabalha com comércio eletrônico decide implementar um ERP. Elabore um cronograma básico de implementação e identifique 3 principais desafios que podem ser enfrentados.
 
-5.  **Análise de Arquitetura**:
-    Imagine o sistema do "Netflix". Ele possui milhões de usuários acessando simultaneamente filmes, perfis e faturas.
-    *   Se o serviço de "Busca" falhar, o usuário deve ser impedido de assistir aos filmes que já estão na sua lista "Continuar Assistindo"? Como a arquitetura de microsserviços ajuda nesse isolamento?
-    *   Desenhe/Escreva como seria a divisão básica: Quais seriam os pelo menos 4 serviços independentes que você criaria para o Netflix?
+4. **Módulos de ERP**: Liste e descreva brevemente 4 módulos essenciais que qualquer Sistema ERP deve possuir, explicando a função de cada um.
+
+## 🔴 Exercício Desafio
+
+5. **Arquitetura ERP Multiempresa**:
+   Uma holding possui 3 empresas: uma torrefação de café, uma rede de cafeterias e uma distribuidora de alimentos. O grupo quer implementar um ERP que integre todas as operações.
+   - Como você configuraria a arquitetura do ERP para atender as 3 empresas?
+   - Quais módulos específicos cada empresa precisaria além dos módulos básicos?
+   - Desenhe (ou descreva) como seria o fluxo de informações entre as empresas no ERP.
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Estes exercícios visam consolidar seu entendimento sobre Sistemas ERP, desde conceitos básicos até cenários complexos de implementação multiempresa.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-01.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 02](exercicio-02.md)
