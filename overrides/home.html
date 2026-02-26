@@ -1,7 +1,4 @@
-{% extends "main.html" %}
-
-{% block tabs %}
-{{ super() }}
+{% extends "main.html" %} {% block tabs %} {{ super() }}
 <style>
   /* Hide the hero section from index.md if present, or handle via CSS */
   .md-content__inner {
@@ -22,11 +19,7 @@
     </div>
   </div>
 </section>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <!-- Render the rest of index.md content below the parallax header -->
-<div class="mdx-container">
-  {{ super() }}
-</div>
+<div class="mdx-container">{{ super() }}</div>
 {% endblock %}
