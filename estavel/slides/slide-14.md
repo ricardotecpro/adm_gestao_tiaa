@@ -1,89 +1,78 @@
-# Aula 14 - Efeitos e APIs 🌐
-## Conectando seu App ao Mundo Real
+# Aula 14 - Gestão de BD: Saída e Feedback 📊
+## Do Dado Processado à Decisão Acionável
 
 ---
 
 ## Agenda 📅
 
-1. O que são Side Effects? <!-- .element: class="fragment" -->
-2. Hook `useEffect` <!-- .element: class="fragment" -->
-3. O Array de Dependências <!-- .element: class="fragment" -->
-4. Buscando dados com `fetch` <!-- .element: class="fragment" -->
-5. Estados de Carregamento e Erro <!-- .element: class="fragment" -->
+1. O que são Saídas (Outputs)? <!-- .element: class="fragment" -->
+2. Relatórios Sintéticos vs. Analíticos <!-- .element: class="fragment" -->
+3. Feedback: O Ciclo de Retroalimentação <!-- .element: class="fragment" -->
+4. Dashboards: Visualização e KPIs <!-- .element: class="fragment" -->
+5. Gerando Insights no Terminal <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Além da Interface 🧪
+## 1. Tipos de Saída 📤
 
-- Efeitos colaterais são ações que tocam o mundo externo ao componente. <!-- .element: class="fragment" -->
-- Ex: Buscar usuários, mudar o título da aba, iniciar um cronômetro. <!-- .element: class="fragment" -->
-
----
-
-## 2. useState vs useEffect 🥊
-
-- **useState**: Para dados que o usuário vê mudando. <!-- .element: class="fragment" -->
-- **useEffect**: Para ações que o componente faz "sozinho". <!-- .element: class="fragment" -->
+- **Sintéticos**: Visão macro para Diretores. <!-- .element: class="fragment" -->
+- **Analíticos**: Visão detalhada para Supervisores. <!-- .element: class="fragment" -->
+- **Operacionais**: Boletos e Notas Fiscais. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Os 3 Momentos do useEffect 🕒
+## 2. O Ciclo do Feedback 🔄
 
-1. **Montagem**: Quando o componente nasce. <!-- .element: class="fragment" -->
-2. **Atualização**: Quando um dado monitorado muda. <!-- .element: class="fragment" -->
-3. **Desmontagem**: Quando o componente morre (Cleanup). <!-- .element: class="fragment" -->
+- A saída corrige a futura entrada. <!-- .element: class="fragment" -->
+- Ex: Vendas baixas (Saída) gera nova promoção (Entrada). <!-- .element: class="fragment" -->
 
----
-
-## 4. O Array de Dependências `[]` 🗃️
-
-- `[]` -> Roda só uma vez. <!-- .element: class="fragment" -->
-- `[cont]` -> Roda sempre que `cont` mudar. <!-- .element: class="fragment" -->
-- `Sem array` -> Roda em toda atualização (Perigo!). <!-- .element: class="fragment" -->
-
----
-
-## 5. Chamadas de API (Fetch) 📨
-
-```javascript
-useEffect(() => {
-  fetch("https://api...")
-    .then(res => res.json())
-    .then(data => setData(data));
-}, []);
+```mermaid
+graph LR
+    I[Entrada] --> P[Processo]
+    P --> O[Saída]
+    O -- "Feedback" --> I
 ```
 
 ---
 
-## 6. UX: Estados de Rede 🛡️
+## 3. Dashboards e Semáforos 📈
 
-- **Loading**: Mostre um Spinner enquanto espera. <!-- .element: class="fragment" -->
-- **Error**: Avise se a internet caiu ou o usuário não existe. <!-- .element: class="fragment" -->
-- **Empty**: Diga se não há resultados. <!-- .element: class="fragment" -->
+- **KPIs**: Indicadores de Sucesso. <!-- .element: class="fragment" -->
+- **Verde**: Meta batida. <!-- .element: class="fragment" -->
+- **Amarelo**: Alerta. <!-- .element: class="fragment" -->
+- **Vermelho**: Ação Imediata necessária. <!-- .element: class="fragment" -->
 
 ---
 
-## Desafio de Efeito ⚡
+## 4. Prática: Dashboards e Alertas 🚀
 
-Se você colocar um `alert("Olá")` dentro de um `useEffect` sem o array `[]`, quantas vezes o alerta vai aparecer se o usuário ficar digitando em um campo de texto que atualiza o estado?
+```termynal
+$ bd-gerar-saida --tipo "Alerta_Estoque"
+[ALERTA] 05 itens críticos abaixo do mínimo.
+$ bd-dashboard-vendas --periodo "maio_2024"
+META: R$ 50.000 | ATUAL: R$ 45.100 (90%)
+KPI: Carlos Souza eleito Melhor Vendedor.
+$ bd-aplicar-feedback --ajustar-estoque-minimo "Laptop_X"
+[OK] Níveis de alerta atualizados para evitar faltas.
+```
 
 ---
 
 ## Resumo ✅
 
-- `useEffect` organiza as ações assíncronas. <!-- .element: class="fragment" -->
-- Controle quando rodar via array de dependências. <!-- .element: class="fragment" -->
-- Trate sempre o carregamento e erros para uma boa UX. <!-- .element: class="fragment" -->
+- Saídas devem gerar ação administrativa. <!-- .element: class="fragment" -->
+- Dashboards facilitam a "leitura" da empresa. <!-- .element: class="fragment" -->
+- Feedback é a chave para o ajuste de rota. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Navegação 🚦
+## Próxima Aula: E-commerce e Marketing 🛒
 
-### Multi-páginas com React Router!
-
-- `/home`, `/perfil`, `/contato`. <!-- .element: class="fragment" -->
-- Links e Navegação Programática. <!-- .element: class="fragment" -->
+- Vendendo 24h por dia na internet. <!-- .element: class="fragment" -->
+- Como atrair e converter clientes digitais. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🌐
+## Dúvidas? 🤔
+
+> "O que não pode ser medido, não pode ser gerenciado." - W. Edwards Deming

@@ -1,130 +1,88 @@
-# Aula 03 - Modelagem de APIs RESTful 📡
-## Recursos, Verbos e Contratos
+# Aula 03 - Funções e Módulos do ERP ⚙️
+## A Engrenagem por Trás da Empresa
 
 ---
 
 ## Agenda 📅
 
-1. O que é REST? <!-- .element: class="fragment" -->
-2. Recursos e URIs <!-- .element: class="fragment" -->
-3. Verbos HTTP (GET, POST, PUT...) <!-- .element: class="fragment" -->
-4. Status Codes <!-- .element: class="fragment" -->
-5. JSON: A Linguagem das APIs <!-- .element: class="fragment" -->
-6. Boas Práticas de Design <!-- .element: class="fragment" -->
+1. Características de um ERP Profissional <!-- .element: class="fragment" -->
+2. A Arquitetura Modular <!-- .element: class="fragment" -->
+3. Módulos: Financeiro, Suprimentos e RH <!-- .element: class="fragment" -->
+4. Funções Transacionais (O nível operacional) <!-- .element: class="fragment" -->
+5. Prática: O Fluxo de uma Compra <!-- .element: class="fragment" -->
 
 ---
 
-## 1. REST: A "Língua" da Web 🌐
+## 1. Características Técnicas 🏗️
 
-- Style arquitetural para sistemas distribuídos. <!-- .element: class="fragment" -->
-- Baseado no protocolo **HTTP**. <!-- .element: class="fragment" -->
-- Independência entre Client e Server. <!-- .element: class="fragment" -->
-
----
-
-## Princípios REST
-
-- **Stateless**: Cada requisição é única. <!-- .element: class="fragment" -->
-- **Uniform Interface**: Padrões compartilhados. <!-- .element: class="fragment" -->
-- **Cacheable**: Melhore a performance. <!-- .element: class="fragment" -->
+- **Integridade**: Dado correto em todos os lugares. <!-- .element: class="fragment" -->
+- **Auditabilidade**: Quem mudou o quê e quando? <!-- .element: class="fragment" -->
+- **Segurança**: Perfis de acesso por cargo (RBAC). <!-- .element: class="fragment" -->
 
 ---
 
-## 2. Identificando Recursos 📍
+## 2. A Pirâmide de Módulos 💎
 
-- Um recurso é qualquer coisa que expomos. <!-- .element: class="fragment" -->
-- **URI**: O endereço do recurso. <!-- .element: class="fragment" -->
-
-### O que NÃO fazer:
-`GET /obterUsuarios` ❌
-
-### O que fazer:
-`GET /usuarios` ✅ (Sempre substantivos no plural!)
-
----
-
-## 3. Os Verbos HTTP 🛠️
-
-Eles definem a intenção da chamada:
-
-- **GET**: Buscar dados. <!-- .element: class="fragment" -->
-- **POST**: Criar novo dado. <!-- .element: class="fragment" -->
-- **PUT**: Atualizar (Trocar tudo). <!-- .element: class="fragment" -->
-- **PATCH**: Atualizar (Apenas um pedaço). <!-- .element: class="fragment" -->
-- **DELETE**: Remover dado. <!-- .element: class="fragment" -->
-
----
-
-## Idempotência e Segurança
-
-| Verbo | Seguro? | Idempotente? |
-| :--- | :--- | :--- |
-| GET | Sim ✅ | Sim ✅ |
-| POST | Não ❌ | Não ❌ |
-| PUT | Não ❌ | Sim ✅ |
-| DELETE | Não ❌ | Sim ✅ |
-
----
-
-## 4. Status Codes: A Resposta 🚦
-
-- **2xx**: Deu certo! (200, 201, 204). <!-- .element: class="fragment" -->
-- **4xx**: Você (cliente) errou algo (400, 401, 404). <!-- .element: class="fragment" -->
-- **5xx**: Eu (servidor) quebrei (500, 503). <!-- .element: class="fragment" -->
-
----
-
-## 5. O Formato JSON 🏗️
-
-```json
-{
-  "nome": "Curso Backend",
-  "modulo": 1,
-  "ativo": true
-}
+```mermaid
+graph TD
+    Core((CORE ERP))
+    Core --- FIN[Financeiro]
+    Core --- EST[Estoque]
+    Core --- RH[RH]
+    Core --- FIS[Fiscal/Faturamento]
 ```
 
-- Leve, legível e universal. <!-- .element: class="fragment" -->
+---
+
+## 3. Módulos em Detalhes 📊
+
+### Financeiro
+- Contas a pagar/receber e fluxo de caixa. <!-- .element: class="fragment" -->
+
+### Suprimentos (Estoque)
+- Entrada de NF e níveis críticos de reposição. <!-- .element: class="fragment" -->
+
+### Recursos Humanos
+- Folha de pagamento e capital humano. <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Design de URIs Complexas
+## 4. O Nível Operacional 🔄
 
-Como buscar os pedidos de um usuário específico?
-
-`GET /usuarios/123/pedidos` ✅
-
-- Hierarquia lógica e limpa. <!-- .element: class="fragment" -->
+- Funções básicas que movem o dia a dia. <!-- .element: class="fragment" -->
+- Conciliação bancária automática. <!-- .element: class="fragment" -->
+- Emissão de Nota Fiscal Eletrônica (NF-e). <!-- .element: class="fragment" -->
 
 ---
 
-## 7. Prática: Postman em Ação 💻
+## 5. Prática: Compra Técnica no Terminal 🚀
 
-- Testando verbos em APIs reais. <!-- .element: class="fragment" -->
-- Analisando Headers e Body. <!-- .element: class="fragment" -->
-
----
-
-## Desafio REST ⚡
-
-Se você quer mudar apenas o e-mail de um usuário, qual verbo deve usar: PUT ou PATCH?
+```termynal
+$ pedido-compra --item "Servidor"
+[STATUS] Aguardando Aprovação Gerencial...
+$ aprovar-pedido --id 450
+[OK] Orçamento aprovado.
+[FINANCEIRO] Provisão gerada em Contas a Pagar.
+[ESTOQUE] Reserva de recebimento criada.
+```
 
 ---
 
 ## Resumo ✅
 
-- REST é sobre recursos e padrões. <!-- .element: class="fragment" -->
-- URIs usam substantivos no plural. <!-- .element: class="fragment" -->
-- Status codes guiam o frontend. <!-- .element: class="fragment" -->
-- JSON é o padrão de facto. <!-- .element: class="fragment" -->
+- O ERP é modular e adaptável. <!-- .element: class="fragment" -->
+- A auditabilidade protege contra fraudes e erros. <!-- .element: class="fragment" -->
+- A integração entre módulos é o "caminho" da informação. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Swagger e Mocks 📝
+## Próxima Aula: Fundamentos do SIG 📄
 
-- Documentação automática. <!-- .element: class="fragment" -->
-- Como trabalhar sem o backend pronto? <!-- .element: class="fragment" -->
+- Diferença entre Dado, Informação e Conhecimento. <!-- .element: class="fragment" -->
+- Por que o SIG não é apenas um software? <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 📡
+## Dúvidas? 🤔
+
+> "A eficiência é fazer certo as coisas; a eficácia é fazer as coisas certas." - Peter Drucker

@@ -1,140 +1,120 @@
-# Aula 01 - Introdução a Microsserviços 🌐
-## De Monólitos a Sistemas Distribuídos
+# Aula 01 - Introdução aos Sistemas de Gerenciamento 🏢
+## A Evolução da Gestão e o DNA do ERP
 
 ---
 
 ## Agenda de Hoje 📅
 
-1. Panorama do Software Moderno <!-- .element: class="fragment" -->
-2. Monólitos vs Microsserviços <!-- .element: class="fragment" -->
-3. A Economia das APIs <!-- .element: class="fragment" -->
-4. Escalabilidade Vertical vs Horizontal <!-- .element: class="fragment" -->
-5. Cinto de Utilidades (Ferramentas) <!-- .element: class="fragment" -->
-6. Setup do Ambiente <!-- .element: class="fragment" -->
+1. O que são Sistemas de Gerenciamento? <!-- .element: class="fragment" -->
+2. A Evolução: MRP -> MRP II -> ERP <!-- .element: class="fragment" -->
+3. O DNA do ERP (Integração e Banco Único) <!-- .element: class="fragment" -->
+4. Complementares: CRM, BI e SCM <!-- .element: class="fragment" -->
+5. O Impacto da TI na Estratégia <!-- .element: class="fragment" -->
+6. Prática: O Fluxo Integrado <!-- .element: class="fragment" -->
 
 ---
 
-## 1. O Mundo Cloud-Native ☁️
+## 1. O que é um Sistema de Gerenciamento? 🧩
 
-- Sistemas globais exigem disponibilidade **24/7**. <!-- .element: class="fragment" -->
-- Milhões de requisições por segundo. <!-- .element: class="fragment" -->
-- Deploy contínuo (várias vezes ao dia). <!-- .element: class="fragment" -->
-
----
-
-## 2. A Evolução da Arquitetura 🏛️➡️🏗️
+- Software para coletar, processar e distribuir dados. <!-- .element: class="fragment" -->
+- Objetivo: Fazer a empresa "falar o mesmo idioma". <!-- .element: class="fragment" -->
+- Unificação de Vendas, Estoque e Financeiro. <!-- .element: class="fragment" -->
 
 ---
 
-## 2.1 O Monólito 🏛️
-
-- Um único projeto, um único deploy. <!-- .element: class="fragment" -->
-- Tudo ou nada: erro em um lugar afeta tudo. <!-- .element: class="fragment" -->
-- Difícil de escalar partes específicas. <!-- .element: class="fragment" -->
-- **Ideal para**: Projetos pequenos, MVPs rápidos. <!-- .element: class="fragment" -->
+## 2. A Evolução da Tecnologia na Gestão 🏛️➡️📲
 
 ---
 
-## 2.2 Microsserviços 🏗️
+## 2.1 Década de 70: MRP 📦
 
-- Conjunto de serviços independentes. <!-- .element: class="fragment" -->
-- Comunicação via rede (APIs). <!-- .element: class="fragment" -->
-- Cada um com seu banco de dados. <!-- .element: class="fragment" -->
-- **Ideal para**: Sistemas complexos e escaláveis. <!-- .element: class="fragment" -->
-
----
-
-## 3. O Papel das APIs 📡
-
-- **Contract-First**: Acordo de comunicação. <!-- .element: class="fragment" -->
-- REST como padrão dominante. <!-- .element: class="fragment" -->
-- JSON: A língua universal. <!-- .element: class="fragment" -->
+- *Materials Requirement Planning*. <!-- .element: class="fragment" -->
+- Foco: **Controle de Estoque** e Produção. <!-- .element: class="fragment" -->
+- Gestão de "caixas e peças". <!-- .element: class="fragment" -->
 
 ---
 
-## Escalabilidade: Vertical vs Horizontal
+## 2.2 Década de 80: MRP II 🏗️
 
-| Vertical (Scale Up) | Horizontal (Scale Out) |
-| :--- | :--- |
-| Aumenta CPU/RAM | Adiciona mais servidores |
-| Tem limite físico | Virtualmente ilimitada |
-| Causa downtime no upgrade | Zero downtime (Redundância) |
+- *Manufacturing Resource Planning*. <!-- .element: class="fragment" -->
+- Expandiu para o **Financeiro** e Planejamento. <!-- .element: class="fragment" -->
+- Início da integração entre fábrica e escritório. <!-- .element: class="fragment" -->
 
 ---
 
-## Arquitetura de Microsserviços
+## 2.3 De 90 ao Futuro: ERP 🌐
+
+- *Enterprise Resource Planning*. <!-- .element: class="fragment" -->
+- Integração **Total** e em tempo real. <!-- .element: class="fragment" -->
+- Um único banco de dados para a holding inteira. <!-- .element: class="fragment" -->
+
+---
+
+## 3. As Características do ERP 🏗️
+
+- **Integração Automática**: Venda baixando estoque "na hora". <!-- .element: class="fragment" -->
+- **Banco de Dados Único**: Fim da informação fragmentada. <!-- .element: class="fragment" -->
+- **Modularidade**: A empresa cresce e adiciona novos "módulos". <!-- .element: class="fragment" -->
+
+---
+
+## Visualizando a Integração Erp
 
 ```mermaid
-graph LR
-    User[Cliente] --> AGW[API Gateway]
-    AGW --> S1[Usuários]
-    AGW --> S2[Pedidos]
-    AGW --> S3[Pagamentos]
-    S1 --> DB1[(DB)]
-    S2 --> DB2[(DB)]
-    S3 --> DB3[(DB)]
+graph TD
+    DB[(Banco Único)] <--> Vendas
+    DB <--> Estoque
+    DB <--> Financeiro
+    DB <--> RH
 ```
 
 ---
 
-## 4. Ferramentas Indispensáveis 🛠️
+## 4. Tecnologias Complementares ⚖️
+
+| Sigla | Foco Principal |
+| :--- | :--- |
+| **CRM** | Gestão de Clientes e Vendas |
+| **BI** | Inteligência e Tomada de Decisão |
+| **SCM** | Cadeia de Suprimentos |
 
 ---
 
-## Client HTTP: Postman & Insomnia
+## 5. TI: De Suporte a Estratégia 🚀
 
-- Testar rotas sem Frontend. <!-- .element: class="fragment" -->
-- Analisar Headers e Status Codes. <!-- .element: class="fragment" -->
-- Simular diferentes cenários de erro. <!-- .element: class="fragment" -->
-
----
-
-## Containerização: Docker 🐋
-
-- "Roda na minha máquina, roda em qualquer lugar". <!-- .element: class="fragment" -->
-- Isola dependências e versões. <!-- .element: class="fragment" -->
-- Facilita a subida de múltiplos serviços locais. <!-- .element: class="fragment" -->
+- Antigamente: TI servia para "consertar impressora". <!-- .element: class="fragment" -->
+- Hoje: TI é o **coração** do negócio. <!-- .element: class="fragment" -->
+- Visão em tempo real da "saúde" da empresa. <!-- .element: class="fragment" -->
 
 ---
 
-## 5. Estrutura de Projeto Backend 📂
+## 6. Prática de Gestão no Terminal 💻
 
-- Divisão clara de responsabilidades. <!-- .element: class="fragment" -->
-- Controllers, Services e Repositories. <!-- .element: class="fragment" -->
-- Tratamento global de exceções. <!-- .element: class="fragment" -->
-
----
-
-## 6. Setup do Ambiente 🚀
-
----
-
-## Requisitos:
-
-- IDE: VS Code ou IntelliJ. <!-- .element: class="fragment" -->
-- Postman (Desktop ou Extensão). <!-- .element: class="fragment" -->
-- Docker Desktop. <!-- .element: class="fragment" -->
-- Git & GitHub. <!-- .element: class="fragment" -->
+```termynal
+$ iniciar-venda --cliente "João Silva"
+[OK] Verificando estoque... Disponível
+[OK] Processando pagamento... NFe Gerada
+$ status-gerencial --hoje
+Relatório: 1 venda | Estoque atualizado | Caixa: +R$ 4.500
+```
 
 ---
 
 ## Resumo da Aula ✅
 
-- Microsserviços trazem resiliência e escala. <!-- .element: class="fragment" -->
-- APIs são o coração da comunicação moderna. <!-- .element: class="fragment" -->
-- Ferramentas como Docker mudaram o jogo. <!-- .element: class="fragment" -->
-- Começamos nossa jornada Fullstack! <!-- .element: class="fragment" -->
+- Sistemas de gestão unificam a organização. <!-- .element: class="fragment" -->
+- ERP é a evolução máxima da integração. <!-- .element: class="fragment" -->
+- Dados integrados = Decisões mais rápidas. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Arquitetura e Gateway 🏗️
+## Próxima Aula: CRM e BI 📈
 
-- Como os serviços conversam? <!-- .element: class="fragment" -->
-- O que é Service Discovery? <!-- .element: class="fragment" -->
-- Protegendo a porta de entrada. <!-- .element: class="fragment" -->
+- Como entender o comportamento do cliente? <!-- .element: class="fragment" -->
+- Transformando mar de dados em Dashboards. <!-- .element: class="fragment" -->
 
 ---
 
 ## Dúvidas? 🤔
 
-> "A arquitetura de hoje é o legado de amanhã. Escolha com sabedoria."
+> "A Tecnologia da Informação e o negócio estão se tornando indissociáveis." - Bill Gates

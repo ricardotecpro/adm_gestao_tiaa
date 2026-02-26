@@ -1,103 +1,81 @@
-# Aula 08 - Boas Práticas e Validação ✅
-## Qualidade e Segurança no Backend
+# Aula 08 - Comunicação Empresarial Digital 📞
+## Fornecedores, Empresas e Consumidores Conectados
 
 ---
 
 ## Agenda 📅
 
-1. Por que Validar Tudo? <!-- .element: class="fragment" -->
-2. Validação vs Sanitização <!-- .element: class="fragment" -->
-3. Schema Validation (Ex: Zod) <!-- .element: class="fragment" -->
-4. Clean Code (Código Limpo) <!-- .element: class="fragment" -->
-5. Tratamento de Erros Profissional <!-- .element: class="fragment" -->
-6. Middlewares Globais <!-- .element: class="fragment" -->
+1. Modelos de Mercado: B2B, B2C e C2C <!-- .element: class="fragment" -->
+2. EDI: Sistemas Conversando com Sistemas <!-- .element: class="fragment" -->
+3. Gestão Integrada de Fornecedores <!-- .element: class="fragment" -->
+4. Chatbots e CRM na Comunicação com Cliente <!-- .element: class="fragment" -->
+5. Automação Logística na Prática <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Regra de Ouro: Desconfiança 🛡️
+## 1. Modelos de Negócio 🌉
 
-- O cliente é o "lado perigoso" da aplicação. <!-- .element: class="fragment" -->
-- Validações evitam dados corrompidos. <!-- .element: class="fragment" -->
-- **Defesa em Profundidade**: Garanta a regra no banco E no código. <!-- .element: class="fragment" -->
-
----
-
-## 2. Validar vs Sanitizar 🧼
-
-- **Validar**: Checar (Idade > 18?). <!-- .element: class="fragment" -->
-- **Sanitizar**: Limpar (Remover `<script>`). <!-- .element: class="fragment" -->
+- **B2B** (*Business to Business*): Fábrica vende para Loja. <!-- .element: class="fragment" -->
+- **B2C** (*Business to Consumer*): Loja vende para Você. <!-- .element: class="fragment" -->
+- **C2C** (*Consumer to Consumer*): Você vende para Vizinho (OLX). <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Schema Validation 📐
+## 2. Tecnologia EDI: O Fim do Papel 📡
 
-- Crie "moldes" para seus dados. <!-- .element: class="fragment" -->
-- Validação centralizada e reutilizável. <!-- .element: class="fragment" -->
+- *Electronic Data Interchange*. <!-- .element: class="fragment" -->
+- Pedido enviado via sistema, recebido via sistema. <!-- .element: class="fragment" -->
+- **Zeros Erros de Digitação**: O PC lê direto o dado do outro PC. <!-- .element: class="fragment" -->
 
-```javascript
-const userSchema = {
-    nome: string().min(3),
-    email: string().email()
-};
+---
+
+## Fluxo de Comunicação Integrada
+
+```mermaid
+graph LR
+    F[Fornecedor] -- "EDI" --> E[Empresa]
+    E -- "CRM" --> C[Consumidor]
+    C -- "Feedback" --> E
 ```
 
 ---
 
-## 4. O Backend Elegante (Clean Code) ✨
+## 3. Gestão de Consumidores (CRM) 🤝
 
-- **DRY**: Don't Repeat Yourself (Não repita lógica). <!-- .element: class="fragment" -->
-- **KISS**: Keep It Simple, Stupid (Mantenha o simples). <!-- .element: class="fragment" -->
-- Nomes de funções que explicam o que está acontecendo. <!-- .element: class="fragment" -->
-
----
-
-## 5. Tratamento de Erros 🚨
-
-- Controller trata o fluxo, não o detalhe técnico. <!-- .element: class="fragment" -->
-- **Try/Catch Global**: Evite crashes. <!-- .element: class="fragment" -->
-- Mensagens amigáveis para o cliente. <!-- .element: class="fragment" -->
+- Chatbots: Atendimento 24h por dia. <!-- .element: class="fragment" -->
+- WhatsApp API: Aumentando a conversão de vendas. <!-- .element: class="fragment" -->
+- Histórico de feedbacks para ajustes de produto. <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Logs vs Mensagens 📜
+## 4. Prática: Enviando Pedido EDI 🚀
 
-- **Terminal/Log**: Detalhe técnico completo. <!-- .element: class="fragment" -->
-- **Cliente (JSON)**: Apenas o que ele precisa saber. <!-- .element: class="fragment" -->
-
-> "Ocorreu um erro interno" (Cliente) ✅
-> "Query failed at line 42 due to NULL constraint" (Logs) ✅
-
----
-
-## 7. Prática: O Schema Perfeito 💻
-
-- Validando um produto complexo. <!-- .element: class="fragment" -->
-- Tratando erros de tipo (String no lugar de Number). <!-- .element: class="fragment" -->
-
----
-
-## Desafio: Limpeza ⚡
-
-Se você recebe um texto de um post com muitos espaços em branco no final, você deve **Validar** ou **Sanitizar**?
+```termynal
+$ comercial-enviar-pedido --fornecedor "Alimentos_SA"
+[TRANSFERINDO] Conectando via EDI...
+[OK] XML da Nota Fiscal recebido.
+$ comercial-avisar-clientes --whats "Chegou estoque!"
+[STATUS] 500 mensagens enviadas automaticamente.
+[METRICA] 12 vendas geradas em 5 minutos.
+```
 
 ---
 
 ## Resumo ✅
 
-- Backend robusto exige validação rigorosa. <!-- .element: class="fragment" -->
-- Limpe os dados antes de salvar (Sanitize). <!-- .element: class="fragment" -->
-- Middleware Global centraliza a gestão de falhas. <!-- .element: class="fragment" -->
-- Código limpo economiza meses de manutenção. <!-- .element: class="fragment" -->
+- O mercado hoje é 100% integrado digitalmente. <!-- .element: class="fragment" -->
+- EDI traz velocidade e precisão no B2B. <!-- .element: class="fragment" -->
+- O consumidor moderno exige respostas em tempo real. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Módulo 3! 🔐
+## Próxima Aula: Rastreamento Logístico 📦
 
-### Segurança e Autenticação
-
-- Quem é você? (Authentication). <!-- .element: class="fragment" -->
-- O que você pode fazer? (Authorization). <!-- .element: class="fragment" -->
+- Como o sistema sabe onde está seu pacote? <!-- .element: class="fragment" -->
+- Código de Barras, QR Code e RFID. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? ✅
+## Dúvidas? 🤔
+
+> "No futuro, as empresas que não se comunicarem via dados, deixarão de existir."

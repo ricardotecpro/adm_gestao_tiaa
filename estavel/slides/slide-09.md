@@ -1,96 +1,81 @@
-# Aula 09 - Segurança e Autenticação com JWT 🔐
-## Portas trancadas e Crachás Digitais
+# Aula 09 - Rastreamento Logístico e de Materiais 📦
+## O Caminho da Eficiência: Do Fornecedor ao Cliente
 
 ---
 
 ## Agenda 📅
 
-1. Autenticação vs Autorização <!-- .element: class="fragment" -->
-2. O Fim das Sessões (Stateful) <!-- .element: class="fragment" -->
-3. O que é JWT? <!-- .element: class="fragment" -->
-4. Estrutura: Header, Payload, Signature <!-- .element: class="fragment" -->
-5. Fluxo de Login completo <!-- .element: class="fragment" -->
-6. Melhores Práticas de Segurança <!-- .element: class="fragment" -->
+1. O Que é Rastreabilidade? <!-- .element: class="fragment" -->
+2. Tecnologias de ID: Código de Barras, QR e RFID <!-- .element: class="fragment" -->
+3. O Fluxo Logístico Moderno <!-- .element: class="fragment" -->
+4. Telemetria e GPS no Transporte <!-- .element: class="fragment" -->
+5. Operando o Inventário Digital <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Quem é Você? (Autenticação) 🚦
+## 1. Por que rastrear? 🔍
 
-- Validar a identidade do usuário. <!-- .element: class="fragment" -->
-- Login e Senha. <!-- .element: class="fragment" -->
-- **Autorização**: O que você PODE fazer? (Níveis de acesso). <!-- .element: class="fragment" -->
-
----
-
-## 2. Por que JWT? 🤔
-
-- Abordagem **Stateless** (Sem estado). <!-- .element: class="fragment" -->
-- O servidor não guarda sessão na memória (escalável!). <!-- .element: class="fragment" -->
-- Perfeito para Microserviços e Mobile. <!-- .element: class="fragment" -->
+- **Recalls**: Segurança e saúde pública. <!-- .element: class="fragment" -->
+- **Combate a Furtos**: Localização em tempo real. <!-- .element: class="fragment" -->
+- **Gestão FIFO/PEPS**: O que chega primeiro, sai primeiro. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Estrutura do Token 🎫
+## 2. Tecnologias de Identificação 🏷️
 
-```text
-[Header].[Payload].[Signature]
+- **Código de Barras**: Óptico e individual. <!-- .element: class="fragment" -->
+- **QR Code**: Armazena links e dados densos. <!-- .element: class="fragment" -->
+- **RFID**: Rádio frequência e leitura em massa. <!-- .element: class="fragment" -->
+
+---
+
+## Fluxo de Rastreamento Moderno
+
+```mermaid
+graph TD
+    F[Fornecedor] -- "Barcode" --> S[Saída]
+    S -- "GPS" --> T[Transporte]
+    T -- "RFID scan" --> E[Estoque]
+    E -- "App Status" --> C[Cliente]
 ```
 
-- **Header**: Algoritmo (ex: HS256). <!-- .element: class="fragment" -->
-- **Payload**: Os dados (id, role, nome). <!-- .element: class="fragment" -->
-- **Signature**: O lacre de segurança. <!-- .element: class="fragment" -->
+---
+
+## 3. Telemetria no Transporte 🚛
+
+- Monitoramento de temperatura, velocidade e rota. <!-- .element: class="fragment" -->
+- Redução de custos com combustível e manutenção. <!-- .element: class="fragment" -->
 
 ---
 
-## 4. O Coração do JWT: A Assinatura 🖋️
+## 4. Prática: Inventário RFID no Terminal 💻
 
-- Usa uma `SECRET_KEY` no servidor. <!-- .element: class="fragment" -->
-- Garante que o token não foi "hackeado" ou alterado. <!-- .element: class="fragment" -->
-
----
-
-## 5. Fluxo de Login 🌊
-
-1. Envia credenciais -> 2. Servidor valida -> 3. Gera JWT -> 4. Frontend guarda o Token -> 5. Envia no Header em cada requisição.
-
----
-
-## 6. Segurança em Mobile 📱
-
-- Nunca guarde em arquivos de texto! <!-- .element: class="fragment" -->
-- Use **EncryptedSharedPreferences** (Android) ou **Keychain** (iOS). <!-- .element: class="fragment" -->
-
----
-
-## 7. Melhores Práticas 🏆
-
-- Use chaves secretas longas e seguras. <!-- .element: class="fragment" -->
-- Defina tempo de expiração (`expiresIn`). <!-- .element: class="fragment" -->
-- Protocolo **HTTPS** é obrigatório! <!-- .element: class="fragment" -->
-
----
-
-## Desafio de Segurança ⚡
-
-O Payload do JWT é criptografado ou apenas codificado? Posso guardar a senha do usuário lá?
+```termynal
+$ logistica-inventario --rfid-scan
+[ESCANEANDO] Identificando todos os itens do setor...
+[OK] 500 itens identificados em 2 segundos.
+[ALERTA] 02 itens com validade vencida (Lote 99).
+$ logistica-notificar --acao "Remover Lote 99"
+[OK] Ordem de serviço enviada ao almoxarifado.
+```
 
 ---
 
 ## Resumo ✅
 
-- JWT permite autenticação rápida e escalável. <!-- .element: class="fragment" -->
-- Header + Payload + Signature. <!-- .element: class="fragment" -->
-- Stateless = Servidor mais leve. <!-- .element: class="fragment" -->
+- Rastrear é garantir a história do produto. <!-- .element: class="fragment" -->
+- RFID revoluciona a velocidade do estoque. <!-- .element: class="fragment" -->
+- Telemetria traz segurança e economia. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Controle de Acesso 🛡️
+## Próxima Aula: Transações Comerciais 🛒
 
-### Quem manda aqui? (RBAC)
-
-- Middlewares de autorização. <!-- .element: class="fragment" -->
-- Protegendo rotas por nível de usuário. <!-- .element: class="fragment" -->
+- O Ponto de Venda (PDV) e o Fiscal. <!-- .element: class="fragment" -->
+- NF-e e a integração com o governo. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🔐
+## Dúvidas? 🤔
+
+> "Logística é a arte de ter o item certo, no lugar certo, na hora certa."
