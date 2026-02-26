@@ -28,7 +28,7 @@ def generate_slide_html(lesson_number: int) -> str:
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula {lesson_number:02d} - {course_title}</title>
+    <title>Aula {lesson_number:02d} - {SITE_NAME}</title>
     
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
@@ -140,15 +140,7 @@ def generate_all_slides():
     slides_dst_dir = pathlib.Path('docs/slides')
     slides_src_dir = slides_dst_dir / 'src'
     
-    # Lê o título do curso do mkdocs.yml (agnosticismo)
-    course_title = "Curso"
-    mkdocs_path = pathlib.Path('mkdocs.yml')
-    if mkdocs_path.exists():
-        mkdocs_content = mkdocs_path.read_text(encoding='utf-8')
-        for line in mkdocs_content.split('\n'):
-            if line.startswith('site_name:'):
-                course_title = line.split(':', 1)[1].strip()
-                break
+    # SITE_NAME is already loaded globally at the top
     
     if not slides_src_dir.exists():
         print("[yellow]⚠ Pasta docs/slides/src/ não encontrada.[/yellow]")
@@ -182,7 +174,7 @@ def generate_all_slides():
                         content = parts[2].lstrip()
             
             dst_md_path.write_text(content, encoding='utf-8')
-            html_path.write_text(generate_slide_html(i, course_title), encoding='utf-8')
+            html_path.write_text(generate_slide_html(i), encoding='utf-8')
 
 
 def generate_all_quizzes():
