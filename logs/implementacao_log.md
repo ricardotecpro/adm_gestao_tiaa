@@ -24,6 +24,7 @@ A **Fase 1** do plano de implementação foi concluída com sucesso. Todas as ta
 | 1.4 Corrigir pyproject.toml        | ✅     | Nome do projeto atualizado para "adm_gestao_tiaa"                 |
 | 1.5 Corrigir bug fragmentos slides | ✅     | Script executado, `{ .fragment }` convertido para sintaxe correta |
 | 1.6 Verificar MathJax e Mermaid    | ✅     | Funcionando corretamente, versão 11.12.3 ativa                    |
+| 1.7 Limpeza pastas .src duplicadas | ✅     | Pastas legadas removidas, 97.4 KB liberados, estrutura limpa      |
 
 ---
 

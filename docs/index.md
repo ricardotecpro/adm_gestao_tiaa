@@ -1,77 +1,140 @@
-# Tecnologia da Informação Aplicada a Administração 📊
+# 💼 Curso: Tecnologia da Informação Aplicada a Administração
 
-> _"A tecnologia não é nada. O que é importante é que você tenha fé nas pessoas, que elas são basicamente boas e inteligentes, e se você der a elas ferramentas, elas farão coisas maravilhosas com elas."_ — Steve Jobs
+> "A tecnologia não é nada. O que é importante é que você tenha fé nas pessoas, que elas são basicamente boas e inteligentes, e se você der a elas ferramentas, elas farão coisas maravilhosas com elas." — Steve Jobs
+
+Bem-vindo à sua jornada no mundo da **gestão empresarial moderna**. Este curso foi projetado para capacitar você a compreender e aplicar tecnologias de informação na administração, desde sistemas ERP até e-commerce, utilizando ferramentas práticas e casos reais de negócio.
 
 ---
 
-## 🎯 Atalhos Rápidos
+## ⚡ Atalhos Rápidos
 
 <div class="grid cards" markdown>
 
-- ## :material-route: **Trilha Completa**
+-   :material-book-open-page-variant: **Trilha de Aulas**
+    ---
+    16 lições modernas englobando ERP, SIG, operações e e-commerce.
+    [:octicons-arrow-right-24: Iniciar Jornada](aulas/index.md)
 
-  Navegue por todas as 16 aulas organizadas em módulos didáticos para uma experiência de aprendizado estruturada.
-  [:octicons-arrow-right-24: Iniciar Trilha](aulas/index.md)
+-   :material-presentation: **Slides Interativos**
+    ---
+    Material visual otimizado com transições e suporte Reveal.js.
+    [:octicons-arrow-right-24: Ver Slides](slides/index.md)
 
-- ## :material-presentation: **Slides Interativos**
+-   :material-school: **Quizzes e Prática**
+    ---
+    Avalie seu progresso com questões técnicas sobre sistemas administrativos.
+    [:octicons-arrow-right-24: Testar Conhecimento](quizzes/index.md)
 
-  Acesse apresentações dinâmicas com animações e conteúdo visual para cada tópico do curso.
-  [:octicons-arrow-right-24: Ver Slides](slides/index.md)
+-   :material-rocket: **Projetos Práticos**
+    ---
+    Aplique conceitos de TI administrativa em casos reais e simulações.
+    [:octicons-arrow-right-24: Ver Projetos](projetos/index.md)
 
-- ## :material-help-circle: **Quizzes Práticos**
+-   :material-dumbbell: **Exercícios Progressivos**
+    ---
+    Das questões conceituais ao desafio prático de implementação de sistemas.
+    [:octicons-arrow-right-24: Praticar Agora](exercicios/index.md)
 
-  Teste seus conhecimentos com avaliações interativas e feedback instantâneo após cada aula.
-  [:octicons-arrow-right-24: Fazer Quizzes](quizzes/index.md)
-
-- ## :material-rocket-launch: **Projetos Aplicados**
-
-  Desenvolva projetos práticos que consolidam o aprendizado em cenários reais de negócios.
-  [:octicons-arrow-right-24: Ver Projetos](projetos/index.md)
-
-- ## :material-pencil-box: **Exercícios Graduais**
-
-  Pratique com exercícios progressivos: básicos, intermediários e desafios avançados.
-  [:octicons-arrow-right-24: Fazer Exercícios](exercicios/index.md)
-
-- ## :material-cog-outline: **Configuração**
-  Configure seu ambiente de estudo para Windows, Linux ou macOS com guias detalhados.
-  [:octicons-arrow-right-24: Configurar Ambiente](setups/index.md)
+-   :material-cog: **Setup e Ferramentas**
+    ---
+    Configurações essenciais para o uso de ferramentas administrativas e digitais.
+    [:octicons-arrow-right-24: Configurar](setups/index.md)
 
 </div>
 
 ---
 
-## 🗺️ Mapa da Jornada de Aprendizado
+## 🗺️ Mapa da Jornada (Módulos)
+
+O curso está estruturado em **4 Módulos** cruciais para a aplicação eficiente de TI na administração:
 
 ### 🏢 Módulo 1: Fundamentos de Sistemas de Gestão
+*A base sólida dos sistemas empresariais integrados.*
+- **Aulas 01 a 04**: Introdução aos ERPs, CRM e BI, Funções do ERP e Fundamentos do SIG.
 
-Explore os conceitos fundamentais de ERP, CRM e Business Intelligence, compreendendo como esses sistemas revolucionam a gestão empresarial moderna.
+### 📊 Módulo 2: SIG e Decisão Estratégica
+*Transformando dados em decisões inteligentes.*
+- **Aulas 05 a 08**: SIG e Tomada de Decisão, Cadastro e Dados, SIGs Corporativos e Comunicação Empresarial.
 
-### 📈 Módulo 2: SIG e Decisão Estratégica
+### ⚙️ Módulo 3: Operações e Comunicação
+*Integrando processos operacionais com tecnologia.*
+- **Aulas 09 a 12**: Rastreamento Logístico, Sistemas Comerciais, Atendimento SAC/FAQ e E-mail Corporativo.
 
-Domine os Sistemas de Informações Gerenciais como ferramentas de tomada de decisão, aprendendo a transformar dados em inteligência de negócios.
-
-### 🔗 Módulo 3: Operações e Comunicação
-
-Mergulhe nos sistemas operacionais empresariais, desde rastreamento logístico até atendimento ao cliente e comunicação corporativa.
-
-### 🚀 Módulo 4: Gestão de Dados e E-commerce
-
-Conclua sua jornada explorando bancos de dados, comércio eletrônico e segurança digital para o mundo empresarial conectado.
-
----
-
-## 🎯 Dicas de Sucesso na Jornada
-
-!!! tip "💡 Conecte Teoria e Prática"
-Sempre relacione os conceitos de sistemas de informação com exemplos reais de empresas que você conhece. Isso torna o aprendizado mais concreto e memorável.
-
-!!! tip "🔄 Pratique Progressivamente"
-Comece com os exercícios básicos, avance para os intermediários e desafie-se com os projetos. A progressão gradual é a chave para dominar a matéria.
-
-!!! tip "🤝 Pense em Integração"
-A grande força dos sistemas administrativos está na integração. Sempre questione: "Como este sistema se conecta com outros?" para ter uma visão holística.
+### 💻 Módulo 4: Gestão de Dados e E-commerce
+*O futuro digital do comércio e da gestão de informações.*
+- **Aulas 13 a 16**: BD - Entrada e Processo, BD - Saída e Feedback, E-commerce e Marketing, Segurança e Lojas.
 
 ---
 
-[:material-play: Iniciar Aula 01 - Introdução aos ERPs](aulas/aula-01.md){ .md-button .md-button--primary .md-button--large }
+## 💡 Dicas de Sucesso
+
+1. **Pense em Integração**: Não olhe apenas para um sistema; veja como ERP, CRM e BI se conectam no ecossistema empresarial.
+2. **Validação é Fundamental**: Nos Módulos 2 e 3, focaremos em como os dados alimentam decisões antes de implementações custosas.
+3. **A Tecnologia é Meio, não Fim**: Utilize sistemas de TI como ferramentas para resolver problemas administrativos reais.
+
+**Pronto para modernizar sua gestão?** [:material-rocket: Ir para Aula 01](aulas/aula-01.md){ .md-button .md-button--primary }
+
+---
+
+## 🎯 Jornada de Aprendizado Estruturada
+
+<div class="learning-modules" markdown>
+
+!!! info "📚 Módulo 1: Fundamentos de Sistemas de Gestão"
+    
+    **🏢 Base Empresarial Sólida**
+    
+    Explore os conceitos fundamentais de **ERP**, **CRM** e **Business Intelligence**, compreendendo como esses sistemas revolucionam a gestão empresarial moderna.
+    
+    [:fontawesome-solid-building: Aulas 01-04](aulas/aula-01.md){ .md-button }
+
+!!! tip "📈 Módulo 2: SIG e Decisão Estratégica"
+    
+    **🎯 Inteligência de Negócios**
+    
+    Domine os **Sistemas de Informações Gerenciais** como ferramentas de tomada de decisão, aprendendo a transformar dados em inteligência de negócios.
+    
+    [:fontawesome-solid-chart-line: Aulas 05-08](aulas/aula-05.md){ .md-button }
+
+!!! success "🔗 Módulo 3: Operações e Comunicação"
+    
+    **⚙️ Sistemas Operacionais Integrados**
+    
+    Mergulhe nos sistemas operacionais empresariais, desde rastreamento logístico até atendimento ao cliente e comunicação corporativa.
+    
+    [:fontawesome-solid-network-wired: Aulas 09-12](aulas/aula-09.md){ .md-button }
+
+!!! warning "🚀 Módulo 4: Gestão de Dados e E-commerce"  
+    
+    **🛒 Mundo Digital Conectado**
+    
+    Conclua sua jornada explorando bancos de dados, comércio eletrônico e segurança digital para o mundo empresarial conectado.
+    
+    [:fontawesome-solid-shopping-cart: Aulas 13-16](aulas/aula-13.md){ .md-button }
+
+</div>
+
+---
+
+## 💡 Metodologia de Sucesso
+
+<div class="tips-section" markdown>
+
+!!! tip "🔗 **Conecte Teoria e Prática**"
+    Sempre relacione os conceitos de sistemas de informação com **exemplos reais de empresas** que você conhece. Isso torna o aprendizado mais concreto e memorável.
+
+!!! tip "🔄 **Pratique Progressivamente**"
+    Comece com os **exercícios básicos**, avance para os **intermediários** e desafie-se com os **projetos**. A progressão gradual é a chave para dominar a matéria.
+
+!!! tip "🤝 **Pense em Integração**"
+    A grande força dos sistemas administrativos está na **integração**. Sempre questione: *"Como este sistema se conecta com outros?"* para ter uma visão holística.
+
+</div>
+
+---
+
+<div class="cta-section" markdown>
+
+[:fontawesome-solid-play: **Iniciar Aula 01** - Introdução aos ERPs](aulas/aula-01.md){ .md-button .md-button--primary .md-button--large }
+
+</div>

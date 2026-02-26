@@ -12,14 +12,14 @@ from rich import print
 from rich.progress import track
 
 
-def generate_slide_html(lesson_number: int) -> str:
+def generate_slide_html(lesson_number: int, course_title: str = "Curso") -> str:
     """Gera HTML para um slide específico"""
     return f'''<!doctype html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula {lesson_number:02d} - Desenvolvimento Mobile Nativo</title>
+    <title>Aula {lesson_number:02d} - {course_title}</title>
     
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
@@ -131,6 +131,16 @@ def generate_all_slides():
     slides_dst_dir = pathlib.Path('docs/slides')
     slides_src_dir = slides_dst_dir / 'src'
     
+    # Lê o título do curso do mkdocs.yml (agnosticismo)
+    course_title = "Curso"
+    mkdocs_path = pathlib.Path('mkdocs.yml')
+    if mkdocs_path.exists():
+        mkdocs_content = mkdocs_path.read_text(encoding='utf-8')
+        for line in mkdocs_content.split('\n'):
+            if line.startswith('site_name:'):
+                course_title = line.split(':', 1)[1].strip()
+                break
+    
     if not slides_src_dir.exists():
         print("[yellow]⚠ Pasta docs/slides/src/ não encontrada.[/yellow]")
         return
@@ -163,7 +173,7 @@ def generate_all_slides():
                         content = parts[2].lstrip()
             
             dst_md_path.write_text(content, encoding='utf-8')
-            html_path.write_text(generate_slide_html(i), encoding='utf-8')
+            html_path.write_text(generate_slide_html(i, course_title), encoding='utf-8')
 
 
 def generate_all_quizzes():
@@ -189,7 +199,7 @@ def generate_all_quizzes():
 
 
 def main():
-    print("[bold]🚀 Automação de Conteúdo: Mobile Nativo[/bold]")
+    print("[bold]🚀 Automação de Conteúdo[/bold]")
     print("=" * 50)
     
     generate_all_slides()

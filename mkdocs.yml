@@ -2,30 +2,34 @@ site_name: Tecnologia da Informação Aplicada a Administração
 site_url: https://ricardotecpro.github.io/adm_gestao_tiaa
 repo_url: https://github.com/ricardotecpro/adm_gestao_tiaa
 repo_name: ricardotecpro/adm_gestao_tiaa
+
+exclude_docs: |
+  quizzes/src/*
+  slides/src/*
+  slides/slide-*.md
 theme:
   name: material
   language: pt-BR
-  favicon: assets/images/logic_logo.svg
-  logo: assets/images/logic_logo.svg
+  favicon: assets/images/adm_ti_logo.svg
+  logo: assets/images/adm_ti_logo.svg
   custom_dir: overrides
   features:
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
     - navigation.path
-    - navigation.instant
-    - navigation.prune
     - navigation.expand
     - navigation.top
     - navigation.footer
     - navigation.indexes
+    - navigation.instant
+    - navigation.prune
     - toc.follow
     - content.code.copy
     - content.code.annotate
+    - search.share
     - search.suggest
     - search.highlight
-    - search.share
-    - content.tabs.link
   palette:
     # Light Mode (Default)
     - media: "(prefers-color-scheme: light)"
@@ -45,6 +49,13 @@ theme:
         name: Mudar para modo claro
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+  font_display: swap
+  font_style: normal
+
+copyright: 'Copyright &copy; 2026 Ricardo Tec Pro'
 
 markdown_extensions:
   - pymdownx.critic
@@ -76,19 +87,16 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-
 plugins:
+  - social:
+      cards: false
+  - tags:
   - mkdocs-revealjs
   - search:
       lang: pt
-  - social:
-      cards: false
-  - tags
-  - awesome-pages
-  - minify:
-      minify_html: true
   - mkdocs-jupyter
   - glightbox
+  - awesome-pages:
   - mkdocs_quiz
   - git-authors:
       show_contribution: true
@@ -98,6 +106,207 @@ plugins:
       sort_authors_by: contribution
       authorship_threshold_percent: 10
       exclude:
+        - index.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+  - macros
+  - mkdocs-video
+  - termynal:
+      title: shell
+      buttons: macos
+      prompt_literal_start:
+        - "$"
+  - rss:
+      match_path: .*
+      date_from_meta:
+        datetime_format: '%Y-%m-%d %H:%M:%S'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - print-site:
+      add_to_navigation: false
+      print_page_title: 'Versão para Impressão'
+      add_print_site_banner: false
+      enumerate_headings: false
+      enumerate_figures: false
+
+hooks:
+  - hooks/copy_slides.py
+
+extra_css:
+  - assets/css/quiz.css
+  - assets/css/home.css
+  - assets/css/extra.css
+  - https://cdn.jsdelivr.net/npm/termynal/termynal.css
+
+extra_javascript:
+  - assets/js/quiz.js
+  - https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js
+  - assets/js/mermaid-init.js
+  - assets/js/custom_termynal.js
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/termynal/termynal.min.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ricardotecpro
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ricardotecpro
+    - icon: fontawesome/solid/globe
+      link: https://ricardotecpro.github.io/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@ricardotecpro
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/ricardotecpro
+  version:
+    provider: mike
+    default: estavel
+
+nav:
+  - Informações:
+    - Curso: index.md
+    - Sobre: sobre.md
+    - Plano: plano-ensino.md
+  - Aulas:
+    - aulas/index.md
+    - 'Módulo 1 - Fundamentos de Sistemas de Gestão':
+      - 'Aula 01 - Intro ERP': aulas/aula-01.md
+      - 'Aula 02 - CRM e BI': aulas/aula-02.md
+      - 'Aula 03 - Funções do ERP': aulas/aula-03.md
+      - 'Aula 04 - Fundamentos do SIG': aulas/aula-04.md
+    - 'Módulo 2 - SIG e Decisão Estratégica':
+      - 'Aula 05 - SIG e Tomada de Decisão': aulas/aula-05.md
+      - 'Aula 06 - Cadastro e Dados': aulas/aula-06.md
+      - 'Aula 07 - SIGs Corporativos': aulas/aula-07.md
+      - 'Aula 08 - Comunicação Empresarial': aulas/aula-08.md
+    - 'Módulo 3 - Operações e Comunicação':
+      - 'Aula 09 - Rastreamento Logístico': aulas/aula-09.md
+      - 'Aula 10 - Sistemas Comerciais': aulas/aula-10.md
+      - 'Aula 11 - Atendimento SAC/FAQ': aulas/aula-11.md
+      - 'Aula 12 - E-mail Corporativo': aulas/aula-12.md
+    - 'Módulo 4 - Gestão de Dados e E-commerce':
+      - 'Aula 13 - BD: Entrada e Processo': aulas/aula-13.md
+      - 'Aula 14 - BD: Saída e Feedback': aulas/aula-14.md
+      - 'Aula 15 - E-commerce e Marketing': aulas/aula-15.md
+      - 'Aula 16 - Segurança e Lojas': aulas/aula-16.md
+  - Materiais:
+    - Materiais Extras: materiais.md
+    - Roadmap: project_roadmap.md
+    - Slides:
+        - slides/index.md
+        - 'Slide 01': slides/slide-01.html
+        - 'Slide 02': slides/slide-02.html
+        - 'Slide 03': slides/slide-03.html
+        - 'Slide 04': slides/slide-04.html
+        - 'Slide 05': slides/slide-05.html
+        - 'Slide 06': slides/slide-06.html
+        - 'Slide 07': slides/slide-07.html
+        - 'Slide 08': slides/slide-08.html
+        - 'Slide 09': slides/slide-09.html
+        - 'Slide 10': slides/slide-10.html
+        - 'Slide 11': slides/slide-11.html
+        - 'Slide 12': slides/slide-12.html
+        - 'Slide 13': slides/slide-13.html
+        - 'Slide 14': slides/slide-14.html
+        - 'Slide 15': slides/slide-15.html
+        - 'Slide 16': slides/slide-16.html
+    - Exercícios:
+        - exercicios/index.md
+        - 'Aula 01':
+            - 'Exercícios': exercicios/exercicio-01.md
+            - 'Solução': exercicios/solucao-01.md
+        - 'Aula 02':
+            - 'Exercícios': exercicios/exercicio-02.md
+            - 'Solução': exercicios/solucao-02.md
+        - 'Aula 03':
+            - 'Exercícios': exercicios/exercicio-03.md
+            - 'Solução': exercicios/solucao-03.md
+        - 'Aula 04':
+            - 'Exercícios': exercicios/exercicio-04.md
+            - 'Solução': exercicios/solucao-04.md
+        - 'Aula 05':
+            - 'Exercícios': exercicios/exercicio-05.md
+            - 'Solução': exercicios/solucao-05.md
+        - 'Aula 06':
+            - 'Exercícios': exercicios/exercicio-06.md
+            - 'Solução': exercicios/solucao-06.md
+        - 'Aula 07':
+            - 'Exercícios': exercicios/exercicio-07.md
+            - 'Solução': exercicios/solucao-07.md
+        - 'Aula 08':
+            - 'Exercícios': exercicios/exercicio-08.md
+            - 'Solução': exercicios/solucao-08.md
+        - 'Aula 09':
+            - 'Exercícios': exercicios/exercicio-09.md
+            - 'Solução': exercicios/solucao-09.md
+        - 'Aula 10':
+            - 'Exercícios': exercicios/exercicio-10.md
+            - 'Solução': exercicios/solucao-10.md
+        - 'Aula 11':
+            - 'Exercícios': exercicios/exercicio-11.md
+            - 'Solução': exercicios/solucao-11.md
+        - 'Aula 12':
+            - 'Exercícios': exercicios/exercicio-12.md
+            - 'Solução': exercicios/solucao-12.md
+        - 'Aula 13':
+            - 'Exercícios': exercicios/exercicio-13.md
+            - 'Solução': exercicios/solucao-13.md
+        - 'Aula 14':
+            - 'Exercícios': exercicios/exercicio-14.md
+            - 'Solução': exercicios/solucao-14.md
+        - 'Aula 15':
+            - 'Exercícios': exercicios/exercicio-15.md
+            - 'Solução': exercicios/solucao-15.md
+        - 'Aula 16':
+            - 'Exercícios': exercicios/exercicio-16.md
+            - 'Solução': exercicios/solucao-16.md
+    - Quizzes:
+        - quizzes/index.md
+        - 'Quiz 01': quizzes/quiz-01.md
+        - 'Quiz 02': quizzes/quiz-02.md
+        - 'Quiz 03': quizzes/quiz-03.md
+        - 'Quiz 04': quizzes/quiz-04.md
+        - 'Quiz 05': quizzes/quiz-05.md
+        - 'Quiz 06': quizzes/quiz-06.md
+        - 'Quiz 07': quizzes/quiz-07.md
+        - 'Quiz 08': quizzes/quiz-08.md
+        - 'Quiz 09': quizzes/quiz-09.md
+        - 'Quiz 10': quizzes/quiz-10.md
+        - 'Quiz 11': quizzes/quiz-11.md
+        - 'Quiz 12': quizzes/quiz-12.md
+        - 'Quiz 13': quizzes/quiz-13.md
+        - 'Quiz 14': quizzes/quiz-14.md
+        - 'Quiz 15': quizzes/quiz-15.md
+        - 'Quiz 16': quizzes/quiz-16.md
+    - Projetos:
+        - projetos/index.md
+        - 'Projeto Referência': projetos/projeto-referencia.md
+        - 'Proj 01': projetos/projeto-01.md
+        - 'Proj 02': projetos/projeto-02.md
+        - 'Proj 03': projetos/projeto-03.md
+        - 'Proj 04': projetos/projeto-04.md
+        - 'Proj 05': projetos/projeto-05.md
+        - 'Proj 06': projetos/projeto-06.md
+        - 'Proj 07': projetos/projeto-07.md
+        - 'Proj 08': projetos/projeto-08.md
+        - 'Proj 09': projetos/projeto-09.md
+        - 'Proj 10': projetos/projeto-10.md
+        - 'Proj 11': projetos/projeto-11.md
+        - 'Proj 12': projetos/projeto-12.md
+        - 'Proj 13': projetos/projeto-13.md
+        - 'Proj 14': projetos/projeto-14.md
+        - 'Proj 15': projetos/projeto-15.md
+        - 'Proj 16': projetos/projeto-16.md
+    - Configuração:
+        - setups/index.md
+        - 'Ambiente Windows': setups/setup-01.md
+        - 'Ambiente Linux': setups/setup-02.md
+        - 'Ambiente macOS': setups/setup-03.md
+  - Impressão: print_page.md
         - index.md
   - git-revision-date-localized:
       enable_creation_date: true
