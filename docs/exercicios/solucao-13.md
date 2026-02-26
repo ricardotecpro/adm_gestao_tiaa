@@ -28,7 +28,8 @@
 ### 3. Fluxo de Dados
 
 !!! warning "Resposta 3"
-```mermaid
+
+````mermaid
 graph TD
 A[Pai] -->|props| B[Filho]
 B -->|eventos| A
@@ -63,11 +64,11 @@ setItens([...itens, novoItem]);
         const [usuario, setUsuario] = useState(null);
 
         return (
-            <>
-                <Header usuario={usuario} />
-                <Login onLogin={setUsuario} />
-                <Dashboard usuario={usuario} />
-            </>
+            &lt;&gt;
+                &lt;Header usuario={usuario} /&gt;
+                &lt;Login onLogin={setUsuario} /&gt;
+                &lt;Dashboard usuario={usuario} /&gt;
+            &lt;/&gt;
         );
     };
     ```
@@ -76,3 +77,4 @@ setItens([...itens, novoItem]);
 
 !!! tip "Navegação"
 [← Exercício 13](exercicio-13.md) | [Próxima Solução →](solucao-14.md)
+````
