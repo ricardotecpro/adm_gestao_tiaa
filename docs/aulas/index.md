@@ -1,39 +1,31 @@
-# Aulas do Curso 📚
+# Aulas Interativas 📚
 
-Acesse aqui todo o conteúdo teórico dividido em módulos de aprendizado.
+Explore a trilha completa de 16 aulas sobre Tecnologia da Informação aplicada à Administração, organizadas em módulos progressivos.
 
-<div class="grid cards" markdown>
+## Módulo 1 - Fundamentos de Sistemas de Gestão
 
--   :material-server: **Módulo 1: Fundamentos de Backend**
-    ---
-    A base do desenvolvimento de APIs e Microsserviços.
-    - [Aula 01 - Intro a Microsserviços](aula-01.md)
-    - [Aula 02 - Arquitetura e API Gateway](aula-02.md)
-    - [Aula 03 - Modelagem de APIs RESTful](aula-03.md)
-    - [Aula 04 - Documentação e Mock](aula-04.md)
+- [:octicons-arrow-right-24: Aula 01 - Introdução aos ERPs](aula-01.md)
+- [:octicons-arrow-right-24: Aula 02 - CRM e Business Intelligence](aula-02.md)
+- [:octicons-arrow-right-24: Aula 03 - Funções e Características dos ERPs](aula-03.md)
+- [:octicons-arrow-right-24: Aula 04 - Fundamentos dos Sistemas de Informação Gerencial](aula-04.md)
 
--   :material-database: **Módulo 2: Manipulação de Dados**
-    ---
-    Implementação robusta e persistência de dados.
-    - [Aula 05 - Controllers e Rotas](aula-05.md)
-    - [Aula 06 - Services e Lógica](aula-06.md)
-    - [Aula 07 - Repositories e Banco SQL](aula-07.md)
-    - [Aula 08 - Validação de Dados](aula-08.md)
+## Módulo 2 - SIG e Decisão Estratégica
 
--   :material-shield-check: **Módulo 3: Segurança e Autenticação**
-    ---
-    Protegendo sua API contra acessos não autorizados.
-    - [Aula 09 - Autenticação com JWT](aula-09.md)
-    - [Aula 10 - Controle de Acesso (RBAC)](aula-10.md)
-    - [Aula 11 - Segurança Avançada (CORS)](aula-11.md)
+- [:octicons-arrow-right-24: Aula 05 - SIG como Ferramenta para Tomada de Decisão](aula-05.md)
+- [:octicons-arrow-right-24: Aula 06 - Cadastro, Fluxo e Gestão de Informações](aula-06.md)
+- [:octicons-arrow-right-24: Aula 07 - SIGs Corporativos Específicos](aula-07.md)
+- [:octicons-arrow-right-24: Aula 08 - Comunicação Empresarial e Comercial](aula-08.md)
 
--   :material-web: **Módulo 4: Aplicações SPA (React)**
-    ---
-    Criando o frontend moderno para consumir sua API.
-    - [Aula 12 - Intro ao Frontend (React)](aula-12.md)
-    - [Aula 13 - Estado e Hooks (useState)](aula-13.md)
-    - [Aula 14 - Chamadas de API (useEffect)](aula-14.md)
-    - [Aula 15 - Navegação (React Router)](aula-15.md)
-    - [Aula 16 - Projeto Final Integrado](aula-16.md)
+## Módulo 3 - Operações e Comunicação
 
-</div>
+- [:octicons-arrow-right-24: Aula 09 - Sistemas de Rastreamento e Logística](aula-09.md)
+- [:octicons-arrow-right-24: Aula 10 - Sistemas de Compra, Venda e Transações](aula-10.md)
+- [:octicons-arrow-right-24: Aula 11 - Atendimento ao Cliente (SAC e FAQ)](aula-11.md)
+- [:octicons-arrow-right-24: Aula 12 - E-mail Corporativo e Colaboração](aula-12.md)
+
+## Módulo 4 - Gestão de Dados e E-commerce
+
+- [:octicons-arrow-right-24: Aula 13 - Bancos de Dados: Entrada e Processamento](aula-13.md)
+- [:octicons-arrow-right-24: Aula 14 - Bancos de Dados: Saída e Feedback](aula-14.md)
+- [:octicons-arrow-right-24: Aula 15 - E-commerce: Conceitos e Marketing Digital](aula-15.md)
+- [:octicons-arrow-right-24: Aula 16 - Segurança Digital e Abertura de Lojas Online](aula-16.md)

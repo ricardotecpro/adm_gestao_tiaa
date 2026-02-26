@@ -1,7 +1,7 @@
 site_name: Tecnologia da Informação Aplicada a Administração
-site_url: https://ricardotecpro.github.io/adm_tiaa
-repo_url: https://github.com/ricardotecpro/adm_tiaa
-repo_name: ricardotecpro/adm_tiaa
+site_url: https://ricardotecpro.github.io/adm_gestao_tiaa
+repo_url: https://github.com/ricardotecpro/adm_gestao_tiaa
+repo_name: ricardotecpro/adm_gestao_tiaa
 theme:
   name: material
   language: pt-BR
@@ -13,6 +13,8 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.path
+    - navigation.instant
+    - navigation.prune
     - navigation.expand
     - navigation.top
     - navigation.footer
@@ -23,6 +25,7 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - content.tabs.link
   palette:
     # Light Mode (Default)
     - media: "(prefers-color-scheme: light)"
@@ -75,14 +78,15 @@ markdown_extensions:
 
 
 plugins:
-  - mkdocs-revealjs:
-      revealjs_config:
-        transition: slide
-        backgroundTransition: fade
-        slideNumber: true
-
+  - mkdocs-revealjs
   - search:
       lang: pt
+  - social:
+      cards: false
+  - tags
+  - awesome-pages
+  - minify:
+      minify_html: true
   - mkdocs-jupyter
   - glightbox
   - mkdocs_quiz
@@ -111,7 +115,6 @@ plugins:
         datetime_format: '%Y-%m-%d %H:%M:%S'
   - print-site:
       add_to_navigation: false
-      # print_page_rel_path: 'print_page.md' # Deprecated or invalid
       print_page_title: 'Versão para Impressão'
       add_print_site_banner: false
       enumerate_headings: false
@@ -136,6 +139,11 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/termynal/termynal.min.js
 
+exclude_docs: |
+  quizzes/src/*
+  slides/src/*
+  slides/slide-*.md
+
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -144,109 +152,120 @@ extra:
       link: https://linkedin.com/in/ricardotecpro
     - icon: fontawesome/solid/globe
       link: https://ricardotecpro.github.io/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@ricardotecpro
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/ricardotecpro
   version:
     provider: mike
     default: estavel
 
 nav:
-  - Início: index.md
-  - Plano de Ensino: plano-ensino.md
+  - Informações:
+      - Início: index.md
+      - Plano de Ensino: plano-ensino.md
+      - O Curso: sobre.md
+      - Roadmap: project_roadmap.md
   - Aulas:
-      - 'Aula 01 - Intro ERP': aulas/aula-01.md
-      - 'Aula 02 - CRM e BI': aulas/aula-02.md
-      - 'Aula 03 - Funções do ERP': aulas/aula-03.md
-      - 'Aula 04 - Fundamentos do SIG': aulas/aula-04.md
-      - 'Aula 05 - SIG e Tomada de Decisão': aulas/aula-05.md
-      - 'Aula 06 - Cadastro e Dados': aulas/aula-06.md
-      - 'Aula 07 - SIGs Corporativos': aulas/aula-07.md
-      - 'Aula 08 - Comunicação Empresarial': aulas/aula-08.md
-      - 'Aula 09 - Rastreamento Logístico': aulas/aula-09.md
-      - 'Aula 10 - Sistemas Comerciais': aulas/aula-10.md
-      - 'Aula 11 - Atendimento SAC/FAQ': aulas/aula-11.md
-      - 'Aula 12 - E-mail Corporativo': aulas/aula-12.md
-      - 'Aula 13 - BD: Entrada e Processo': aulas/aula-13.md
-      - 'Aula 14 - BD: Saída e Feedback': aulas/aula-14.md
-      - 'Aula 15 - E-commerce e Marketing': aulas/aula-15.md
-      - 'Aula 16 - Segurança e Lojas': aulas/aula-16.md
-  - Exercícios:
-      - 'Índice': exercicios/index.md
-      - 'Ex 01': exercicios/exercicio-01.md
-      - 'Ex 02': exercicios/exercicio-02.md
-      - 'Ex 03': exercicios/exercicio-03.md
-      - 'Ex 04': exercicios/exercicio-04.md
-      - 'Ex 05': exercicios/exercicio-05.md
-      - 'Ex 06': exercicios/exercicio-06.md
-      - 'Ex 07': exercicios/exercicio-07.md
-      - 'Ex 08': exercicios/exercicio-08.md
-      - 'Ex 09': exercicios/exercicio-09.md
-      - 'Ex 10': exercicios/exercicio-10.md
-      - 'Ex 11': exercicios/exercicio-11.md
-      - 'Ex 12': exercicios/exercicio-12.md
-      - 'Ex 13': exercicios/exercicio-13.md
-      - 'Ex 14': exercicios/exercicio-14.md
-      - 'Ex 15': exercicios/exercicio-15.md
-      - 'Ex 16': exercicios/exercicio-16.md
-  - Projetos:
-      - 'Índice': projetos/index.md
-      - 'Proj 01': projetos/projeto-01.md
-      - 'Proj 02': projetos/projeto-02.md
-      - 'Proj 03': projetos/projeto-03.md
-      - 'Proj 04': projetos/projeto-04.md
-      - 'Proj 05': projetos/projeto-05.md
-      - 'Proj 06': projetos/projeto-06.md
-      - 'Proj 07': projetos/projeto-07.md
-      - 'Proj 08': projetos/projeto-08.md
-      - 'Proj 09': projetos/projeto-09.md
-      - 'Proj 10': projetos/projeto-10.md
-      - 'Proj 11': projetos/projeto-11.md
-      - 'Proj 12': projetos/projeto-12.md
-      - 'Proj 13': projetos/projeto-13.md
-      - 'Proj 14': projetos/projeto-14.md
-      - 'Proj 15': projetos/projeto-15.md
-      - 'Proj 16': projetos/projeto-16.md
-  - Quizzes:
-      - 'Índice': quizzes/index.md
-      - 'Quiz 01': quizzes/quiz-01.md
-      - 'Quiz 02': quizzes/quiz-02.md
-      - 'Quiz 03': quizzes/quiz-03.md
-      - 'Quiz 04': quizzes/quiz-04.md
-      - 'Quiz 05': quizzes/quiz-05.md
-      - 'Quiz 06': quizzes/quiz-06.md
-      - 'Quiz 07': quizzes/quiz-07.md
-      - 'Quiz 08': quizzes/quiz-08.md
-      - 'Quiz 09': quizzes/quiz-09.md
-      - 'Quiz 10': quizzes/quiz-10.md
-      - 'Quiz 11': quizzes/quiz-11.md
-      - 'Quiz 12': quizzes/quiz-12.md
-      - 'Quiz 13': quizzes/quiz-13.md
-      - 'Quiz 14': quizzes/quiz-14.md
-      - 'Quiz 15': quizzes/quiz-15.md
-      - 'Quiz 16': quizzes/quiz-16.md
-  - Slides:
-      - 'Índice': slides/index.md
-      - 'Slide 01': slides/slide-01.md
-      - 'Slide 02': slides/slide-02.md
-      - 'Slide 03': slides/slide-03.md
-      - 'Slide 04': slides/slide-04.md
-      - 'Slide 05': slides/slide-05.md
-      - 'Slide 06': slides/slide-06.md
-      - 'Slide 07': slides/slide-07.md
-      - 'Slide 08': slides/slide-08.md
-      - 'Slide 09': slides/slide-09.md
-      - 'Slide 10': slides/slide-10.md
-      - 'Slide 11': slides/slide-11.md
-      - 'Slide 12': slides/slide-12.md
-      - 'Slide 13': slides/slide-13.md
-      - 'Slide 14': slides/slide-14.md
-      - 'Slide 15': slides/slide-15.md
-      - 'Slide 16': slides/slide-16.md
-  - Configuração:
-      - 'Índice': setups/index.md
-      - 'Setup Inicial': setups/setup-01.md
-      - 'Guia de Estudo': setups/setup-02.md
-  - Sobre:
-      - 'O Curso': sobre.md
-      - 'Roadmap': project_roadmap.md
-      - 'Materiais Extras': materiais.md
+      - 'Índice': aulas/index.md
+      - 'Módulo 1 - Fundamentos de Sistemas de Gestão':
+          - 'Aula 01 - Intro ERP': aulas/aula-01.md
+          - 'Aula 02 - CRM e BI': aulas/aula-02.md
+          - 'Aula 03 - Funções do ERP': aulas/aula-03.md
+          - 'Aula 04 - Fundamentos do SIG': aulas/aula-04.md
+      - 'Módulo 2 - SIG e Decisão Estratégica':
+          - 'Aula 05 - SIG e Tomada de Decisão': aulas/aula-05.md
+          - 'Aula 06 - Cadastro e Dados': aulas/aula-06.md
+          - 'Aula 07 - SIGs Corporativos': aulas/aula-07.md
+          - 'Aula 08 - Comunicação Empresarial': aulas/aula-08.md
+      - 'Módulo 3 - Operações e Comunicação':
+          - 'Aula 09 - Rastreamento Logístico': aulas/aula-09.md
+          - 'Aula 10 - Sistemas Comerciais': aulas/aula-10.md
+          - 'Aula 11 - Atendimento SAC/FAQ': aulas/aula-11.md
+          - 'Aula 12 - E-mail Corporativo': aulas/aula-12.md
+      - 'Módulo 4 - Gestão de Dados e E-commerce':
+          - 'Aula 13 - BD: Entrada e Processo': aulas/aula-13.md
+          - 'Aula 14 - BD: Saída e Feedback': aulas/aula-14.md
+          - 'Aula 15 - E-commerce e Marketing': aulas/aula-15.md
+          - 'Aula 16 - Segurança e Lojas': aulas/aula-16.md
+      - 'Exercícios':
+          - 'Índice': exercicios/index.md
+          - 'Exercício 01': exercicios/exercicio-01.md
+          - 'Exercício 02': exercicios/exercicio-02.md
+          - 'Exercício 03': exercicios/exercicio-03.md
+          - 'Exercício 04': exercicios/exercicio-04.md
+          - 'Exercício 05': exercicios/exercicio-05.md
+          - 'Exercício 06': exercicios/exercicio-06.md
+          - 'Exercício 07': exercicios/exercicio-07.md
+          - 'Exercício 08': exercicios/exercicio-08.md
+          - 'Exercício 09': exercicios/exercicio-09.md
+          - 'Exercício 10': exercicios/exercicio-10.md
+          - 'Exercício 11': exercicios/exercicio-11.md
+          - 'Exercício 12': exercicios/exercicio-12.md
+          - 'Exercício 13': exercicios/exercicio-13.md
+          - 'Exercício 14': exercicios/exercicio-14.md
+          - 'Exercício 15': exercicios/exercicio-15.md
+          - 'Exercício 16': exercicios/exercicio-16.md
+      - 'Projetos':
+          - 'Índice': projetos/index.md
+          - 'Projeto 01': projetos/projeto-01.md
+          - 'Projeto 02': projetos/projeto-02.md
+          - 'Projeto 03': projetos/projeto-03.md
+          - 'Projeto 04': projetos/projeto-04.md
+          - 'Projeto 05': projetos/projeto-05.md
+          - 'Projeto 06': projetos/projeto-06.md
+          - 'Projeto 07': projetos/projeto-07.md
+          - 'Projeto 08': projetos/projeto-08.md
+          - 'Projeto 09': projetos/projeto-09.md
+          - 'Projeto 10': projetos/projeto-10.md
+          - 'Projeto 11': projetos/projeto-11.md
+          - 'Projeto 12': projetos/projeto-12.md
+          - 'Projeto 13': projetos/projeto-13.md
+          - 'Projeto 14': projetos/projeto-14.md
+          - 'Projeto 15': projetos/projeto-15.md
+          - 'Projeto 16': projetos/projeto-16.md
+      - 'Quizzes':
+          - 'Índice': quizzes/index.md
+          - 'Quiz 01': quizzes/quiz-01.md
+          - 'Quiz 02': quizzes/quiz-02.md
+          - 'Quiz 03': quizzes/quiz-03.md
+          - 'Quiz 04': quizzes/quiz-04.md
+          - 'Quiz 05': quizzes/quiz-05.md
+          - 'Quiz 06': quizzes/quiz-06.md
+          - 'Quiz 07': quizzes/quiz-07.md
+          - 'Quiz 08': quizzes/quiz-08.md
+          - 'Quiz 09': quizzes/quiz-09.md
+          - 'Quiz 10': quizzes/quiz-10.md
+          - 'Quiz 11': quizzes/quiz-11.md
+          - 'Quiz 12': quizzes/quiz-12.md
+          - 'Quiz 13': quizzes/quiz-13.md
+          - 'Quiz 14': quizzes/quiz-14.md
+          - 'Quiz 15': quizzes/quiz-15.md
+          - 'Quiz 16': quizzes/quiz-16.md
+      - 'Slides':
+          - 'Índice': slides/index.md
+          - 'Slide 01': slides/slide-01.md
+          - 'Slide 02': slides/slide-02.md
+          - 'Slide 03': slides/slide-03.md
+          - 'Slide 04': slides/slide-04.md
+          - 'Slide 05': slides/slide-05.md
+          - 'Slide 06': slides/slide-06.md
+          - 'Slide 07': slides/slide-07.md
+          - 'Slide 08': slides/slide-08.md
+          - 'Slide 09': slides/slide-09.md
+          - 'Slide 10': slides/slide-10.md
+          - 'Slide 11': slides/slide-11.md
+          - 'Slide 12': slides/slide-12.md
+          - 'Slide 13': slides/slide-13.md
+          - 'Slide 14': slides/slide-14.md
+          - 'Slide 15': slides/slide-15.md
+          - 'Slide 16': slides/slide-16.md
+  - Materiais:
+      - 'Índice Geral': materiais.md
+      - 'Configuração':
+          - 'Índice': setups/index.md
+          - 'Setup Windows': setups/setup-01.md
+          - 'Setup Linux': setups/setup-02.md
+          - 'Setup macOS': setups/setup-03.md
   - Impressão: print_page.md
 

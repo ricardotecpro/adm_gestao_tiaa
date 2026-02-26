@@ -1,35 +1,31 @@
-# Projetos Práticos 🚀
+# Projetos Aplicados 🚀
 
-Transforme teoria em prática com desafios progressivos que compõem seu portfólio.
+Consolide seu aprendizado com projetos práticos que simulam cenários reais de negócios usando tecnologia da informação.
 
-<div class="grid cards" markdown>
+## Módulo 1 - Fundamentos de Sistemas de Gestão
 
--   :material-server: **Módulo 1: Fundamentos de Backend**
-    ---
-    - [Projeto 01 - Primeiro Microsserviço](projeto-01.md)
-    - [Projeto 02 - Gateway Simples](projeto-02.md)
-    - [Projeto 03 - Modelagem de Dominio](projeto-03.md)
-    - [**Projeto 04 - Documentação Swagger**](projeto-04.md) 🏆
+- [:octicons-arrow-right-24: Projeto 01 - Análise de ERP Empresarial](projeto-01.md)
+- [:octicons-arrow-right-24: Projeto 02 - Dashboard de CRM](projeto-02.md)
+- [:octicons-arrow-right-24: Projeto 03 - Centro de Integração ERP](projeto-03.md)
+- [:octicons-arrow-right-24: Projeto 04 - Sistema de Informação Gerencial](projeto-04.md)
 
--   :material-database: **Módulo 2: Manipulação de Dados**
-    ---
-    - [Projeto 05 - API de Produtos](projeto-05.md)
-    - [Projeto 06 - Orquestração de Serviços](projeto-06.md)
-    - [Projeto 07 - Repositories SQL](projeto-07.md)
-    - [**Projeto 08 - Validação Herói (Joi/Zod)**](projeto-08.md) 🏆
+## Módulo 2 - SIG e Decisão Estratégica
 
--   :material-shield-check: **Módulo 3: Segurança e Autenticação**
-    ---
-    - [Projeto 09 - Auth JWT](projeto-09.md)
-    - [Projeto 10 - Gestão de Permissões](projeto-10.md)
-    - [Projeto 11 - Token de Renovação](projeto-11.md)
-    - [**Projeto 12 - API Blindada (Helmet/CORS)**](projeto-12.md) 🏆
+- [:octicons-arrow-right-24: Projeto 05 - Plataforma de Tomada de Decisão](projeto-05.md)
+- [:octicons-arrow-right-24: Projeto 06 - Sistema de Cadastro Unificado](projeto-06.md)
+- [:octicons-arrow-right-24: Projeto 07 - SIG Customizado para Empresa](projeto-07.md)
+- [:octicons-arrow-right-24: Projeto 08 - Central de Comunicação Empresarial](projeto-08.md)
 
--   :material-web: **Módulo 4: Aplicações SPA (React)**
-    ---
-    - [Projeto 13 - Dashboard React](projeto-13.md)
-    - [Projeto 14 - Repositórios GitHub](projeto-14.md)
-    - [Projeto 15 - Sistema Multi-Páginas](projeto-15.md)
-    - [**Projeto 16 - App Final Full-Stack**](projeto-16.md) 🎓
+## Módulo 3 - Operações e Comunicação
 
-</div>
+- [:octicons-arrow-right-24: Projeto 09 - Sistema de Logística Inteligente](projeto-09.md)
+- [:octicons-arrow-right-24: Projeto 10 - Plataforma de Transações Comerciais](projeto-10.md)
+- [:octicons-arrow-right-24: Projeto 11 - Centro de Atendimento Digital](projeto-11.md)
+- [:octicons-arrow-right-24: Projeto 12 - Sistema de E-mail Corporativo](projeto-12.md)
+
+## Módulo 4 - Gestão de Dados e E-commerce
+
+- [:octicons-arrow-right-24: Projeto 13 - Banco de Dados Empresarial](projeto-13.md)
+- [:octicons-arrow-right-24: Projeto 14 - Sistema de Relatórios Automatizados](projeto-14.md)
+- [:octicons-arrow-right-24: Projeto 15 - Plataforma de E-commerce Completa](projeto-15.md)
+- [:octicons-arrow-right-24: Projeto 16 - Sistema de Segurança Digital](projeto-16.md)

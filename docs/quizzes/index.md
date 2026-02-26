@@ -1,35 +1,31 @@
 # Quizzes Interativos 🧠
 
-Teste seus conhecimentos rapidamente ao final de cada módulo.
+Avalie seu progresso com quizzes interativos que oferecem feedback instantâneo sobre cada tópico estudado.
 
-<div class="grid cards" markdown>
+## Módulo 1 - Fundamentos de Sistemas de Gestão
 
--   :material-numeric-1-box: **Fase 1**
-    ---
-    - [Quiz 01 - Intro](quiz-01.md)
-    - [Quiz 02 - Java vs Swift](quiz-02.md)
-    - [Quiz 03 - Kotlin](quiz-03.md)
-    - [Quiz 04 - Estrutura App](quiz-04.md)
+- [:octicons-arrow-right-24: Quiz 01 - Introdução aos ERPs](quiz-01.md)
+- [:octicons-arrow-right-24: Quiz 02 - CRM e Business Intelligence](quiz-02.md)
+- [:octicons-arrow-right-24: Quiz 03 - Características dos ERPs](quiz-03.md)
+- [:octicons-arrow-right-24: Quiz 04 - Fundamentos dos SIG](quiz-04.md)
 
--   :material-numeric-2-box: **Fase 2**
-    ---
-    - [Quiz 05 - UI/Layouts](quiz-05.md)
-    - [Quiz 06 - Navegação](quiz-06.md)
-    - [Quiz 07 - MVVM](quiz-07.md)
-    - [Quiz 08 - Persistência](quiz-08.md)
+## Módulo 2 - SIG e Decisão Estratégica
 
--   :material-numeric-3-box: **Fase 3**
-    ---
-    - [Quiz 09 - RecyclerView](quiz-09.md)
-    - [Quiz 10 - API REST](quiz-10.md)
-    - [Quiz 11 - Async/Threads](quiz-11.md)
-    - [Quiz 12 - UX/Material](quiz-12.md)
+- [:octicons-arrow-right-24: Quiz 05 - SIG para Tomada de Decisão](quiz-05.md)
+- [:octicons-arrow-right-24: Quiz 06 - Gestão de Informações](quiz-06.md)
+- [:octicons-arrow-right-24: Quiz 07 - SIGs Corporativos](quiz-07.md)
+- [:octicons-arrow-right-24: Quiz 08 - Comunicação Empresarial](quiz-08.md)
 
--   :material-numeric-4-box: **Fase 4**
-    ---
-    - [Quiz 13 - Sensores](quiz-13.md)
-    - [Quiz 14 - Testes/Debug](quiz-14.md)
-    - [Quiz 15 - Publicação](quiz-15.md)
-    - [Quiz 16 - Revisão Final](quiz-16.md)
+## Módulo 3 - Operações e Comunicação
 
-</div>
+- [:octicons-arrow-right-24: Quiz 09 - Sistemas de Rastreamento](quiz-09.md)
+- [:octicons-arrow-right-24: Quiz 10 - Sistemas Comerciais](quiz-10.md)
+- [:octicons-arrow-right-24: Quiz 11 - Atendimento ao Cliente](quiz-11.md)
+- [:octicons-arrow-right-24: Quiz 12 - E-mail Corporativo](quiz-12.md)
+
+## Módulo 4 - Gestão de Dados e E-commerce
+
+- [:octicons-arrow-right-24: Quiz 13 - Bancos de Dados](quiz-13.md)
+- [:octicons-arrow-right-24: Quiz 14 - Relatórios e Feedback](quiz-14.md)
+- [:octicons-arrow-right-24: Quiz 15 - E-commerce e Marketing](quiz-15.md)
+- [:octicons-arrow-right-24: Quiz 16 - Segurança Digital](quiz-16.md)

@@ -1,35 +1,31 @@
-# Listas de Exercícios 🏋️
+# Exercícios Práticos 📝
 
-Pratique o que aprendeu com desafios graduais para cada aula.
+Desenvolva suas habilidades com exercícios progressivos organizados por módulo de aprendizado.
 
-<div class="grid cards" markdown>
+## Módulo 1 - Fundamentos de Sistemas de Gestão
 
--   :material-numeric-1-box: **Módulo 1: Fundamentos de Backend**
-    ---
-    - [Ex 01 - Intro a Microsserviços](exercicio-01.md)
-    - [Ex 02 - Arquitetura e Gateway](exercicio-02.md)
-    - [Ex 03 - Modelagem REST](exercicio-03.md)
-    - [Ex 04 - Documentação e Mocks](exercicio-04.md)
+- [:octicons-arrow-right-24: Exercício 01 - Análise de Sistema ERP](exercicio-01.md)
+- [:octicons-arrow-right-24: Exercício 02 - Implementação de CRM](exercicio-02.md)
+- [:octicons-arrow-right-24: Exercício 03 - Configuração de ERP](exercicio-03.md)
+- [:octicons-arrow-right-24: Exercício 04 - Design de SIG](exercicio-04.md)
 
--   :material-numeric-2-box: **Módulo 2: Manipulação de Dados**
-    ---
-    - [Ex 05 - Controllers e Rotas](exercicio-05.md)
-    - [Ex 06 - Services e Lógica](exercicio-06.md)
-    - [Ex 07 - Banco de Dados SQL](exercicio-07.md)
-    - [Ex 08 - Validação de Dados](exercicio-08.md)
+## Módulo 2 - SIG e Decisão Estratégica
 
--   :material-numeric-3-box: **Módulo 3: Segurança e Autenticação**
-    ---
-    - [Ex 09 - Autenticação JWT](exercicio-09.md)
-    - [Ex 10 - Controle de Acesso (RBAC)](exercicio-10.md)
-    - [Ex 11 - Segurança Avançada](exercicio-11.md)
+- [:octicons-arrow-right-24: Exercício 05 - Dashboard de Decisão](exercicio-05.md)
+- [:octicons-arrow-right-24: Exercício 06 - Cadastro de Produtos](exercicio-06.md)
+- [:octicons-arrow-right-24: Exercício 07 - SIG Customizado](exercicio-07.md)
+- [:octicons-arrow-right-24: Exercício 08 - Comunicação Interna](exercicio-08.md)
 
--   :material-numeric-4-box: **Módulo 4: Aplicações SPA (React)**
-    ---
-    - [Ex 12 - Introdução ao React](exercicio-12.md)
-    - [Ex 13 - Estado e Hooks](exercicio-13.md)
-    - [Ex 14 - Chamadas de API](exercicio-14.md)
-    - [Ex 15 - Navegação Router](exercicio-15.md)
-    - [Ex 16 - Planejamento Projeto Final](exercicio-16.md)
+## Módulo 3 - Operações e Comunicação
 
-</div>
+- [:octicons-arrow-right-24: Exercício 09 - Sistema de Rastreamento](exercicio-09.md)
+- [:octicons-arrow-right-24: Exercício 10 - Plataforma de Vendas](exercicio-10.md)
+- [:octicons-arrow-right-24: Exercício 11 - Central de Atendimento](exercicio-11.md)
+- [:octicons-arrow-right-24: Exercício 12 - E-mail Marketing](exercicio-12.md)
+
+## Módulo 4 - Gestão de Dados e E-commerce
+
+- [:octicons-arrow-right-24: Exercício 13 - Modelagem de Banco](exercicio-13.md)
+- [:octicons-arrow-right-24: Exercício 14 - Relatórios Gerenciais](exercicio-14.md)
+- [:octicons-arrow-right-24: Exercício 15 - Loja Virtual](exercicio-15.md)
+- [:octicons-arrow-right-24: Exercício 16 - Segurança Digital](exercicio-16.md)

@@ -1,22 +1,31 @@
-# Ambientes de Desenvolvimento 🛠️
+# Configuração do Ambiente 🛠️
 
-Guias para configurar seu computador para o desenvolvimento mobile.
+Guias detalhados para preparar seu ambiente de estudo em diferentes sistemas operacionais, garantindo que você tenha todas as ferramentas necessárias.
 
 <div class="grid cards" markdown>
 
--   :material-android: **Android**
-    ---
-    Instalação do Android Studio, SDK e emuladores.
-    - [Setup 01 - Android Studio](setup-01.md)
+- ## :material-microsoft-windows: **Windows**
 
--   :material-apple: **iOS (Opcional/Referência)**
-    ---
-    Configuração básica de Xcode e ferramentas Mac.
-    - [Setup 02 - Xcode Foundation](setup-02.md)
+  Configuração completa para usuários Windows, incluindo programas essenciais e ferramentas de administração.
+  [:octicons-arrow-right-24: Configurar Windows](setup-01.md)
 
--   :material-cog: **Ferramentas de Apoio**
-    ---
-    Git, Terminais e Postman/Insomnia para testes de API.
-    - [Setup 03 - Tools](setup-03.md)
+- ## :material-linux: **Linux**
+
+  Setup otimizado para distribuições Linux, com comandos específicos e pacotes recomendados.
+  [:octicons-arrow-right-24: Configurar Linux](setup-02.md)
+
+- ## :material-apple: **macOS**
+  Guia especializado para usuários Mac, incluindo Homebrew e ferramentas nativas do sistema.
+  [:octicons-arrow-right-24: Configurar macOS](setup-03.md)
 
 </div>
+
+---
+
+## 📋 Próximos Passos
+
+Após configurar seu ambiente:
+
+1. **Teste a instalação** executando os comandos básicos
+2. **Inicie pela Aula 01** para começar sua jornada de aprendizado
+3. **Mantenha-se atualizado** verificando periodicamente se há novas versões das ferramentas

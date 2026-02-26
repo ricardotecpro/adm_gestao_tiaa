@@ -1,68 +1,77 @@
 # Tecnologia da Informação Aplicada a Administração 📊
 
-Explore como a tecnologia transforma a gestão organizacional, desde sistemas ERP e SIG até as tendências modernas do e-commerce e segurança digital.
-
-!!! tip "Foco do Curso"
-    **Objetivo**: Capacitar o estudante a compreender e aplicar ferramentas tecnológicas essenciais para a eficiência administrativa e tomada de decisão estratégica.
+> _"A tecnologia não é nada. O que é importante é que você tenha fé nas pessoas, que elas são basicamente boas e inteligentes, e se você der a elas ferramentas, elas farão coisas maravilhosas com elas."_ — Steve Jobs
 
 ---
 
-## 🎯 Pilares da Tecnologia Administrativa
+## 🎯 Atalhos Rápidos
 
 <div class="grid cards" markdown>
 
--   :material-office-building-cog: **Sistemas de Gestão (ERP)**
-    ---
-    Compreenda a integração de processos corporativos através de ERPs, CRMs e Business Intelligence.
-    [:octicons-arrow-right-24: Ver Sistemas](aulas/aula-01.md)
+- ## :material-route: **Trilha Completa**
 
--   :material-chart-box-outline: **Informação Gerencial (SIG)**
-    ---
-    Aprenda como transformar dados em decisões estratégicas utilizando Sistemas de Informação Gerenciais.
-    [:octicons-code-24: Ver SIG](aulas/aula-04.md)
+  Navegue por todas as 16 aulas organizadas em módulos didáticos para uma experiência de aprendizado estruturada.
+  [:octicons-arrow-right-24: Iniciar Trilha](aulas/index.md)
 
--   :material-cart-outline: **Comércio Eletrônico**
-    ---
-    Domine as plataformas de e-commerce, marketing digital e estratégias de venda online.
-    [:octicons-rocket-24: Ver E-commerce](aulas/aula-15.md)
+- ## :material-presentation: **Slides Interativos**
 
--   :material-shield-check-outline: **Segurança e Transações**
-    ---
-    Entenda os mecanismos de proteção, meios de pagamento e segurança contra fraudes no ambiente virtual.
-    [:octicons-repo-24: Ver Segurança](aulas/aula-16.md)
+  Acesse apresentações dinâmicas com animações e conteúdo visual para cada tópico do curso.
+  [:octicons-arrow-right-24: Ver Slides](slides/index.md)
+
+- ## :material-help-circle: **Quizzes Práticos**
+
+  Teste seus conhecimentos com avaliações interativas e feedback instantâneo após cada aula.
+  [:octicons-arrow-right-24: Fazer Quizzes](quizzes/index.md)
+
+- ## :material-rocket-launch: **Projetos Aplicados**
+
+  Desenvolva projetos práticos que consolidam o aprendizado em cenários reais de negócios.
+  [:octicons-arrow-right-24: Ver Projetos](projetos/index.md)
+
+- ## :material-pencil-box: **Exercícios Graduais**
+
+  Pratique com exercícios progressivos: básicos, intermediários e desafios avançados.
+  [:octicons-arrow-right-24: Fazer Exercícios](exercicios/index.md)
+
+- ## :material-cog-outline: **Configuração**
+  Configure seu ambiente de estudo para Windows, Linux ou macOS com guias detalhados.
+  [:octicons-arrow-right-24: Configurar Ambiente](setups/index.md)
 
 </div>
 
 ---
 
-## 📚 Jornada de Aprendizado (16 Aulas)
+## 🗺️ Mapa da Jornada de Aprendizado
 
-O curso é estruturado em quatro trilhas fundamentais para a administração moderna.
+### 🏢 Módulo 1: Fundamentos de Sistemas de Gestão
 
-### 🏢 Módulo 1: Fundamentos de Sistemas de Gestão (Aulas 01-04)
-*   [Aula 01 - Intro ERP](aulas/aula-01.md) 🧩
-*   [Aula 02 - CRM e BI](aulas/aula-02.md) 🏗️
-*   [Aula 03 - Funções do ERP](aulas/aula-03.md) 📡
-*   [Aula 04 - Fundamentos do SIG](aulas/aula-04.md) 📄
+Explore os conceitos fundamentais de ERP, CRM e Business Intelligence, compreendendo como esses sistemas revolucionam a gestão empresarial moderna.
 
-### 📈 Módulo 2: SIG e Decisão Estratégica (Aulas 05-08)
-*   [Aula 05 - SIG e Tomada de Decisão](aulas/aula-05.md) ⚙️
-*   [Aula 06 - Cadastro e Dados](aulas/aula-06.md) 💾
-*   [Aula 07 - SIGs Corporativos](aulas/aula-07.md) 🧪
-*   [Aula 08 - Comunicação Empresarial](aulas/aula-08.md) 🚢
+### 📈 Módulo 2: SIG e Decisão Estratégica
 
-### 🔗 Módulo 3: Operações e Comunicação (Aulas 09-12)
-*   [Aula 09 - Rastreamento Logístico](aulas/aula-09.md) 🔑
-*   [Aula 10 - Sistemas Comerciais](aulas/aula-10.md) 🔐
-*   [Aula 11 - Atendimento SAC/FAQ](aulas/aula-11.md) 🛡️
-*   [Aula 12 - E-mail Corporativo](aulas/aula-12.md) 📧
+Domine os Sistemas de Informações Gerenciais como ferramentas de tomada de decisão, aprendendo a transformar dados em inteligência de negócios.
 
-### 🚀 Módulo 4: Gestão de Dados e E-commerce (Aulas 13-16)
-*   [Aula 13 - BD: Entrada e Processo](aulas/aula-13.md) 🌐
-*   [Aula 14 - BD: Saída e Feedback](aulas/aula-14.md) 🧱
-*   [Aula 15 - E-commerce e Marketing](aulas/aula-15.md) 🔄
-*   [Aula 16 - Segurança e Lojas](aulas/aula-16.md) 🎓
+### 🔗 Módulo 3: Operações e Comunicação
+
+Mergulhe nos sistemas operacionais empresariais, desde rastreamento logístico até atendimento ao cliente e comunicação corporativa.
+
+### 🚀 Módulo 4: Gestão de Dados e E-commerce
+
+Conclua sua jornada explorando bancos de dados, comércio eletrônico e segurança digital para o mundo empresarial conectado.
 
 ---
 
-[:material-play: Começar Minha Jornada Administrativa](aulas/aula-01.md){ .md-button .md-button--primary .md-button--large }
+## 🎯 Dicas de Sucesso na Jornada
+
+!!! tip "💡 Conecte Teoria e Prática"
+Sempre relacione os conceitos de sistemas de informação com exemplos reais de empresas que você conhece. Isso torna o aprendizado mais concreto e memorável.
+
+!!! tip "🔄 Pratique Progressivamente"
+Comece com os exercícios básicos, avance para os intermediários e desafie-se com os projetos. A progressão gradual é a chave para dominar a matéria.
+
+!!! tip "🤝 Pense em Integração"
+A grande força dos sistemas administrativos está na integração. Sempre questione: "Como este sistema se conecta com outros?" para ter uma visão holística.
+
+---
+
+[:material-play: Iniciar Aula 01 - Introdução aos ERPs](aulas/aula-01.md){ .md-button .md-button--primary .md-button--large }
