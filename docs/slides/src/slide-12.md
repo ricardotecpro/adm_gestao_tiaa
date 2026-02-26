@@ -1,84 +1,81 @@
-# Aula 12 - Introdução ao React ⚛️
-## O Poder dos Componentes Modernos
+# Aula 12 - E-mail e Comunicação Interna 📧
+## Etiqueta, Formalidade e Colaboração
 
 ---
 
 ## Agenda 📅
 
-1. O que são SPAs? { .fragment }
-2. Por que React? { .fragment }
-3. Vite: A Ferramenta Rápida { .fragment }
-4. JSX: JS + HTML { .fragment }
-5. Componentes e LEGO { .fragment }
-6. Props: O Coração Dinâmico { .fragment }
+1. O E-mail como Documento Oficial <!-- .element: class="fragment" -->
+2. Etiqueta Digital e Boas Práticas <!-- .element: class="fragment" -->
+3. Chat Corporativo vs. E-mail <!-- .element: class="fragment" -->
+4. Gestão de Tarefas (Kanban e Projetos) <!-- .element: class="fragment" -->
+5. Integrando o Fluxo Interno <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Single Page Applications (SPA) 📄
+## 1. O Valor do E-mail Corporativo 📑
 
-- O site que nunca recarrega. { .fragment }
-- Navegação fluida e instantânea. { .fragment }
-- Ex: Gmail, Facebook, Spotify Web. { .fragment }
-
----
-
-## 2. Por que o React venceu? ⚔️
-
-- **Componentização** (Foco no Reuso). { .fragment }
-- **Virtual DOM** (Foco na Performance). { .fragment }
-- **Gigantesco Ecossistema** (Foco no Emprego). { .fragment }
+- **Prova Legal**: Acordos registrados via e-mail. <!-- .element: class="fragment" -->
+- **Memória Institucional**: Histórico de decisões. <!-- .element: class="fragment" -->
+- **Formalidade**: Ideal para o contato com externos. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Vite: O Novo Padrão ⚡
+## 2. Dicas de Etiqueta 🌟
 
-- Inicia o projeto em segundos. { .fragment }
-- Feedback instantâneo durante o código. { .fragment }
+- **Assunto Objetivo**: Resuma o conteúdo. <!-- .element: class="fragment" -->
+- **Sem Gritar**: Evite CAIXA ALTA. <!-- .element: class="fragment" -->
+- **Assinatura Profissional**: Identifique-se. <!-- .element: class="fragment" -->
 
 ---
 
-## 4. JSX: A Mistura Perfeita 🧪
+## Fluxo de Informação Interna
 
-```jsx
-function Titulo() {
-  const nome = "React";
-  return <h1>Olá, {nome}!</h1>;
-}
+```mermaid
+graph LR
+    D[Diretoria] -- "Oficial" --> G[Gerentes]
+    G -- "Instantâneo" --> E[Equipes]
+    E -- "Kanban" --> G
 ```
 
-- Parece HTML, mas tem o poder do Javascript. { .fragment }
+---
+
+## 3. Ferramentas de Gestão (Trello/Teams) 📋
+
+- Substituem o "ping-pong" de e-mails. <!-- .element: class="fragment" -->
+- Divisão clara de quem faz o quê e quando. <!-- .element: class="fragment" -->
+- Fim da "Reunião que poderia ser um e-mail". <!-- .element: class="fragment" -->
 
 ---
 
-## 5. Componentes = LEGO 🧩
+## 4. Prática: Gestão no Terminal 💻
 
-- Pequenas partes isoladas. { .fragment }
-- Facilita testes e trabalho em equipe. { .fragment }
-
----
-
-## 6. Props: Passando o Bastão 🎁
-
-- Permite que componentes recebam dados do "pai". { .fragment }
-- Torna componentes genéricos e reutilizáveis. { .fragment }
+```termynal
+$ comunicacao-enviar-aviso --setor "Financeiro"
+[ENVIANDO] E-mail oficial para 15 pessoas.
+[AVISO] Postado no canal do Slack #aviso-gerencia.
+$ projeto-criar-tarefa --titulo "Auditoria 2024"
+[TRELLO] Tarefa criada na coluna 'A fazer'.
+[NOTIFICAÇÃO] Responsáveis alertados por e-mail.
+```
 
 ---
 
 ## Resumo ✅
 
-- SPA torna a Web parecida com Apps. { .fragment }
-- React organiza sua UI em componentes. { .fragment }
-- Vite é seu melhor amigo no desenvolvimento. { .fragment }
+- E-mail é para formalizar; Chat é para agilizar. <!-- .element: class="fragment" -->
+- Etiqueta digital evita conflitos desnecessários. <!-- .element: class="fragment" -->
+- Gestão de tarefas traz transparência ao trabalho. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Dinâmica e Estado 🎣
+## Módulo 4: Gestão de Dados 🗄️
 
-### O que acontece quando o usuário clica?
-
-- Hooks: `useState`. { .fragment }
-- Reatividade na prática. { .fragment }
+- Banco de Dados: Entrada e Processamento. <!-- .element: class="fragment" -->
+- E-commerce, Segurança e Marketing Digital. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? ⚛️
+## Dúvidas? 🤔
+
+> "Uma comunicação falha é a raiz de quase todos os problemas administrativos."

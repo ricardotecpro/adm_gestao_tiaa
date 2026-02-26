@@ -1,30 +1,35 @@
-# Exercícios 12 - Introdução ao React ⚛️
+# Exercícios 12 - E-mail e Comunicação Corporativa 📧
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Conceito**: O que significa a sigla SPA e qual sua principal vantagem?
-2.  **Sintaxe**: No React, usamos `className` ou `class` para definir classes CSS? Por quê?
+1. **E-mail Oficial**: Por que no ambiente de administração o e-mail é considerado mais do que uma mensagem, sendo visto como um **registro oficial**?
 
-## 🟡 Médios
+2. **Cópia Oculta (CCO)**: Em qual situação prática um gestor deve usar o campo **CCO** em vez do **CC** tradicional?
 
-3.  **Componentes**:
-    Por que dizemos que a arquitetura do React é baseada em "LEGO"? Como isso ajuda na organização do código?
-4.  **Vite**:
-    Qual a função do Vite no desenvolvimento de um projeto React moderno?
-5.  **Props**:
-    Explique como as `props` permitem que um mesmo componente (ex: um Botão) seja usado em vários lugares com textos e cores diferentes.
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Etiqueta Digital**: Cite 3 erros comuns de etiqueta que devem ser evitados ao escrever um e-mail para um fornecedor ou diretor.
 
-6.  **JSX vs HTML**:
-    O código abaixo é Javascript ou HTML? Justifique sua resposta mencionando pelo menos duas diferenças sutis que o JSX impõe.
-    ```jsx
-    const elemento = (
-      <div className="container">
-        <h1>Título</h1>
-        <br />
-      </div>
-    );
-    ```
-    *   O que acontece se eu esquecer de fechar a tag `<br>`?
-    *   Como eu faria para exibir o valor de uma variável `nome` dentro do `h1`?
+4. **Chat vs. E-mail**: Quando um administrador deve escolher o **Slack/Teams** em vez do **E-mail** para falar com sua equipe? Dê um exemplo.
+
+## 🔴 Exercício Desafio
+
+5. **Gestão de Crise de Comunicação**:
+    Um projeto importante está atrasado e a caixa de entrada de todos os envolvidos está com 100 e-mails de discussão.
+    - Como o uso de uma ferramenta de **Gestão de Tarefas (ex: Trello)** poderia organizar essa bagunça e reduzir o volume de e-mails?
+    - Escreva um e-mail formal e objetivo convocando a equipe para uma reunião de emergência, aplicando as regras de "Assunto Claro" e "Profissionalismo".
+    - Descreva o risco de se tomar decisões estratégicas importantes apenas via chat rápido, sem registrar a conclusão formal por e-mail corporativo.
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Consolidar as melhores práticas de comunicação profissional, garantindo clareza, segurança jurídica e eficiência nas interações internas e externas da organização.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-12.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 13](exercicio-13.md)

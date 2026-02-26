@@ -1,71 +1,71 @@
-# Quiz 05 - Implementação de APIs ⚙️
+# Quiz 05 - Tomada de Decisão e Qualidade de Dados 📈
 
-1. Qual a principal responsabilidade da camada de Controller?
-    - [ ] Salvar dados no banco de dados
-    - [x] Gerenciar a requisição HTTP e retornar a resposta adequada
-    - [ ] Fazer cálculos complexos de impostos
-    - [ ] Criar a interface gráfica do usuário
-    *Explicação: O Controller age como um intermediário entre o mundo externo (HTTP) e a lógica interna do sistema.*
+1. Quais são as 4 fases do processo de tomada de decisão no SIG?
+    - [ ] Início, Meio, Fim e Revisão
+    - [x] Inteligência, Design, Escolha e Implementação
+    - [ ] Cadastro, Venda, Entrega e Cobrança
+    - [ ] Pesquisa, Compra, Uso e Descarte
+    *Explicação: Este é o modelo clássico de Herbert Simon para decisões organizacionais.*
 
-2. O que é um "Handler" em um sistema de rotas?
-    - [ ] Um tipo de vírus de computador
-    - [x] A função específica que é executada quando uma rota é chamada
-    - [ ] O nome do servidor de hospedagem
-    - [ ] O arquivo onde guardamos as senhas
-    *Explicação: Cada rota (Verbo + Path) é mapeada para um Handler que processa aquela ação específica.*
+2. O que ocorre na fase de "Inteligência" da decisão?
+    - [ ] O computador decide sozinho
+    - [x] Identificação e compreensão do problema ou oportunidade
+    - [ ] Criação de gráficos bonitos
+    - [ ] Contratação de novos gerentes
+    *Explicação: É a fase de descobrir "O que está acontecendo?" antes de tentar resolver.*
 
-3. Qual a melhor forma de capturar o ID de um usuário para uma busca individual (ex: /usuarios/10)?
-    - [ ] Query Param (?id=10)
-    - [x] Path Param (/usuarios/:id)
-    - [ ] Request Body ({ "id": 10 })
-    - [ ] Através de um cookie
-    *Explicação: Path Params são ideais para identificar recursos de forma única e hierárquica na URI.*
+3. Sobre a qualidade do dado, o que significa "Precisão"?
+    - [ ] Ser rápido para digitar
+    - [x] O dado representar fielmente a realidade (ex: valor monetário exato)
+    - [ ] Estar escrito em letras grandes
+    - [ ] Ter backup em 3 lugares
+    *Explicação: Um dado impreciso (ex: R$ 10 em vez de R$ 100) gera prejuízos reais.*
 
-4. Quando devemos usar "Query Params"?
-    - [ ] Para enviar a senha do usuário
-    - [x] Para filtros, ordenação e paginação (ex: ?cor=azul)
-    - [ ] Para atualizar o nome de um produto
-    - [ ] Para deletar o banco de dados
-    *Explicação: Query Params são usados para modificar ou filtrar a representação dos dados retornados.*
+4. O conceito GIGO (*Garbage In, Garbage Out*) alerta para:
+    - [ ] Jogar o computador no lixo se ele quebrar
+    - [x] Se entrar dado "lixo" (errado), a saída (informação) também será "lixo"
+    - [ ] Reciclar papéis da empresa
+    - [ ] Limpar o cache do navegador
+    *Explicação: A qualidade da decisão depende 100% da qualidade da entrada de dados.*
 
-5. Em qual objeto da requisição costuma vir o JSON enviado via POST?
-    - [ ] req.params
-    - [ ] req.query
-    - [x] req.body
-    - [ ] req.headers
-    *Explicação: O Body é a parte da mensagem HTTP reservada para o transporte de dados complexos e volumosos.*
+5. Qual o horizonte de tempo de uma decisão no nível "Estratégico"?
+    - [ ] Próximas 2 horas
+    - [ ] Apenas hoje
+    - [x] Longo prazo (Anos)
+    - [ ] Não há tempo definido
+    *Explicação: O nível estratégico planeja o futuro da organização (ex: expansão de mercado).*
 
-6. Qual analogia melhor define o papel do Controller?
-    - [ ] O cozinheiro que prepara o prato
-    - [x] O garçom que anota o pedido e entrega o prato
-    - [ ] O dono do restaurante que cuida do banco de dados
-    - [ ] O cliente que come a comida
-    *Explicação: O Controller apenas coordena a entrada e a saída, delegando a "preparação" para outras camadas.*
+6. O que é a "Pontualidade" da informação?
+    - [ ] Chegar cedo no trabalho
+    - [x] A informação estar disponível no momento em que a decisão precisa ser tomada
+    - [ ] O sistema nunca travar
+    - [ ] Os relatórios serem curtos
+    *Explicação: Uma informação que chega "depois" do problema ter ocorrido não serve para decidir.*
 
-7. Por que a Injeção de Dependência é útil nos Controllers?
-    - [ ] Para o código ficar mais pesado e seguro
-    - [x] Para facilitar a troca de comportamentos e a criação de testes automatizados
-    - [ ] Para economizar espaço no HD
-    - [ ] Porque o Google obriga
-    *Explicação: Receber dependências prontas torna o Controller menos acoplado e mais fácil de manter.*
+7. Na fase de "Design" da decisão, o administrador:
+    - [ ] Desenha o logotipo da empresa
+    - [x] Formula e analisa possíveis rotas de ação (alternativas)
+    - [ ] Escolhe a primeira opção que vê
+    - [ ] Demite os funcionários envolvidos
+    *Explicação: É o momento de projetar soluções antes de bater o martelo.*
 
-8. O que acontece se o Controller não retornar um Status Code?
-    - [ ] O servidor explode
-    - [x] O cliente pode receber um status padrão (ex: 200) que não condiz com o resultado real
-    - [ ] O computador trava
-    - [ ] A internet cai
-    *Explicação: É vital ser explícito sobre o que aconteceu (201 para sucesso, 400 para erro, etc).*
+8. Decisões "Estruturadas" são:
+    - [ ] Decisões muito difíceis e raras
+    - [x] Processos repetitivos e rotineiros com regras claras (ex: repor estoque)
+    - [ ] Decisões tomadas apenas pelo dono da empresa
+    - [ ] Decisões que não usam computador
+    *Explicação: São facilmente automatizadas por sistemas de informação.*
 
-9. Onde configuramos o mapeamento de Verbo + Path no backend?
-    - [ ] No banco de dados
-    - [x] No arquivo de roteamento (Router)
-    - [ ] No arquivo de interface (CSS)
-    - [ ] Dentro do arquivo de imagem .png
-    *Explicação: O roteador é quem diz: "Se chegar esse verbo nesse caminho, chame essa função".*
+9. O excesso de informação pode atrapalhar o gestor?
+    - [ ] Não, quanto mais melhor
+    - [x] Sim, causa "paralisia por análise" e dificulta foco no que é importante
+    - [ ] Apenas se os computadores forem lentos
+    - [ ] Não, o SIG filtra tudo sozinho sem configurar
+    *Explicação: O SIG deve filtrar o relevante; o "ruído" excessivo gera confusão.*
 
-10. Qual a vantagem de padronizar as respostas de erro em JSON?
-    - [ ] Para o erro ficar mais bonito
-    - [x] Para que o frontend consiga ler a mensagem e exibir um alerta amigável ao usuário
-    - [ ] Para economizar bateria do servidor
-    - [ ] Para esconder o código do erro
-    *Explicação: Um JSON de erro estruturado permite que o app reaja de forma inteligente a falhas.*
+10. Qual destes é um exemplo de falha na qualidade do dado?
+    - [ ] O sistema ser azul em vez de verde
+    - [x] Um produto cadastrado sem o "Preço de Custo"
+    - [ ] O monitor ser de 15 polegadas
+    - [ ] O teclado ser sem fio
+    *Explicação: Dados incompletos impedem o cálculo de margem e lucro, tornando o SIG inútil.*

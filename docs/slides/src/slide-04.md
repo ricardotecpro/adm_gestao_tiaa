@@ -1,110 +1,83 @@
-# Aula 04 - Documentação e Mocks 📝
-## Developer Experience e Contratos
+# Aula 04 - Fundamentos do SIG 📄
+## Da Informação ao Conhecimento Estratégico
 
 ---
 
 ## Agenda 📅
 
-1. Por que documentar? { .fragment }
-2. OpenAPI vs Swagger { .fragment }
-3. Swagger UI e Editor { .fragment }
-4. O Poder dos Mocks { .fragment }
-5. Developer Experience (DX) { .fragment }
-6. Ferramentas de Simulação { .fragment }
+1. O que é um SIG? (Os 3 Pilares) <!-- .element: class="fragment" -->
+2. Dado vs Informação vs Conhecimento <!-- .element: class="fragment" -->
+3. A Importância Organizacional <!-- .element: class="fragment" -->
+4. Visão Sistêmica e Custos <!-- .element: class="fragment" -->
+5. Prática: Analisando com o SIG <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Documentação é DX 🚀
+## 1. O que é um SIG? 🧐
 
-- Sua API é seu produto. { .fragment }
-- Documentar economiza tempo de suporte. { .fragment }
-- Facilita a integração com Front/Mobile. { .fragment }
+- Conjunto de componentes que transformam dados. <!-- .element: class="fragment" -->
+- Apoio total à tomada de decisão. <!-- .element: class="fragment" -->
 
----
-
-## 2. OpenAPI (OAS) 📜
-
-- O padrão mundial. { .fragment }
-- Arquivo YAML ou JSON descritivo. { .fragment }
-- Agnóstico de linguagem. { .fragment }
+### Os 3 Pilares
+1. Tecnologia (Hardware/Software) <!-- .element: class="fragment" -->
+2. Pessoas (Operadores/Gestores) <!-- .element: class="fragment" -->
+3. Processos (Regras de Negócio) <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Swagger: O Canivete Suíço 🛠️
+## 2. A Hierarquia do Conhecimento 🧠
 
-- **Editor**: Escreva e valide o contrato. { .fragment }
-- **UI**: Gere a página visual de testes. { .fragment }
-- **Codegen**: Gere código (client/server) automaticamente. { .fragment }
+```mermaid
+graph LR
+    D[Dado Bruto] --> P(Processo)
+    P --> I[Informação Útil]
+    I --> C[Conhecimento Estratégico]
+```
 
----
-
-## Swagger UI em Ação
-
-- Permite testar endpoints no próprio navegador. { .fragment }
-- Mostra exemplos de JSON de entrada e saída. { .fragment }
-- Exibe todos os Status Codes possíveis. { .fragment }
-
----
-
-## 4. O Poder dos Mocks 🎭
-
-- **Development in Parallel**: Front não espera pelo Back. { .fragment }
-- Servidor "Fake" que retorna dados reais. { .fragment }
-- Valide a experiência antes da implementação complexa. { .fragment }
+- **Dado**: "45". <!-- .element: class="fragment" -->
+- **Informação**: "Vendemos 45 itens hoje". <!-- .element: class="fragment" -->
+- **Conhecimento**: "Precisamos repor o estoque amanhã". <!-- .element: class="fragment" -->
 
 ---
 
-## 5. Developer Experience (DX) 👨‍💻
+## 3. Por que investir em um SIG? 🌟
 
-Como ser amado por outros devs:
-
-- Nomes de rotas claros. { .fragment }
-- Erros descritivos no Body. { .fragment }
-- Exemplos de requisição. { .fragment }
-- Documentação atualizada (ou gerada pelo código). { .fragment }
+- **Redução de Custos**: Fim dos desperdícios. <!-- .element: class="fragment" -->
+- **Vantagem Competitiva**: Informação é poder. <!-- .element: class="fragment" -->
+- **Fim do "Operar no Escuro"**. <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Ferramentas Recomendadas 🧰
+## 4. O SIG em Operação no Terminal 🚀
 
-- **Swagger Editor**: Online ou Local. { .fragment }
-- **Mockoon**: Mock local amigável. { .fragment }
-- **Prism**: Mock via CLI. { .fragment }
-- **Postman**: Collections documentadas. { .fragment }
-
----
-
-## 7. Prática: Editando um YAML 💻
-
-- Desenhando um endpoint `GET /tarefas`. { .fragment }
-- Definindo parâmetros de entrada. { .fragment }
-- Criando esquemas de dados. { .fragment }
-
----
-
-## Desafio: Mock vs Stubs ⚡
-
-Qual a principal vantagem de um Mock Server online (como Postman) em relação a um Mock rodando apenas no computador do desenvolvedor?
+```termynal
+$ sig-analisar --vendas-junho
+[PROCESSANDO] Analisando metas...
+STATUS: 92% Atingido.
+DADO: 1.200 Airfryers vendidas.
+SITUAÇÃO: 80% vendidas com cupom de desconto.
+INSIGHT: O cliente só compra se houver promoção ativa.
+$ sig-alerta --gerencia
+ALERTA: Revisar margem de lucro da categoria 'Cozinha'.
+```
 
 ---
 
 ## Resumo ✅
 
-- OpenAPI é o contrato. { .fragment }
-- Swagger UI é a vitrine da sua API. { .fragment }
-- Mocks destravam o desenvolvimento da equipe. { .fragment }
-- DX é o diferencial de uma boa API. { .fragment }
+- SIG envolve Tecnologia, Pessoas e Processos. <!-- .element: class="fragment" -->
+- Informação sem contexto é apenas dado. <!-- .element: class="fragment" -->
+- Conhecimento gera ação e lucro. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Implementação Backend! 💻
+## Próxima Aula: Tomada de Decisão 📈
 
-### Módulo 2: Manipulação de Dados
-
-- Controllers e Services. { .fragment }
-- Repositories e Banco de Dados. { .fragment }
-- Mão na massa com código real! { .fragment }
+- Como o gerente escolhe o melhor caminho? <!-- .element: class="fragment" -->
+- Sistemas de Apoio à Decisão (SAD). <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 📝
+## Dúvidas? 🤔
+
+> "Informação é a resolução da incerteza." - Claude Shannon

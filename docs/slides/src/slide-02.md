@@ -1,127 +1,92 @@
-# Aula 02 - Arquitetura e Gateway 🏗️
-## Orquestrando Microsserviços
+# Aula 02 - CRM, BI e a Sinergia da Gestão 📈
+## Relacionamento e Inteligência Competitiva
 
 ---
 
 ## Agenda 📅
 
-1. Comunicação entre Serviços { .fragment }
-2. Síncrono vs Assíncrono { .fragment }
-3. O Papel do API Gateway { .fragment }
-4. Service Discovery { .fragment }
-5. Load Balancing { .fragment }
-6. Padrões de Resiliência { .fragment }
+1. O que é CRM? <!-- .element: class="fragment" -->
+2. O Ciclo de Vida do Cliente <!-- .element: class="fragment" -->
+3. Business Intelligence (BI): Dashboards e KPIs <!-- .element: class="fragment" -->
+4. A Sinergia: ERP + CRM + BI <!-- .element: class="fragment" -->
+5. Inteligência de Dados na Prática <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Como os Serviços Conversam? 💬
+## 1. CRM: Além de um Software 🤝
 
-- Microsserviços são ilhas que precisam de pontes. { .fragment }
-- Dois mundos: **Sync** e **Async**. { .fragment }
-
----
-
-## 1.1 Comunicação Síncrona 🔄
-
-- Cliente bloqueia até a resposta. { .fragment }
-- Uso de HTTP/REST ou gRPC. { .fragment }
-- **Risco**: Acoplamento temporal e gargalos. { .fragment }
+- *Customer Relationship Management*. <!-- .element: class="fragment" -->
+- É uma **estratégia** de foco no cliente. <!-- .element: class="fragment" -->
+- Gestão do funil de vendas e fidelização. <!-- .element: class="fragment" -->
 
 ---
 
-## 1.2 Comunicação Assíncrona 📬
-
-- Envia e esquece (Eventos). { .fragment }
-- Uso de Filas e Tópicos (Broker). { .fragment }
-- **Vantagem**: Escalabilidade e desacoplamento. { .fragment }
-
----
-
-## 2. API Gateway: O Porteiro 🚪
-
-- Única entrada para o mundo exterior. { .fragment }
-- Esconde a complexidade interna. { .fragment }
-
----
-
-## Gateway Responsibilities
-
-- **Roteamento**: `/p` -> Pagamento, `/e` -> Estoque. { .fragment }
-- **Segurança**: Autenticação centralizada. { .fragment }
-- **Rate Limit**: Proteção contra flood. { .fragment }
-- **Logs & Monitoramento**. { .fragment }
-
----
-
-## 3. Service Discovery 🔎
-
-- Onde está o servidor de pagamentos? { .fragment }
-- Agenda dinâmica de IPs e Portas. { .fragment }
-- **Ferramentas**: Netflix Eureka, Consul. { .fragment }
-
----
-
-## 4. Load Balancing ⚖️
-
-- Distribuição inteligente da carga. { .fragment }
-- Evita que um container "morra" de trabalho. { .fragment }
+## O Ciclo do Cliente (Funil)
 
 ```mermaid
-graph TD
-    GW[Gateway] --> LB[Load Balancer]
-    LB --> S1[Serviço A]
-    LB --> S2[Serviço B]
-    LB --> S3[Serviço C]
+graph LR
+    A[Atração] --> B[Conversão]
+    B --> C[Retenção]
+    C --> D[Fidelização]
+    D --> A
 ```
 
 ---
 
-## 5. Resiliência: Circuit Breaker 🔌
+## 2. Business Intelligence (BI) 🧠
 
-- Detecta serviços lentos ou falhos. { .fragment }
-- Abre o circuito para proteger o resto do sistema. { .fragment }
-- Evita o cascateamento de erros. { .fragment }
-
----
-
-## Comparativo: Sync vs Async
-
-| Característica | Síncrono 🔄 | Assíncrono 📬 |
-| :--- | :--- | :--- |
-| **Resposta** | Imediata | Eventual |
-| **Desempenho** | Limitado pelo destino | Alto débito |
-| **Uso comum** | Cadastro/Login | Geração de Relatórios |
+- Coleta e análise para **suporte à decisão**. <!-- .element: class="fragment" -->
+- Componentes: Data Warehouse e Dashboards. <!-- .element: class="fragment" -->
+- Foco em **KPIs** (Indicadores de Desempenho). <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Prática: O "Dashboard" Agregador 💻
+## 3. ERP vs CRM vs BI 🔗
 
-- Como o Gateway une dados de 3 serviços? { .fragment }
-- Agregação de respostas (Aggregation Pattern). { .fragment }
+| Ferramenta | Pergunta que Responde |
+| :--- | :--- |
+| **ERP** | "Quanto temos no estoque?" |
+| **CRM** | "Quem são os clientes fiéis?" |
+| **BI** | "Qual será a demanda futura?" |
 
 ---
 
-## Desafio Relâmpago ⚡
+## 4. O Painel do Gestor (BI) 📊
 
-O que acontece se o seu API Gateway cair? Ele é um ponto único de falha?
+- Visualização clara de metas vs. realidade. <!-- .element: class="fragment" -->
+- Alertas de perigo (ex: queda repentina de vendas). <!-- .element: class="fragment" -->
+
+---
+
+## 5. Prática: Dashboard no Terminal 💻
+
+```termynal
+$ dashboard-comercial --resumo
+[CARREGANDO] Sincronizando ERP e CRM...
+TOTAL VENDAS: R$ 125.000,00 (+12%)
+CONVERSÃO: 8%
+$ gerar-insight --bi
+INSIGHT: Clientes do Sul compram mais às terças.
+SUGESTÃO: Campanha E-mail via CRM na segunda à noite.
+```
 
 ---
 
 ## Resumo ✅
 
-- Sync é fácil, Async é escalável. { .fragment }
-- API Gateway protege e organiza. { .fragment }
-- Service Discovery é essencial em containers. { .fragment }
-- Resiliência não é opcional! { .fragment }
+- CRM foca no relacionamento e vendas. <!-- .element: class="fragment" -->
+- BI transforma dados do ERP em inteligência. <!-- .element: class="fragment" -->
+- A integração das três ferramentas é o "Padrão Ouro". <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Modelagem REST 📡
+## Próxima Aula: Funções do ERP ⚙️
 
-- Verbos HTTP. { .fragment }
-- Status Codes. { .fragment }
-- O contrato ideal. { .fragment }
+- Módulos Financeiro, RH e Suprimentos. <!-- .element: class="fragment" -->
+- O fluxo de uma transação profissional. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🏗️
+## Dúvidas? 🤔
+
+> "Dados são o novo petróleo da economia moderna." - Clive Humby

@@ -1,71 +1,71 @@
-# Quiz 01 - Introdução a Microsserviços 🌐
+# Quiz 01 - Introdução aos Sistemas de Gestão 🌐
 
-1. Qual a principal característica de uma arquitetura Monolítica?
-    - [ ] É composta por vários serviços independentes
-    - [x] O sistema é um único bloco de código onde tudo está acoplado
-    - [ ] É escrita apenas em JavaScript
-    - [ ] Não utiliza banco de dados
-    *Explicação: No monólito, todas as funcionalidades residem em um único processo e base de código.*
+1. Qual a principal característica de um sistema Monolítico (Legado) na administração?
+    - [ ] É composto por microsserviços independentes
+    - [x] É um sistema único e fechado onde tudo está acoplado
+    - [ ] Funciona apenas em dispositivos móveis
+    - [ ] Não possui banco de dados
+    *Explicação: Sistemas legados costumam ser monólitos onde financeiro, estoque e RH rodam em um único grande bloco de código.*
 
-2. Qual vantagem é mais associada aos Microsserviços?
-    - [ ] Simplicidade de deploy inicial
-    - [ ] Baixo custo de infraestrutura
-    - [x] Escalabilidade granular e isolamento de falhas
-    - [ ] Facilidade em depurar logs centralizados
-    *Explicação: Microsserviços permitem escalar apenas a parte do sistema que precisa de mais fôlego (ex: pagamentos).*
+2. O que significa a sigla ERP?
+    - [ ] Electronic Resource Process
+    - [x] Enterprise Resource Planning
+    - [ ] Easy Research Plan
+    - [ ] Every Resource Part
+    *Explicação: Planejamento de Recursos Empresariais. É o software que integra todos os dados e processos de uma organização.*
 
-3. O que é "Escalabilidade Horizontal"?
-    - [ ] Aumentar a memória RAM de um único servidor
-    - [x] Adicionar mais máquinas ou instâncias para dividir a carga
-    - [ ] Trocar o banco de dados SQL por NoSQL
-    - [ ] Aumentar o tamanho das tabelas
-    *Explicação: É o ato de adicionar mais "trabalhadores" ao sistema ao invés de aumentar o poder de um só (vertical).*
+3. Qual a principal vantagem de um sistema integrado sobre o uso de várias planilhas isoladas?
+    - [ ] Planilhas são mais seguras
+    - [x] Unicidade do dado e redução da redundância
+    - [ ] O sistema integrado é sempre mais barato
+    - [ ] Não requer treinamento
+    *Explicação: Em um sistema integrado, o dado é inserido uma única vez e reflete em todos os departamentos automaticamente.*
 
-4. Qual o papel de uma API (Application Programming Interface)?
-    - [ ] Criar o design da interface do usuário
-    - [x] Permitir a comunicação e troca de dados entre sistemas
-    - [ ] Servir como o sistema operacional do servidor
-    - [ ] Substituir o banco de dados
-    *Explicação: APIs são os contratos de comunicação entre o backend e seus clientes ou outros serviços.*
+4. Na evolução dos sistemas, o que era o MRP?
+    - [ ] Um sistema de marketing digital
+    - [ ] Um tipo de banco de dados NoSQL
+    - [x] Planejamento de Necessidades de Materiais (Foco em produção)
+    - [ ] Uma linguagem de programação
+    *Explicação: O MRP foi o antecessor do ERP, focado especificamente no controle de materiais para a indústria.*
 
-5. Sobre Microsserviços, o que significa ser "Poliglota"?
-    - [ ] Falar várias línguas humanas
-    - [x] A liberdade de usar diferentes linguagens/tecnologias para cada serviço
-    - [ ] Rodar apenas em servidores internacionais
-    - [ ] Usar apenas tradução automática nas rotas
-    *Explicação: Um serviço pode ser em Node.js e outro em Java, dependendo da necessidade técnica.*
+5. Qual o papel da TI na administração moderna?
+    - [ ] Apenas consertar computadores e impressoras
+    - [ ] Substituir todos os funcionários humanos
+    - [x] Atuar como ferramenta estratégica para a tomada de decisão
+    - [ ] Reduzir o lucro da empresa
+    *Explicação: A TIAA foca em usar a tecnologia como meio para atingir objetivos de negócio e eficiência gerencial.*
 
-6. Qual destas ferramentas é usada para testar requisições para uma API sem precisar de frontend?
-    - [ ] Photoshop
-    - [x] Postman / Insomnia
-    - [ ] Excel
-    - [ ] Docker
-    *Explicação: Clients HTTP como o Postman permitem enviar verbos como GET, POST, etc., e ver a resposta direta.*
+6. O que acontece quando os dados de uma empresa estão "fragmentados"?
+    - [ ] A empresa vende mais rápido
+    - [x] Aumenta o risco de erros, retrabalho e decisões baseadas em dados falsos
+    - [ ] O sistema fica mais leve
+    - [ ] Os funcionários trabalham menos
+    *Explicação: A fragmentação gera o "caos da informação", onde o financeiro diz uma coisa e o estoque diz outra.*
 
-7. O que acontece se um módulo de um monólito tiver um "Memory Leak" crítico?
-    - [ ] Apenas aquele módulo para de funcionar
-    - [ ] O banco de dados se apaga automaticamente
-    - [x] Provavelmente todo o sistema ficará instável ou sairá do ar
-    - [ ] O sistema migra sozinho para microsserviços
-    *Explicação: Como tudo roda no mesmo processo, falhas críticas afetam o bloco inteiro.*
+7. Sobre a evolução da TIAA, o que permitiu o surgimento dos ERPs modernos na década de 90?
+    - [ ] A invenção da máquina de escrever
+    - [x] O aumento do poder de processamento e a popularização das redes locais
+    - [ ] O fim do uso de bancos de dados
+    - [ ] A proibição do uso de planilhas
+    *Explicação: A infraestrutura tecnológica evoluiu para suportar grandes volumes de dados integrados em tempo real.*
 
-8. Qual o formato de dados mais comum usado hoje para comunicação entre serviços?
-    - [ ] XML
-    - [x] JSON
-    - [ ] CSV
-    - [ ] TXT
-    *Explicação: O JSON é leve, legível por humanos e o padrão de facto para APIs REST.*
+8. Qual o formato de dados mais comum para integração entre sistemas administrativos hoje?
+    - [ ] Papel Carbono
+    - [x] JSON / XML
+    - [ ] Morse
+    - [ ] Fita Magnética
+    *Explicação: JSON e XML são os padrões universais para que sistemas diferentes "conversem" entre si.*
 
-9. Por que Microsserviços são considerados mais complexos operacionalmente?
-    - [ ] Porque exigem mais linhas de código
-    - [x] Devido à necessidade de monitorar muitos serviços, redes e consistência distribuída
-    - [ ] Porque só funcionam com Linux
-    - [ ] Porque requerem hardware da NASA
-    *Explicação: Manter 50 serviços conversando entre si exige muito mais automação e observabilidade.*
+9. Por que a implantação de um ERP é considerada um desafio cultural?
+    - [ ] Porque o software é gratuito
+    - [x] Porque exige que as pessoas mudem a forma como trabalham e compartilham dados
+    - [ ] Porque não precisa de senhas
+    - [ ] Porque só funciona em inglês
+    *Explicação: A resistência humana à mudança de processos é o maior obstáculo na implantação de tecnologia.*
 
-10. Qual ferramenta ajuda a garantir que o ambiente de desenvolvimento seja idêntico ao de produção?
-    - [ ] Git
-    - [ ] Postman
-    - [ ] VS Code
-    - [x] Docker (Containerização)
-    *Explicação: O Docker isola o serviço e suas dependências em um container que roda igual em qualquer lugar.*
+10. Qual ferramenta ajuda o administrador a ver o "resumo" da saúde da empresa sem olhar milhares de linhas?
+    - [ ] Bloco de notas
+    - [ ] Calculadora científica
+    - [x] Dashboards (Painéis de Indicadores)
+    - [ ] Teclado mecânico
+    *Explicação: Dashboards consolidam dados complexos em gráficos visuais e fáceis de interpretar.*

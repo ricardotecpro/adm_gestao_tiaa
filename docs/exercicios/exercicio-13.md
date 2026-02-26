@@ -1,22 +1,35 @@
-# Exercícios 13 - Estado e Reatividade (Hooks) 🎣
+# Exercícios 13 - Gestão de BD: Entrada e Processo 🗄️
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Conceito**: Por que uma variável comum (ex: `let x = 0`) não serve para atualizar um contador na tela do React?
-2.  **Sintaxe**: O que faz o comando `const [valor, setValor] = useState(0);`? Explique cada um dos 3 elementos.
+1. **Validação de Entrada**: O que são "máscaras de entrada" e por que elas são fundamentais para evitar que o "lixo" entre no banco de dados corporativo?
 
-## 🟡 Médios
+2. **O Motor de Processamento**: Cite dois exemplos de como o sistema processa dados brutos antes de salvá-los definitivamente (ex: Cálculos, Conversões).
 
-3.  **Eventos**:
-    Como passamos uma função que deve ser executada apenas quando o usuário clica em um botão? Mostre um exemplo de código.
-4.  **Imutabilidade**:
-    Por que não podemos fazer `lista.push(item)` e depois `setLista(lista)` no React? Qual o jeito correto de adicionar um item a um array no estado?
-5.  **Inputs**:
-    O que é um "Input Controlado" e como o atributo `value` e o evento `onChange` trabalham juntos?
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Integridade Referencial**: Explique por que um sistema de gestão não deve permitir que uma "Venda" seja salva se o "ID do Cliente" não existir no banco de dados.
 
-6.  **Toggle de Visibilidade**:
-    Crie a lógica para um componente que esconde ou mostra um texto secreto.
-    *   Qual tipo de dado você usaria no `useState` (Boolean, String ou Number)?
-    *   Como ficaria a expressão JSX para mostrar o texto apenas se o estado for verdadeiro?
+4. **Regras de Negócio**: Imagine que um usuário tenta salvar um produto com "Preço de Venda" menor que o "Preço de Custo". Como o SIG deve processar essa validação?
+
+## 🔴 Exercício Desafio
+
+5. **Design de Formulário Seguro**:
+    Você está desenhando a tela de **Cadastro de Novos Funcionários** no RH do ERP.
+    - Liste 5 campos obrigatórios e defina a "máscara" ou "regra" para cada um (ex: CPF, Data de Nascimento).
+    - Descreva o fluxo do dado desde o momento em que o RH digita o nome até o momento em que ele é salvo no **Banco de Dados Central**.
+    - Por que deixar um campo como "Cargo" sem validação pode causar problemas em relatórios gerenciais futuros?
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Consolidar o conhecimento sobre a camada técnica de captura e tratamento de dados, garantindo que a base de informações da empresa seja confiável e íntegra.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-13.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 14](exercicio-14.md)

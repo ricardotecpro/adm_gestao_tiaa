@@ -1,100 +1,74 @@
-# Aula 15 - React Router 🚦
-## Criando Apps Multi-Página
+# Aula 15 - E-commerce e Marketing Digital 🛒
+## O Varejo Global e a Atração de Dados
 
 ---
 
 ## Agenda 📅
 
-1. O que são SPAs? { .fragment }
-2. Multi-páginas (Simuladas) { .fragment }
-3. Componentes de Rota { .fragment }
-4. Navegação (`Link` e `useNavigate`) { .fragment }
-5. Parâmetros dinâmicos (`:id`) { .fragment }
+1. Modelos de E-commerce: Próprio, Marketplace e Dropshipping <!-- .element: class="fragment" -->
+2. A Jornada de Compra Digital <!-- .element: class="fragment" -->
+3. SEO e Tráfego Pago <!-- .element: class="fragment" -->
+4. Recuperação de Carrinho e Conversão <!-- .element: class="fragment" -->
+5. Status da Loja Virtual no Terminal <!-- .element: class="fragment" -->
 
 ---
 
-## 1. O Mundo do SPA ⚛️
+## 1. Onde vender online? 💻
 
-- O site é uma única página HTML. { .fragment }
-- O Javascript "troca" a tela sem recarregar. { .fragment }
-- UX rápida e fluida. { .fragment }
+- **Loja Própria**: Marca exclusiva. <!-- .element: class="fragment" -->
+- **Marketplace**: Shopping virtual (Mercado Livre/Amazon). <!-- .element: class="fragment" -->
+- **Dropshipping**: Venda sem estoque físico. <!-- .element: class="fragment" -->
 
 ---
 
-## 2. React Router Dom ⚙️
+## 2. A Jornada do Cliente Digital
 
-```bash
-npm install react-router-dom
+```mermaid
+graph LR
+    M[Marketing] --> C(Carrinho)
+    C --> P{Checkout}
+    P -- "Ok" --> L[Logistica]
+    P -- "Falha" --> R[Recuperação]
 ```
 
-- A biblioteca padrão para web. { .fragment }
-- Permite que a URL combine com o que aparece na tela. { .fragment }
+---
+
+## 3. Marketing Orientado a Dados 📈
+
+- **SEO**: Estar no topo do Google de graça. <!-- .element: class="fragment" -->
+- **Analytics**: Saber quem clica e onde sai. <!-- .element: class="fragment" -->
+- **CPA**: Custo por Aquisição de Cliente. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. A Estrutura Básica 🏗️
+## 4. Prática: Gestão de Loja Online 🚀
 
-- **BrowserRouter**: O container principal. { .fragment }
-- **Routes**: O seletor de rotas. { .fragment }
-- **Route**: Define o caminho (`path`) e o componente (`element`). { .fragment }
-
----
-
-## 4. Navegando sem Recarregar! 🏃‍♂️
-
-- Use `<Link to="/contato">` { .fragment }
-- **NUNCA** use `<a href="...">` para rotas internas. { .fragment }
-
----
-
-## 5. Navegação Programática 🚀
-
-```javascript
-const navigate = useNavigate();
-
-onClick={() => navigate("/dashboard")}
+```termynal
+$ e-commerce-status --vendas-hoje
+TOTAL: R$ 12.500 | TICKET MÉDIO: R$ 277.
+$ marketing-analisar-campanha --id "Black_Friday"
+CLICKs: 12.000 | CONVERSÃO: 3% (Lucrativo).
+$ e-commerce-recuperar-carrinhos
+[STATUS] 12 Cupons de 10% enviados automaticamente.
 ```
-
-- Ideal para redirecionar após ações (Login, Clique em Card). { .fragment }
-
----
-
-## 6. Rotas Dinâmicas (URL Params) 🆔
-
-- `path="/perfil/:username"` { .fragment }
-- Hook `useParams()` captura o valor. { .fragment }
-- Uma única página que se adapta a mil perfis. { .fragment }
-
----
-
-## 7. Página 404 (Not Found) 👻
-
-- `path="*"` { .fragment }
-- Garante que o usuário nunca caia em uma tela em branco. { .fragment }
-
----
-
-## Desafio de Roteamento ⚡
-
-Se eu digitar `www.meusite.com/asdfg` e não tiver uma rota configurada para isso, o que o usuário vai ver se eu NÃO colocar uma rota com o `path="*"`?
 
 ---
 
 ## Resumo ✅
 
-- Roteamento traz a sensação de um site real. { .fragment }
-- Hooks `useNavigate` e `useParams` são essenciais. { .fragment }
-- SPAs são o padrão da indústria moderna. { .fragment }
+- E-commerce é uma operação 24/7. <!-- .element: class="fragment" -->
+- Marketplaces trazem visibilidade imediata. <!-- .element: class="fragment" -->
+- Marketing digital e gestão devem estar integrados. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: O Grande Final 🏆
+## Aula Final: Revisão e Futuro 🚀
 
-### Projeto Integrado: Backend + Frontend!
-
-- Conectando nossa API Node ao site React. { .fragment }
-- O Projeto Final do Curso! { .fragment }
+- Onde a TIAA vai chegar? <!-- .element: class="fragment" -->
+- IA, Blockchain e sua carreira. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🚦
+## Dúvidas? 🤔
+
+> "No e-commerce, a vitrine é infinita e o cliente está a um clique de distância."

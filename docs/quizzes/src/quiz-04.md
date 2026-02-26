@@ -1,71 +1,71 @@
-# Quiz 04 - Documentação e Mocks 📝
+# Quiz 04 - Fundamentos do SIG 🧠
 
-1. O que é o OpenAPI (OAS)?
-    - [ ] Uma linguagem de programação para backend
-    - [x] Uma especificação padrão para descrever e documentar APIs RESTful
-    - [ ] Um navegador web para desenvolvedores
-    - [ ] Um banco de dados em nuvem
-    *Explicação: O OpenAPI define um formato padrão para descrever recursos, rotas e respostas de uma API.*
+1. O que diferencia um Dado de uma Informação?
+    - [ ] São a mesma coisa
+    - [ ] Dado é digital e Informação é no papel
+    - [x] Dado é um fato bruto; Informação é o dado processado e com significado
+    - [ ] Informação é mais pesada no HD
+    *Explicação: "R$ 10,00" é um dado. "O preço médio do café subiu R$ 10,00" é uma informação.*
 
-2. Qual a principal diferença entre OpenAPI e Swagger?
-    - [ ] Swagger é pago e OpenAPI é gratuito
-    - [x] OpenAPI é a especificação e Swagger é o conjunto de ferramentas (UI, Editor, etc)
-    - [ ] OpenAPI foi substituída pelo Swagger em 2021
-    - [ ] Não há diferença, são nomes para a mesma cor
-    *Explicação: Pense no OpenAPI como as "regras" e no Swagger como as "ferramentas" que usam essas regras.*
+2. No conceito do SIG, o que é o "Conhecimento"?
+    - [ ] Ler muitos livros
+    - [x] A aplicação da informação para resolver problemas e tomar decisões
+    - [ ] Decorar o manual do sistema
+    - [ ] Ter acesso à internet
+    *Explicação: Conhecimento é saber o que fazer com a informação que o sistema gerou.*
 
-3. Para que serve o Swagger UI?
-    - [ ] Para editar o banco de dados diretamente
-    - [x] Para gerar uma página visual e interativa onde se pode testar os endpoints documentados
-    - [ ] Para compilar o código Java para o servidor
-    - [ ] Para baixar músicas gratuitas
-    *Explicação: O Swagger UI lê o arquivo YAML/JSON e cria uma interface amigável para humanos.*
+3. Qual o objetivo principal de um SIG (Sistema de Informação Gerencial)?
+    - [ ] Substituir os gerentes por robôs
+    - [ ] Jogar videogame nas horas vagas
+    - [x] Apoiar os gestores na tomada de decisões estratégicas e táticas
+    - [ ] Armazenar fotos da confraternização
+    *Explicação: O SIG filtra o mar de dados do ERP e entrega o que o gerente precisa para decidir.*
 
-4. Qual o objetivo principal de um "Mock de API"?
-    - [ ] Substituir o backup do sistema
-    - [x] Simular o comportamento de uma API real para permitir o desenvolvimento paralelo
-    - [ ] Aumentar a segurança contra vírus
-    - [ ] Esconder o endereço IP do servidor
-    *Explicação: Mocks permitem que o Frontend programe contra um servidor "de mentira" enquanto o real não está pronto.*
+4. Quais são os 3 pilares de um sistema de informação?
+    - [ ] Mouse, Teclado e Monitor
+    - [ ] Internet, Wi-Fi e Bluetooth
+    - [x] Pessoas, Processos e Tecnologia
+    - [ ] Dinheiro, Tempo e Espaço
+    *Explicação: Um sistema falha se as pessoas não souberem usar ou os processos estiverem errados, mesmo com tecnologia cara.*
 
-5. O que significa "Developer Experience" (DX)?
-    - [ ] O tempo que o desenvolvedor gasta jogando videogame
-    - [x] A facilidade e satisfação de um desenvolvedor ao usar sua ferramenta ou API
-    - [ ] A quantidade de memória RAM do monitor
-    - [ ] O nome do sistema operacional dos servidores
-    *Explicação: Uma boa DX significa documentação clara, erros úteis e facilidade de integração.*
+5. O que é um "Sistema de Apoio à Decisão" (SAD)?
+    - [ ] Alguém que decide por você
+    - [x] Uma ferramenta que simula cenários (ex: "E se aumentarmos o preço em 10%?")
+    - [ ] O manual de instruções da empresa
+    - [ ] Um consultor externo
+    *Explicação: O SAD ajuda a prever resultados baseados em modelos matemáticos e dados históricos.*
 
-6. Qual formato de arquivo é mais utilizado para escrever especificações OpenAPI?
-    - [ ] .html
-    - [x] .yaml ou .json
-    - [ ] .docx
-    - [ ] .pdf
-    *Explicação: YAML é preferido por ser mais legível por humanos e suportar identação clara.*
+6. Qual o papel do "Feedback" no ciclo de um sistema?
+    - [ ] Elogiar o programador
+    - [x] Usar os resultados das saídas para ajustar as futuras entradas e correções
+    - [ ] Desligar o sistema quando há erro
+    - [ ] Aumentar a velocidade da internet
+    *Explicação: Se o lucro caiu, o feedback faz o sistema sinalizar a necessidade de mudar a estratégia.*
 
-7. Por que retornar mensagens de erro explicativas no corpo da resposta (Body) é uma boa prática?
-    - [ ] Para o log ficar mais colorido
-    - [x] Para ajudar o consumidor da API a entender exatamente o que errou sem precisar perguntar ao autor
-    - [ ] Porque o HTTP obriga a escrever textos longos
-    - [ ] Para ocupar mais espaço no servidor
-    *Explicação: Um erro `400` com a mensagem `"Data de nascimento é obrigatória"` economiza horas de suporte.*
+7. Em qual nível da empresa o SIG é mais utilizado?
+    - [ ] Operacional (quem faz o trabalho pesado)
+    - [x] Tático e Estratégico (Gerentes e Diretores)
+    - [ ] Apenas na portaria
+    - [ ] Em nenhum, o SIG é para clientes
+    *Explicação: Embora use dados do operacional, o SIG é a ferramenta de quem comanda a empresa.*
 
-8. Qual componente do Swagger permite digitar e validar a especificação da API em tempo real?
-    - [ ] Swagger Hub
-    - [x] Swagger Editor
-    - [ ] Swagger Inspector
-    - [ ] Swagger Play
-    *Explicação: O Editor valida a sintaxe YAML e mostra o preview da documentação instantaneamente.*
+8. O que é a "Vantagem Competitiva" gerada pelo SIG?
+    - [ ] Ter o computador mais bonito
+    - [x] Decidir mais rápido e melhor que o concorrente por ter informações precisas
+    - [ ] Contratar mais funcionários que os outros
+    - [ ] Não pagar impostos
+    *Explicação: Quem entende seu mercado e seus custos primeiro, ganha a liderança.*
 
-9. Em qual fase do projeto o "Design de Contrato" deve ocorrer?
-    - [ ] Somente no fim do projeto para arquivar
-    - [x] No início, antes mesmo de começar a codificar as rotas (API First)
-    - [ ] Apenas se o cliente pedir
-    - [ ] Nunca, é perda de tempo
-    *Explicação: No API First, o contrato é acordado primeiro para que as equipes de Front e Back trabalhem em sintaxe.*
+9. Por que o SIG deve ser "Personalizável"?
+    - [ ] Para mudar a cor do fundo
+    - [x] Porque cada empresa e cada gestor tem necessidades diferentes de relatórios
+    - [ ] Para poder rodar em Macs
+    - [ ] Porque é proibido ter sistemas iguais
+    *Explicação: O sistema deve se adaptar ao negócio, não o contrário.*
 
-10. Qual ferramenta pode ser usada para subir um mock server local a partir de uma collection?
-    - [ ] Microsoft Excel
-    - [x] Postman / Mockoon
-    - [ ] Notepad++
-    - [ ] Windows Paint
-    *Explicação: Postman e Mockoon facilitam a criação de respostas estáticas baseadas em rotas.*
+10. Um SIG que apresenta dados errados é perigoso porque:
+    - [ ] Pode queimar o monitor
+    - [x] Leva o gestor a tomar decisões desastrosas acreditando que está certo
+    - [ ] Fica lento para abrir
+    - [ ] O governo pode confiscar o software
+    *Explicação: Informação falsa ou imprecisa é pior do que nenhuma informação.*

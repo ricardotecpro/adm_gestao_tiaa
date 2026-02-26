@@ -1,71 +1,71 @@
-# Quiz 09 - Segurança e Autenticação com JWT 🔐
+# Quiz 09 - Rastreamento Logístico 📦
 
-1. Qual a diferença entre Autenticação e Autorização?
-    - [ ] Autenticação é sobre permissões, Autorização é sobre identidade
-    - [x] Autenticação checa quem você é, Autorização checa o que você pode fazer
-    - [ ] Autenticação é para o backend, Autorização é para o frontend
-    - [ ] É a mesma coisa, apenas nomes diferentes
-    *Explicação: Primeiro você prova quem é (Login), depois o sistema checa se você tem acesso (Roles).*
+1. O que é Rastreabilidade no contexto administrativo?
+    - [ ] Saber o nome do motorista apenas
+    - [x] Seguir a história e localização de um item por registros documentados
+    - [ ] Ter uma foto do produto
+    - [ ] Não perder o controle remoto
+    *Explicação: Rastrear permite saber onde o produto está e por onde passou.*
 
-2. O que significa a sigla JWT?
-    - [ ] Java Web Tool
-    - [x] JSON Web Token
-    - [ ] Javascript Web Transfer
-    - [ ] Just Web Ticket
-    *Explicação: É um padrão de mercado para transmissão segura de informações como objetos JSON.*
+2. Qual a limitação do Código de Barras (1D) tradicional?
+    - [ ] É muito caro
+    - [x] Precisa de visão direta e leitura individual (um por um)
+    - [ ] Não pode ser impresso em papel
+    - [ ] Só funciona no Brasil
+    *Explicação: O código de barras exige que o operador mire o laser em cada etiqueta separadamente.*
 
-3. Quantas partes compõem um token JWT?
-    - [ ] Uma parte única
-    - [ ] Duas partes (Dados e Assinatura)
-    - [x] Três partes (Header, Payload e Signature)
-    - [ ] Quatro partes (Header, Payload, Signature e Expire)
-    *Explicação: As três partes são unidas por pontos para formar o token completo.*
+3. Sobre o RFID, sua principal vantagem é:
+    - [ ] Ser colorido
+    - [x] Leitura por rádio frequência, em massa e sem contato visual direto
+    - [ ] Funcionar sem baterias
+    - [ ] Ser feito de metal
+    *Explicação: O RFID permite ler o conteúdo de uma caixa inteira sem precisar abri-la.*
 
-4. O que é o "Payload" do JWT?
-    - [ ] O algoritmo de criptografia
-    - [ ] A senha do banco de dados
-    - [x] O corpo do token, onde ficam os dados do usuário (ex: id, nome)
-    - [ ] A chave secreta do servidor
-    *Explicação: É aqui que guardamos as "alegações" (claims) sobre o usuário logado.*
+4. O QR Code (2D) é superior ao código de barras comum porque:
+    - [ ] É mais bonito
+    - [x] Armazena muito mais dados (links, textos, datas de validade)
+    - [ ] Nunca rasga
+    - [ ] É gratuito para imprimir e o código de barras é pago
+    *Explicação: O 2D usa as duas dimensões para guardar informações densas.*
 
-5. Por que a "Assinatura" (Signature) é a parte mais importante para a segurança?
-    - [ ] Porque ela deixa o token colorido
-    - [x] Porque ela garante que o Payload não foi alterado por terceiros
-    - [ ] Porque ela esconde o nome do usuário
-    - [ ] Porque ela faz o token expirar mais rápido
-    *Explicação: Se alguém mudar um único caractere no Payload, a assinatura deixará de ser válida.*
+5. No transporte, o que é "Telemetria"?
+    - [ ] Medir a distância com régua
+    - [x] Monitoramento remoto de dados do veículo (velocidade, combustível, rota)
+    - [ ] Um tipo de pneu inteligente
+    - [ ] O rádio do caminhão
+    *Explicação: Permite gestão de frotas eficiente e redução de custos logísticos.*
 
-6. O que significa dizer que o JWT é "Stateless" (Sem Estado)?
-    - [ ] Que o servidor não tem banco de dados
-    - [x] Que o servidor não precisa guardar informações da sessão do usuário na memória
-    - [ ] Que o token nunca expira
-    - [ ] Que o usuário não precisa de internet
-    *Explicação: Toda a informação necessária para validar o usuário está dentro do próprio token.*
+6. O sistema FIFO/PEPS na logística significa:
+    - [ ] O mais caro sai primeiro
+    - [x] Primeiro que entra é o Primeiro que sai (Controle de validade)
+    - [ ] Organizar por cor
+    - [ ] Deixar por último o que chegou primeiro
+    *Explicação: Essencial para produtos perecíveis não perderem a validade no estoque.*
 
-7. Onde o Payload do JWT pode ser lido?
-    - [ ] Apenas pelo servidor que tem a chave secreta
-    - [x] Por qualquer pessoa, pois ele é apenas codificado (Base64), não encriptado
-    - [ ] Apenas por usuários com permissão de Admin
-    - [ ] Em lugar nenhum, ele é invisível
-    *Explicação: CUIDADO! Nunca guarde senhas ou dados sensíveis no Payload, pois qualquer um pode ler.*
+7. Por que a logística usa GPS integrado ao sistema?
+    - [ ] Para o motorista não se perder (apenas)
+    - [x] Para dar previsibilidade de entrega ao cliente e segurança à carga
+    - [ ] Para economizar bateria do celular
+    - [ ] Para tirar fotos do caminho
+    *Explicação: Saber o tempo estimado de chegada (ETA) é um diferencial competitivo.*
 
-8. Qual o objetivo do campo "expiresIn" (ou 'exp')?
-    - [ ] Mudar o nome do usuário
-    - [x] Definir um tempo de validade para o token, após o qual ele será rejeitado
-    - [ ] Apagar o banco de dados
-    - [ ] Aumentar a velocidade da API
-    *Explicação: Tokens não devem ser eternos; limitando a duração, reduzimos riscos de roubo de sessão.*
+8. Um "Recall" de produto só é possível se houver:
+    - [ ] Muito dinheiro em caixa
+    - [x] Rastreabilidade eficiente por lotes
+    - [ ] Um bom departamento de marketing
+    - [ ] Muitos advogados
+    *Explicação: É preciso saber exatamente para quais clientes os itens defeituosos foram vendidos.*
 
-9. Onde o frontend geralmente envia o JWT para o servidor?
-    - [ ] No corpo da mensagem (Body)
-    - [x] No cabeçalho (Header) de autorização: `Authorization: Bearer <token>`
-    - [ ] No nome do arquivo
-    - [ ] Por e-mail
-    *Explicação: O padrão Bearer Token nos headers HTTP é a forma mais comum de enviar o JWT.*
+9. O inventário rotativo facilitado por tecnologia ajuda a:
+    - [ ] Ter mais funcionários no galpão
+    - [x] Identificar perdas e erros de estoque sem parar a operação da fábrica
+    - [ ] Contar apenas os itens caros
+    - [ ] Não precisar mais contar o estoque
+    *Explicação: A tecnologia permite contagens constantes e precisas.*
 
-10. O que acontece se o servidor perder a "Chave Secreta"?
-    - [ ] Os usuários ganham acesso livre
-    - [x] Todos os tokens emitidos anteriormente se tornam inválidos instantaneamente
-    - [ ] O banco de dados é deletado
-    - [ ] Nada, a chave secreta não é importante
-    *Explicação: Sem a chave, o servidor não consegue mais verificar se as assinaturas dos tokens são legítimas.*
+10. Qual o impacto da automação no recebimento de cargas?
+    - [ ] O caminhão descarrega sozinho
+    - [x] Conferência automática entre o pedido de compra e o que chegou fisicamente
+    - [ ] Os funcionários não precisam mais trabalhar
+    - [ ] A carga fica mais leve
+    *Explicação: O sistema bipa a nota e o item, acusando erro se houver divergência.*

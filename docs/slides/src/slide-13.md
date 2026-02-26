@@ -1,89 +1,82 @@
-# Aula 13 - Estado e Hooks 🎣
-## Tornando seu App Interativo
+# Aula 13 - Gestão de BD: Entrada e Processo 🗄️
+## O Cofre da Informação Corporativa
 
 ---
 
 ## Agenda 📅
 
-1. O que é o Estado (State)? { .fragment }
-2. Hook `useState` { .fragment }
-3. Lidando com Cliques e Eventos { .fragment }
-4. Inputs Controlados { .fragment }
-5. Imutabilidade e Arrays { .fragment }
+1. O Banco de Dados como Ativo Estratégico <!-- .element: class="fragment" -->
+2. Entrada de Dados: Máscaras e Validações <!-- .element: class="fragment" -->
+3. O Motor de Processamento do SIG <!-- .element: class="fragment" -->
+4. Integridade Referencial (Dados Relacionais) <!-- .element: class="fragment" -->
+5. Processando Dados no Terminal <!-- .element: class="fragment" -->
 
 ---
 
-## 1. O Problema da Estática 🧱
+## 1. Entrada: A Porta de Vidro 📝
 
-- Variáveis comuns mudam nos bastidores... { .fragment }
-- ...mas a tela continua a mesma! { .fragment }
-- O React precisa de um sinal para re-desenhar. { .fragment }
+- O banco de dados só é útil se o dado for limpo. <!-- .element: class="fragment" -->
+- **Máscaras**: CPF, CNPJ, Data, CEP. <!-- .element: class="fragment" -->
+- **Regras**: Preço não pode ser negativo. <!-- .element: class="fragment" -->
 
 ---
 
-## 2. useState: O Motor de Mudança 🚀
+## 2. Camada de Processamento ⚙️
 
-```jsx
-const [cont, setCont] = useState(0);
+- Onde o dado vira informação. <!-- .element: class="fragment" -->
+- **Cálculo de Impostos** automático. <!-- .element: class="fragment" -->
+- **Conversão de Moedas** e Unidades. <!-- .element: class="fragment" -->
+
+---
+
+## Fluxo: Input -> Validação -> Processo
+
+```mermaid
+graph TD
+    U[Usuário] -- "Input" --> V{Validação}
+    V -- "Erro" --> U
+    V -- "Ok" --> P[Processamento]
+    P -- "Salvar" --> DB[(Banco Dados)]
 ```
 
-1. **cont**: O valor atual. { .fragment }
-2. **setCont**: A função que atualiza. { .fragment }
-3. **0**: O ponto de partida. { .fragment }
+---
+
+## 3. Integridade Referencial 🔗
+
+- Tabelas estão ligadas entre si. <!-- .element: class="fragment" -->
+- Ex: Não existe Venda sem um Cliente cadastrado. <!-- .element: class="fragment" -->
+- O sistema impede a criação de "dados órfãos". <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Eventos no React ⚡
+## 4. Prática: Processamento de Venda 🚀
 
-- `onClick={funcao}` { .fragment }
-- `onChange={(e) => ...}` { .fragment }
-- Sempre em **CamelCase**! { .fragment }
-
----
-
-## 4. Inputs Controlados ⌨️
-
-- O React é quem manda no valor do input. { .fragment }
-- `value={estado}` + `onChange`. { .fragment }
-- Facilita validação e limpeza de campos. { .fragment }
-
----
-
-## 5. Imutabilidade (Muito Importante!) 💎
-
-- Nunca altere o estado original: `lista.push(x)` ❌ { .fragment }
-- Sempre crie uma cópia nova: `setLista([...lista, x])` ✅ { .fragment }
-
----
-
-## 6. Fluxo de Dados 🌊
-
-- O estado flui do Pai para o Filho via Props. { .fragment }
-- Se o estado do Pai muda, todo mundo abaixo dele atualiza. { .fragment }
-
----
-
-## Desafio de Estado ⚡
-
-Se eu tenho um botão que soma +1 ao contador, o que acontece com a interface se eu esquecer de importar o `useState` e usar uma variável global `let contador = 0`?
+```termynal
+$ bd-processar-venda --cliente "990" --item "Pão"
+[VALIDANDO] Cliente localizado.
+[PROCESSANDO] Qtd: 10 | Preço: 0.50.
+[TOTAL] R$ 5,00 calculado.
+[ESTOQUE] Reserva de baixa realizada.
+[OK] Transação salva com sucesso no BD.
+```
 
 ---
 
 ## Resumo ✅
 
-- `useState` traz vida aos componentes. { .fragment }
-- Mudança de estado = Re-renderização. { .fragment }
-- Use sempre funções disparadoras (`set...`). { .fragment }
+- Validação na entrada evita o caos no futuro. <!-- .element: class="fragment" -->
+- O processamento automatiza as regras de negócio. <!-- .element: class="fragment" -->
+- Bancos de dados relacionais garantem a conexão lógica. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Efeitos e APIs 🌐
+## Próxima Aula: Saída e Feedback 📊
 
-### Buscando dados no mundo real!
-
-- Hook: `useEffect`. { .fragment }
-- Consumindo nossa API Backend. { .fragment }
+- Transformando o BD em relatórios e gráficos. <!-- .element: class="fragment" -->
+- O ciclo de ajuste estratégico da empresa. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🎣
+## Dúvidas? 🤔
+
+> "Um banco de dados bem estruturado é a fundação de uma empresa sólida."

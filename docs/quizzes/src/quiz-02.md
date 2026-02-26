@@ -1,71 +1,71 @@
-# Quiz 02 - Arquitetura e Gateway 🏗️
+# Quiz 02 - CRM e Business Intelligence (BI) 📊
 
-1. O que acontece na comunicação síncrona (Sync)?
-    - [ ] O serviço envia a mensagem e esquece
-    - [x] O serviço envia a requisição e aguarda a resposta para continuar
-    - [ ] A comunicação só ocorre via rádio
-    - [ ] O banco de dados é desligado
-    *Explicação: No modelo síncrono, a execução fica bloqueada até que o destino retorne o dado.*
+1. Qual o foco principal de um sistema CRM?
+    - [ ] Controlar a folha de pagamento
+    - [x] Gestão do Relacionamento com o Cliente
+    - [ ] Medir a temperatura das máquinas na fábrica
+    - [ ] Programar o banco de dados
+    *Explicação: Customer Relationship Management foca em atrair, satisfazer e fidelizar os clientes.*
 
-2. Qual o principal perigo da comunicação síncrona em excesso?
-    - [ ] O código fica muito curto
-    - [x] Cascateamento de falhas (um serviço lento trava todos os outros)
-    - [ ] Economia exagerada de memória
-    - [ ] O sistema fica rápido demais
-    *Explicação: Se um serviço na cadeia falhar ou demorar, todos os serviços "acima" dele também sofrerão.*
+2. No conceito de BI, o que significa transformar "Dados" em "Conhecimento"?
+    - [ ] Digitar textos mais rápidos
+    - [ ] Comprar mais computadores
+    - [x] Processar fatos brutos para gerar insights e apoiar a estratégia
+    - [ ] Imprimir relatórios e guardá-los
+    *Explicação: Dados sozinhos não valem nada; o BI os organiza para que o administrador entenda o que está acontecendo.*
 
-3. Qual a função do API Gateway?
-    - [ ] Armazenar as senhas dos desenvolvedores
-    - [x] Atuar como ponto único de entrada para roteamento e segurança
-    - [ ] Substituir o roteador Wi-Fi da empresa
-    - [ ] Processar scripts de interface visual
-    *Explicação: O Gateway centraliza preocupações transversais como autenticação, log e roteamento.*
+3. O que é o "Funil de Vendas" no CRM?
+    - [ ] Um acessório para colocar óleo no carro
+    - [x] A representação das etapas desde o contato inicial até o fechamento do negócio
+    - [ ] Uma forma de punir vendedores ruins
+    - [ ] O local onde os dados são apagados
+    *Explicação: O funil ajuda a visualizar quantos clientes estão em cada fase do processo comercial.*
 
-4. O que é "Rate Limiting"?
-    - [ ] Aumentar a velocidade da internet
-    - [x] Limitar a quantidade de requisições que um cliente pode fazer em um tempo
-    - [ ] Cobrar por cada clique no botão
-    - [ ] Diminuir a fonte do texto
-    *Explicação: Rate limiting protege o sistema contra abusos ou ataques de negação de serviço (DoS).*
+4. Qual a diferença entre um relatório operacional e um dashboard de BI?
+    - [ ] Não há diferença
+    - [ ] O relatório é mais colorido
+    - [x] O BI foca em tendências e visão macro, enquanto o operacional foca no detalhe do dia a dia
+    - [ ] O operacional é sempre digital e o BI é sempre impresso
+    *Explicação: O BI olha para o "todo" e para o "futuro", enquanto o operacional olha para a "transação".*
 
-5. No Service Discovery, como os serviços são localizados?
-    - [ ] Por endereços IP fixos escritos no código
-    - [x] Via um registro dinâmico que mantém os endereços atualizados
-    - [ ] Através de busca no Google
-    - [ ] Usando GPS
-    *Explicação: Em ambientes elásticos (Docker/K8s), os IPs mudam sempre, exigindo um "Discovery" dinâmico.*
+5. O que significa "Fidelizar" um cliente no contexto do CRM?
+    - [ ] Cobrar o preço mais caro possível
+    - [x] Criar uma relação de confiança para que ele volte a comprar e indique a marca
+    - [ ] Impedir que ele compre na concorrência usando contratos judiciais
+    - [ ] Dar brindes apenas uma vez
+    *Explicação: Reter um cliente atual é muito mais barato do que conquistar um novo.*
 
-6. Qual o papel do "Load Balancer"?
-    - [ ] Medir o peso dos servidores físicos
-    - [x] Distribuir a carga de trabalho entre várias instâncias do mesmo serviço
-    - [ ] Equilibrar o gasto de energia
-    - [ ] Organizar as pastas do projeto
-    *Explicação: Ele garante que nenhuma instância fique sobrecarregada enquanto outras estão ociosas.*
+6. Qual destas é uma ferramenta comum para análise de dados (BI)?
+    - [ ] Photoshop
+    - [x] Power BI / Tableau
+    - [ ] Windows Media Player
+    - [ ] WinRAR
+    *Explicação: São softwares especialistas em conectar bancos de dados e gerar painéis visuais inteligentes.*
 
-7. O que caracteriza a comunicação Assíncrona (Async)?
-    - [ ] Uso obrigatório de cabos de fibra ótica
-    - [x] O uso de mensageria (filas) onde o chamador não espera a resposta imediata
-    - [ ] Comunicação em tempo real por vídeo
-    - [ ] Bloqueio total do banco de dados
-    *Explicação: É ideal para processos longos ou para aumentar a resiliência do sistema.*
+7. No BI, o que é um KPI?
+    - [ ] Uma marca de computador
+    - [ ] Um erro de sistema
+    - [x] Indicador-Chave de Desempenho (Key Performance Indicator)
+    - [ ] Um tipo de cabo de rede
+    *Explicação: São as métricas mais importantes que dizem se a empresa está indo bem ou mal.*
 
-8. O que é um "Circuit Breaker" (Disjuntor)?
-    - [ ] Um fusível físico no servidor
-    - [x] Um padrão que interrompe chamadas para um serviço falho para evitar sobrecarga
-    - [ ] Um hacker que invade sistemas
-    - [ ] O botão de desligar do computador
-    *Explicação: Ele protege o sistema impedindo que requisições inúteis sejam feitas a um serviço que já se sabe estar fora do ar.*
+8. Como o CRM ajuda o setor de Marketing?
+    - [ ] Fazendo café para a equipe
+    - [x] Fornecendo dados sobre o perfil e comportamento dos clientes para campanhas alvo
+    - [ ] Desligando os computadores à noite
+    - [ ] Escrevendo os anúncios sozinho
+    *Explicação: Saber o que o cliente gosta permite criar propagandas que realmente funcionam.*
 
-9. Qual destas é uma responsabilidade típica de um Gateway?
-    - [ ] Desenhar o logo da empresa
-    - [ ] Compilar código C++
-    - [x] Agregação de respostas e Autenticação
-    - [ ] Formatar o HD do servidor
-    *Explicação: O Gateway pode unir dados de 3 serviços diferentes e entregar um único JSON ao frontend.*
+9. Por que a integração entre CRM e ERP é importante?
+    - [ ] Para o computador não travar
+    - [x] Para que a venda feita no CRM já dê baixa no estoque e no financeiro do ERP
+    - [ ] Porque são o mesmo programa obrigatório por lei
+    - [ ] Não é importante, podem ser isolados
+    *Explicação: A integração evita o retrabalho de digitar a mesma venda em dois lugares diferentes.*
 
-10. Qual ferramenta é comumente usada para implementar Service Discovery?
-    - [ ] Microsoft Word
-    - [x] Netflix Eureka / Consul
-    - [ ] Adobe Photoshop
-    - [ ] WhatsApp
-    *Explicação: Eureka e Consul são soluções populares para gerenciar a agenda de serviços em microsserviços.*
+10. O que é "Data Mining" (Mineração de Dados) no BI?
+    - [ ] Cavar buracos para enterrar servidores
+    - [x] Usar algoritmos para encontrar padrões escondidos em grandes volumes de dados
+    - [ ] Digitar dados manualmente
+    - [ ] Apagar dados antigos para ganhar espaço
+    *Explicação: A mineração busca tendências que o olho humano não conseguiria ver em tabelas gigantes.*

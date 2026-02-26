@@ -1,71 +1,71 @@
-# Quiz 14 - Efeitos e APIs (useEffect) 🌐
+# Quiz 14 - Gestão de BD: Saída e Feedback 📊
 
-1. O que é um "Efeito Colateral" no React?
-    - [ ] É um bug que trava o computador
-    - [x] Uma ação que acontece fora do fluxo normal de renderizar a interface (ex: buscar dados, timers)
-    - [ ] É o nome de uma biblioteca de animação
-    - [ ] É quando o CSS muda a cor do botão
-    *Explicação: Efeitos saem do campo puro de "desenhar componentes" e tocam o mundo externo.*
+1. No conceito de sistemas, o que é uma "Saída" (Output)?
+    - [ ] Quando o funcionário vai embora
+    - [x] A informação processada entregue ao usuário (relatórios, gráficos, alertas)
+    - [ ] O ato de apagar arquivos
+    - [ ] Um comando de erro
+    *Explicação: É o resultado final e útil de tudo o que foi inserido e processado.*
 
-2. Qual o segundo parâmetro do `useEffect`?
-    - [ ] Um número inteiro
-    - [x] O array de dependências
-    - [ ] O nome do componente
-    - [ ] Um arquivo CSS
-    *Explicação: Esse array decide quando o efeito deve ser re-executado.*
+2. Um Relatório "Sintético" foca em:
+    - [ ] Mostrar cada centavo gasto individualmente
+    - [x] Resumos e totais para visão rápida da diretoria
+    - [ ] Descrição técnica do banco de dados
+    - [ ] Listagem de e-mails de clientes
+    *Explicação: Pouca informação, mas de alto valor estratégico (ex: Faturamento Total).*
 
-3. O que acontece se passarmos um array de dependências vazio `[]`?
-    - [ ] O efeito nunca roda
-    - [ ] O efeito roda em todo "re-render"
-    - [x] O efeito roda apenas uma vez, quando o componente é montado (aparece na tela)
-    - [ ] O app fecha com erro
-    *Explicação: É o padrão usado para buscar dados iniciais de uma API.*
+3. O que caracteriza um Relatório "Analítico"?
+    - [ ] Ser muito curto
+    - [x] Detalhamento linha a linha dos dados (ex: todas as vendas do dia 10)
+    - [ ] Ter apenas desenhos e ícones
+    - [ ] Ser exclusivo para o dono da empresa
+    *Explicação: Serve para auditoria e entender o "porquê" de um resultado macro.*
 
-4. Como fazemos para que um efeito rode toda vez que o estado `tema` mudar?
-    - [ ] useEffect(() => { ... })
-    - [ ] useEffect(() => { ... }, [])
-    - [x] useEffect(() => { ... }, [tema])
-    - [ ] useEffect([tema], () => { ... })
-    *Explicação: Incluir a variável no array obriga o React a monitorá-la.*
+4. O Feedback (Retroalimentação) no SIG serve para:
+    - [ ] Dar parabéns ao sistema
+    - [x] Usar o resultado da saída para ajustar as entradas e melhorar o processo
+    - [ ] Trocar os computadores todo ano
+    - [ ] Reduzir a velocidade do processamento
+    *Explicação: ciclo de melhoria contínua baseado no resultado real.*
 
-5. O que a função `fetch()` retorna?
-    - [ ] O dado final em formato JSON
-    - [x] Uma Promise (Promessa)
-    - [ ] Um número de erro
-    - [ ] Uma string de texto
-    *Explicação: Chamadas de rede são assíncronas; o fetch promete que trará o dado no futuro.*
+5. Um Dashboard de BI (Business Intelligence) é:
+    - [ ] Uma mesa de escritório
+    - [x] Um painel visual com gráficos e indicadores em tempo real
+    - [ ] O manual impresso do ERP
+    - [ ] Um tipo de teclado para gerentes
+    *Explicação: Facilita a "leitura" rápida da saúde do negócio.*
 
-6. Para que serve o `.then(res => res.json())`?
-    - [ ] Para salvar o dado no disco
-    - [ ] Para fechar a conexão
-    - [x] Para converter a resposta bruta da rede em um objeto Javascript que possamos usar
-    - [ ] Para criptografar os dados
-    *Explicação: A resposta inicial é um objeto de rede; precisamos extrair o corpo dela em JSON.*
+6. Indicadores de "Semáforo" (Verde, Amarelo, Vermelho) ajudam a:
+    - [ ] Organizar o trânsito no estacionamento
+    - [x] Identificar instantaneamente o que precisa de atenção urgente (ex: meta não batida)
+    - [ ] Deixar o sistema mais infantil
+    - [ ] Economizar tinta na impressão
+    *Explicação: Focam a energia do gestor nos problemas (Gestão por Exceção).*
 
-7. Qual a maneira correta de lidar com o estado de "Carregando"?
-    - [ ] Usar um cronômetro de 5 segundos
-    - [x] Criar um estado booleano `isLoading` e exibi-lo enquanto a API não responde
-    - [ ] Pedir para o usuário clicar em "Refresh"
-    - [ ] Não precisa lidar, o React faz sozinho
-    *Explicação: Feedback para o usuário é essencial para uma boa experiência (UX).*
+7. O que é uma "Saída Operacional"?
+    - [ ] Um balanço patrimonial de 10 anos
+    - [x] Documentos necessários para o dia a dia (ex: Ordem de Serviço, Nota Fiscal)
+    - [ ] O fechamento de capital da empresa
+    - [ ] Um vídeo motivacional
+    *Explicação: São as saídas que fazem o trabalho "andar" na ponta.*
 
-8. O que acontece se você atualizar um estado dentro de um `useEffect` sem o array `[]`?
-    - [ ] O estado não muda
-    - [x] Pode gerar um loop infinito (o efeito muda o estado, que re-renderiza, que roda o efeito...)
-    - [ ] O site fica mais rápido
-    - [ ] O computador reinicia
-    *Explicação: Este é um dos erros mais comuns de iniciantes no React.*
+8. Alertas automáticos por e-mail (ex: "Estoque Crítico") são úteis porque:
+    - [ ] Ocupam a caixa de entrada do gestor
+    - [x] São saídas proativas que avisam o problema antes que ele cause prejuízo
+    - [ ] Provam que o sistema é caro
+    - [ ] Impedem o gestor de tirar férias
+    *Explicação: O sistema "vigia" a empresa e avisa quando algo foge da regra.*
 
-9. Onde devemos colocar a chamada `fetch` para que ela não rode milhares de vezes sem necessidade?
-    - [ ] Fora do componente
-    - [ ] No meio do JSX
-    - [x] Dentro de um `useEffect` com dependências controladas
-    - [ ] Dentro do CSS
-    *Explicação: O useEffect isola a lógica de disparos de rede.*
+9. Tomar decisões sem olhar os relatórios de saída é chamado de:
+    - [ ] Gestão moderna
+    - [x] "Gestão por Achismo" (Alto risco de erro)
+    - [ ] Sorte administrativa
+    - [ ] Economia de tempo
+    *Explicação: Decidir no escuro ignora o investimento feito em tecnologia.*
 
-10. Se quisermos limpar um timer ou fechar um socket quando o componente sumir da tela, onde fazemos isso?
-    - [ ] Em outro componente
-    - [ ] No `useState`
-    - [x] Na função de "cleanup" retornada pelo `useEffect`
-    - [ ] Deletando o arquivo
-    *Explicação: O useEffect permite retornar uma função que o React chama ao "desmontar" o componente.*
+10. Um KPI (*Key Performance Indicator*) deve ser:
+    - [ ] Muito difícil de calcular
+    - [x] Relevante, mensurável e alinhado aos objetivos da empresa
+    - [ ] Mudado todos os dias
+    - [ ] Guardado em segredo absoluto dos funcionários
+    *Explicação: Métricas claras guiam a equipe para o sucesso.*

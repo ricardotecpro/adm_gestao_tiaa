@@ -1,106 +1,82 @@
-# Aula 07 - Repositories e Banco de Dados 🗄️
-## Onde a informação descansa
+# Aula 07 - SIGs de Nicho e Sistemas Verticais 🧪
+## Especialização Tecnológica por Setor
 
 ---
 
 ## Agenda 📅
 
-1. Por que Bancos de Dados? { .fragment }
-2. PostgreSQL: O Robusto { .fragment }
-3. SQL Básico (SELECT, INSERT...) { .fragment }
-4. Relacionamentos (1:N, N:N) { .fragment }
-5. Camada de Persistence { .fragment }
-6. O Padrão Repository { .fragment }
+1. Sistemas Genéricos vs. Verticais <!-- .element: class="fragment" -->
+2. SIGs de Setores Críticos (Hospital/Indústria) <!-- .element: class="fragment" -->
+3. Gestão em Atividades de Risco <!-- .element: class="fragment" -->
+4. Integração: O "Nicho" conversa com o "Todo" <!-- .element: class="fragment" -->
+5. Consulta Técnica por Setor <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Persistência de Dados 💾
+## 1. Sistemas Verticais (Nicho) 🏢
 
-- Sem banco, o servidor esquece tudo ao reiniciar. { .fragment }
-- Precisamos de segurança e integridade. { .fragment }
-- **Estritamente Tipado**: O banco garante o formato. { .fragment }
-
----
-
-## 2. Por que PostgreSQL? 🐘
-
-- Código Aberto (Open Source). { .fragment }
-- Extremamente confiável (ACID). { .fragment }
-- Suporta dados complexos (JSONB). { .fragment }
+- Focados em regras específicas de um setor. <!-- .element: class="fragment" -->
+- Exemplo: Um banco precisa de um sistema que processe **milhares de transações por segundo**. <!-- .element: class="fragment" -->
+- Exemplo: Uma fábrica precisa de um software que entenda o **tempo de parada da máquina**. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. SQL: A Linguagem Universal 🗣️
+## 2. Comparativo de Setores 🔬
 
-```sql
--- Buscar usuários VIP
-SELECT * FROM usuarios 
-WHERE tipo = 'VIP' 
-ORDER BY nome;
-```
-
-- **DDL**: Define a estrutura (Tabelas). { .fragment }
-- **DML**: Manipula os dados (Linhas). { .fragment }
+| Setor | Diferencial do SIG |
+| :--- | :--- |
+| **Hospitalar** | Prontuário e Gestão de Leitos |
+| **Bancário** | Segurança Extrema e Fraudes |
+| **Industrial** | Controle de Produção e Sensores |
 
 ---
 
-## 4. O Coração: Relacionamentos 🔗
+## Foco dos SIGs Verticais
 
-- **1:N**: Um cliente, muitos pedidos. { .fragment }
-- **N:N**: Muitos alunos, muitos cursos. { .fragment }
-- **Foreign Key**: A âncora que liga tudo. { .fragment }
-
----
-
-## 5. Camada de Persistence 🧱
-
-- O código que conversa com o driver do banco. { .fragment }
-- Onde as queries são traduzidas para o código. { .fragment }
-
----
-
-## 6. Padrão Repository 📥
-
-- "Não me diga como, diga O QUE você quer". { .fragment }
-- Isola o SQL da regra de negócio. { .fragment }
-
-```javascript
-// No Service
-userRepository.findByEmail(email);
+```mermaid
+graph LR
+    A[Geral] --> B(Financeiro/RH)
+    C[Hospital] --> D(Leitos/Saúde)
+    E[Posto] --> F(Bombas/Tanques)
 ```
 
 ---
 
-## 7. Migrations 📜
+## 3. Atividades de Risco ⚠️
 
-- Controle de versão para o Banco. { .fragment }
-- Permite "voltar no tempo" se algo quebrar. { .fragment }
-- Mantém o time em sincronia. { .fragment }
+- Aviação, Usinas Nucleares, Hospitais. <!-- .element: class="fragment" -->
+- O SIG exige **Redundância de Dados**. <!-- .element: class="fragment" -->
+- **Logs Imutáveis**: Nada pode ser apagado por segurança. <!-- .element: class="fragment" -->
 
 ---
 
-## Desafio SQL ⚡
+## 4. Prática: Consulta Vertical 💻
 
-Qual comando você usaria para mudar o preço de todos os produtos da categoria 'Games' para 99.90?
+```termynal
+$ sig-industrial --status-maquina 07
+[LENDO SENSORES] Temperatura: 85°C.
+[ALERTA] Manutenção necessária em 48h.
+$ sig-hospitalar --leitos-disponiveis
+STATUS UTI: 2 Disponíveis | 3 Aguardando Alta.
+```
 
 ---
 
 ## Resumo ✅
 
-- Bancos de dados dão memória ao sistema. { .fragment }
-- PostgreSQL é o padrão da indústria. { .fragment }
-- SQL é habilidade obrigatória para backend. { .fragment }
-- Repository Pattern traz flexibilidade. { .fragment }
+- Um sistema para todos nem sempre funciona. <!-- .element: class="fragment" -->
+- Sistemas verticais respondem a regras de nicho. <!-- .element: class="fragment" -->
+- Segurança e rastreabilidade são vitais em sistemas críticos. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Integridade! ✅
+## Próxima Aula: Comunicação Empresarial 📞
 
-### Validação e Boas Práticas
-
-- Garantindo que dados "sujos" não entrem no banco. { .fragment }
-- Tratamento de exceções de banco. { .fragment }
+- Modelos B2B, B2C e C2C. <!-- .element: class="fragment" -->
+- Tecnologia EDI: Sistemas que conversam sozinhos. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🗄️
+## Dúvidas? 🤔
+
+> "A ferramenta deve se moldar ao negócio, e não o contrário."

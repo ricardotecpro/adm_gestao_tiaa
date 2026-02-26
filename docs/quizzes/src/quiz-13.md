@@ -1,71 +1,71 @@
-# Quiz 13 - Estado e Reatividade (useState) 🎣
+# Quiz 13 - Gestão de BD: Entrada e Processo 🗄️
 
-1. O que acontece quando o valor de um "State" muda no React?
-    - [ ] O computador reinicia
-    - [x] O React re-seta (redesenha) o componente na tela com os novos dados
-    - [ ] O código Javascript é deletado
-    - [ ] Nada, o desenvolvedor deve atualizar a tela manualmente
-    *Explicação: A reatividade automática é um dos maiores poderes do React.*
+1. O que é um Banco de Dados Relacional?
+    - [ ] Um sistema que conversa com as pessoas
+    - [x] Um conjunto de tabelas que se conectam através de chaves comuns (IDs)
+    - [ ] Uma lista simples de nomes no bloco de notas
+    - [ ] Um hardware específico para guardar fotos
+    *Explicação: É a base da maioria dos ERPs, onde Clientes se ligam a Vendas, etc.*
 
-2. Qual a forma correta de criar um estado para guardar um número?
-    - [ ] let x = 0;
-    - [ ] const x = 0;
-    - [x] const [x, setX] = useState(0);
-    - [ ] val x by state(0);
-    *Explicação: Usamos o "Array Destructuring" para pegar a variável e a função disparadora.*
+2. No cadastro, qual a função da "Validação de Campo"?
+    - [ ] Deixar a tela mais colorida
+    - [x] Impedir que dados errados ou incompletos sejam salvos (ex: CPF com letras)
+    - [ ] Fazer o computador trabalhar mais
+    - [ ] Excluir o usuário que errou
+    *Explicação: Garante a integridade do dado desde o momento da digitação.*
 
-3. Por que não podemos fazer `contador = contador + 1` diretamente?
-    - [ ] Porque gasta muita energia
-    - [ ] Porque o Javascript proíbe
-    - [x] Porque o React não ficará sabendo da mudança e não atualizará a tela
-    - [ ] Porque isso apaga o banco de dados
-    *Explicação: A função `set...` é quem avisa ao React que algo mudou.*
+3. Uma "Máscara de Entrada" (ex: __/__/____) serve para:
+    - [ ] Esconder o que o usuário digita
+    - [x] Padronizar o formato do dado inserido (ex: Datas e Telefones)
+    - [ ] Proteger contra vírus
+    - [ ] Ocupar espaço na tela
+    *Explicação: Facilita a vida do usuário e garante que o sistema receba o dado no formato certo.*
 
-4. O que é um Hook?
-    - [ ] Um erro CSS
-    - [x] Uma função especial (como useState) que permite "enganchar" recursos do React em componentes de função
-    - [ ] Um tipo de cabo USB
-    - [ ] O vilão do Peter Pan
-    *Explicação: Hooks revolucionaram o React, removendo a necessidade de usar "Classes" complexas.*
+4. O "Processamento" de dados ocorre:
+    - [ ] Antes do usuário digitar
+    - [x] Após a entrada e antes da saída, transformando os dados brutos (ex: cálculos)
+    - [ ] Apenas quando o sistema é desligado
+    - [ ] Fora do computador, no papel
+    *Explicação: É o "trabalho" técnico que o software faz para gerar resultados.*
 
-5. Qual o evento correto para detectar o clique em um botão no React?
-    - [ ] onclick
-    - [x] onClick (com o C maiúsculo)
-    - [ ] click
-    - [ ] on-press
-    *Explicação: Eventos no React seguem o padrão CamelCase.*
+5. Um exemplo de processamento automático no ERP é:
+    - [ ] O teclado digitar sozinho
+    - [x] O cálculo automático de ST e ICMS ao emitir uma nota fiscal
+    - [ ] O monitor mudar de brilho
+    - [ ] O envio de café para a mesa do gestor
+    *Explicação: O sistema aplica regras complexas de impostos sem intervenção humana.*
 
-6. Como você adiciona um novo elemento em um array de estado `lista` sem quebrar a imutabilidade?
-    - [ ] lista.push(novo)
-    - [ ] lista += novo
-    - [x] setLista([...lista, novo])
-    - [ ] setLista(novo)
-    *Explicação: Usamos o "Spread Operator" (...) para criar uma cópia da lista original com o novo item.*
+6. O que é a "Integridade Referencial"?
+    - [ ] Falar sempre a verdade para o chefe
+    - [x] Regra que impede, por exemplo, deletar um cliente que possui vendas ativas
+    - [ ] A velocidade com que o HD gira
+    - [ ] Ter muitos backups
+    *Explicação: Garante que os dados do banco não fiquem "órfãos" ou desconectados.*
 
-7. Em um "Input Controlado", quem manda no valor que aparece na caixinha de texto?
-    - [ ] O usuário
-    - [ ] O Teclado
-    - [x] O Estado (State)
-    - [ ] O CSS
-    *Explicação: O valor do input é amarrado ao estado, garantindo que o JS tenha controle total do que é digitado.*
+7. Na entrada de dados, o que significa um campo ser "Obrigatório" (*Not Null*)?
+    - [ ] Que custa dinheiro preenchê-lo
+    - [x] Que o sistema não permite salvar o registro se o campo estiver vazio
+    - [ ] Que o campo é proibido
+    - [ ] Que o campo só pode ter números
+    *Explicação: Vital para campos críticos como Preço ou CPF.*
 
-8. O que o parâmetro `e` em `onChange={(e) => ...}` representa?
-    - [ ] Erro
-    - [ ] Estilo
-    - [x] O Objeto de Evento que contém dados como `target.value`
-    - [ ] Email
-    *Explicação: O evento contém todas as informações sobre a interação que acabou de acontecer.*
+8. O "Processamento Batch" (em lote) é usado para:
+    - [ ] Vendas rápidas no balcão
+    - [x] Executar grandes volumes de dados de uma vez (ex: gerar 1.000 boletos à noite)
+    - [ ] Digitar um nome por vez
+    - [ ] Limpar o gabinete do PC
+    *Explicação: Tarefas pesadas que não precisam de resposta instantânea para o usuário.*
 
-9. Qual o valor inicial de `cont` em `const [cont, setCont] = useState(10)`?
-    - [ ] 0
-    - [ ] null
-    - [x] 10
-    - [ ] undefined
-    *Explicação: O valor dentro dos parênteses do useState define o ponto de partida.*
+9. A "Chave Primária" (Primary Key) em uma tabela serve para:
+    - [ ] Abrir o servidor fisicamente
+    - [x] Identificar de forma ÚNICA cada registro daquela tabela (ex: Código do Produto)
+    - [ ] Mudar a cor do sistema
+    - [ ] Dar acesso de administrador aos usuários
+    *Explicação: Não podem existir duas chaves primárias iguais na mesma tabela.*
 
-10. Se um componente pai muda seu estado, o que acontece com seus componentes filhos?
-    - [ ] Eles param de funcionar
-    - [x] Eles também são re-renderizados pelo React
-    - [ ] Eles ficam travados
-    - [ ] Eles mudam de cor sozinhos
-    *Explicação: O fluxo de dados no React é descendente; se o pai muda, a árvore abaixo dele se atualiza.*
+10. O motor de processamento do sistema aplica as "Regras de Negócio", que são:
+    - [ ] Leis do governo apenas
+    - [x] As diretrizes e limites da empresa (ex: "Desconto máximo de 10%")
+    - [ ] O horário de funcionamento da TI
+    - [ ] As senhas dos diretores
+    *Explicação: O software deve seguir a política de gestão da empresa.*

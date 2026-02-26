@@ -1,21 +1,35 @@
-# Exercícios 09 - Segurança e Autenticação com JWT 🔐
+# Exercícios 09 - Rastreamento Logístico 📦
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Conceito**: Qual a principal diferença entre Autenticação e Autorização?
-2.  **JWT**: Quais são as 3 partes de um token JWT?
+1. **O que é Rastreabilidade?**: Explique o conceito de rastreabilidade e cite dois motivos principais (ex: Recall, Segurança) para uma empresa investir nessa tecnologia.
 
-## 🟡 Médios
+2. **Tecnologias de ID**: Diferencie, em poucas palavras, as três principais tecnologias de identificação: **Código de Barras**, **QR Code** e **RFID**.
 
-3.  **Segurança**:
-    Por que nunca devemos incluir informações sensíveis (como a senha do usuário) dentro do Payload do JWT?
-4.  **Stateless**:
-    Quais as vantagens de uma arquitetura "Stateless" em sistemas que precisam escalar para milhões de usuários?
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Vantagem do RFID**: Imagine um galpão com 10.000 caixas de sapatos. Por que o uso de **RFID** seria muito superior ao **Código de Barras** para realizar um inventário completo em poucos minutos?
 
-5.  **Análise de Token**:
-    Imagine que você interceptou um token JWT.
-    *   Como você faria para ler o nome do usuário que está dentro dele sem saber a chave secreta?
-    *   Agora, imagine que você tentou mudar o `id` do usuário para burlar o sistema. Por que o servidor vai rejeitar esse token quando você tentar usá-lo?
-    *   Onde o frontend deve armazenar o token para que ele não suma quando a página for recarregada?
+4. **Telemetria e GPS**: Como a integração entre o GPS do caminhão e o sistema de logística da empresa ajuda no "atendimento ao cliente" (B2C)?
+
+## 🔴 Exercício Desafio
+
+5. **Design de Solução Logística**:
+    Você é o gestor de uma **Distribuidora de Medicamentos** de alto custo.
+    - Qual tecnologia de identificação você escolheria para garantir que nenhum remédio vença no estoque sem ser notado?
+    - Descreva o fluxo do produto desde a recepção da carga (vinda do fornecedor) até a expedição para o hospital, citando um ponto onde a **Rastreabilidade** evita um erro humano.
+    - O que é o sistema **FIFO/PEPS** e por que o SIG deve controlá-lo automaticamente?
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Consolidar o entendimento sobre as tecnologias que permitem o controle total do fluxo de materiais, reduzindo perdas e aumentando a eficiência operacional da logística.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-09.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 10](exercicio-10.md)

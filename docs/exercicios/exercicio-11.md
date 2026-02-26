@@ -1,22 +1,35 @@
-# Exercícios 11 - Refresh Token e Segurança Avançada 🏗️
+# Exercícios 11 - Atendimento ao Cliente (SAC e FAQ) 🎧
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Conceito**: Por que Access Tokens costumam ter vida curta?
-2.  **Bibliotecas**: Para que serve a biblioteca **Helmet** em um aplicativo Express?
+1. **SAC 4.0**: Defina o que é o atendimento **Omnichannel** e por que ele é melhor do que o atendimento multicanal tradicional.
 
-## 🟡 Médios
+2. **FAQ**: O que é uma FAQ e como essa ferramenta ajuda a reduzir os custos operacionais de uma empresa?
 
-3.  **CORS**:
-    Explique por que o CORS é uma segurança do **Navegador** e não do servidor. O que acontece se você tentar chamar uma API sem CORS a partir de um script no Terminal (cURL)?
-4.  **Flow**:
-    Desenhe o fluxo de uma requisição que retorna erro 401 por token expirado e como o frontend deve agir para usar o Refresh Token.
-5.  **Headers**:
-    Cite três informações sensíveis que o Helmet ajuda a esconder nos cabeçalhos HTTP.
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Help Desk e Tickets**: Explique o conceito de **Ticket** (Chamado) e a importância do **SLA** (tempo de resposta) para a satisfação do cliente.
 
-6.  **Segurança de Refresh Tokens**:
-    Se o Refresh Token permite gerar novos Access Tokens, por que ele é considerado mais seguro?
-    *   Onde ele deve ser armazenado preferencialmente no navegador (LocalStorage ou Cookies HttpOnly)? Por quê?
-    *   O que é o "Refresh Token Rotation"?
+4. **Base de Conhecimento (KB)**: Como uma Base de Conhecimento ajuda um atendente novato a resolver problemas complexos com a mesma eficiência de um veterano?
+
+## 🔴 Exercício Desafio
+
+5. **Estratégia de Suporte para e-Commerce**:
+    Sua loja virtual está recebendo 1.000 perguntas por dia sobre "Onde está meu pedido?".
+    - Proponha uma solução usando **FAQ Automática** e **Self-Service** para reduzir o volume de chamados humanos.
+    - Desenhe o fluxo de um ticket que começa como uma dúvida simples no Chatbot, mas acaba precisando de um atendente humano por ser uma "falha na entrega".
+    - Como o **CRM** ajuda o atendente humano a dar uma resposta personalizada ao cliente que está reclamando?
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Analisar como a tecnologia pode humanizar e agilizar o suporte ao cliente, transformando reclamações em oportunidades de melhoria e fidelização.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-11.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 12](exercicio-12.md)

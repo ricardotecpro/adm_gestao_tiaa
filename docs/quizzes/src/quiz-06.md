@@ -1,71 +1,71 @@
-# Quiz 06 - Services e Regras de Negócio 🧠
+# Quiz 06 - Cadastro e Fluxo de Informação 💾
 
-1. O que acontece se colocarmos toda a lógica de negócio dentro do Controller?
-    - [ ] O app fica mais rápido
-    - [x] O código fica difícil de testar, manter e reutilizar (o famoso "Controller Gordo")
-    - [ ] O banco de dados se apaga sozinho
-    - [ ] O roteamento para de funcionar
-    *Explicação: Acoplar lógica de negócio ao transporte HTTP cria dívida técnica e dificulta a evolução do sistema.*
+1. Qual a primeira etapa do Ciclo de Vida da Informação?
+    - [ ] Destruição do dado
+    - [x] Coleta ou Entrada (Captura do dado)
+    - [ ] Impressão de relatórios
+    - [ ] Venda do produto
+    *Explicação: O ciclo começa quando o dado entra no sistema (cadastro).*
 
-2. Qual a principal responsabilidade do Service?
-    - [ ] Definir as rotas do app
-    - [x] Executar as regras de negócio, validações e cálculos
-    - [ ] Gerar as respostas JSON para o cliente
-    - [ ] Configurar a porta do servidor
-    *Explicação: O Service é onde o conhecimento do domínio da aplicação (as regras do "negócio") reside.*
+2. Sobre o Fluxo de Informação "Horizontal", ele ocorre entre:
+    - [ ] Donos e Funcionários
+    - [x] Departamentos do mesmo nível (ex: Vendas e Estoque)
+    - [ ] Empresa e Governo apenas
+    - [ ] Interno e Externo apenas
+    *Explicação: O fluxo horizontal garante a integração entre áreas colegas da empresa.*
 
-3. Como um Service deve notificar o Controller sobre uma falha de validação?
-    - [ ] Retornando um número 400
-    - [x] Lançando uma exceção ou erro (throw Error)
-    - [ ] Enviando um e-mail para o administrador
-    - [ ] Mudando a cor do console
-    *Explicação: O lançamento de erros permite que o Controller capture o fluxo e decida qual resposta HTTP enviar.*
+3. O que é a "Disseminação" no ciclo da informação?
+    - [ ] Apagar os dados do banco
+    - [x] Entregar a informação certa para a pessoa certa no tempo certo
+    - [ ] Traduzir o sistema para outros países
+    - [ ] Comprar novos servidores
+    *Explicação: É a fase de distribuir o conhecimento processado para quem decide.*
 
-4. Por que o Service não deve acessar os objetos `req` ou `res`?
-    - [ ] Porque eles são secretos
-    - [x] Para manter o Service independente do protocolo de transporte (podendo ser usado em gRPC, CLI, etc)
-    - [ ] Porque isso gasta muita internet
-    - [ ] Para economizar linhas de código
-    *Explicação: A camada de serviço deve ser "cega" para o transporte, focando apenas nos dados e regras.*
+4. Qual a função do "Backup" em um fluxo de informação digital?
+    - [ ] Deixar o sistema mais rápido
+    - [x] Garantir a recuperação dos dados em caso de falhas ou ataques
+    - [ ] Facilitar a digitação
+    - [ ] Não tem função prática
+    *Explicação: Sem backup, a empresa morre se o servidor queimar ou for invadido.*
 
-5. O que define uma "Regra de Negócio"?
-    - [ ] O nome das variáveis do sistema
-    - [x] As diretrizes que ditam como o serviço deve operar (ex: "só maiores de 18 podem comprar")
-    - [ ] O tipo de servidor onde o app está rodando
-    - [ ] A cor do logotipo da empresa
-    *Explicação: Regras de negócio são as "leis" do funcionamento daquela aplicação específica.*
+5. No "Fluxo Vertical", a informação flui entre:
+    - [ ] Concorrentes
+    - [x] Diferentes níveis hierárquicos (Diretoria ↔️ Operacional)
+    - [ ] Apenas entre máquinas
+    - [ ] Apenas por e-mail
+    *Explicação: O fluxo vertical serve para controle, metas e feedbacks hierárquicos.*
 
-6. Qual a vantagem de reutilizar um Service em diferentes Controllers?
-    - [ ] Nenhuma, é melhor copiar o código
-    - [x] Consistência: a regra é aplicada da mesma forma em todo o sistema
-    - [ ] Economiza espaço de memória no disco
-    - [ ] Deixa o site mais colorido
-    *Explicação: Centralizar a regra no Service garante que, se a lei mudar, você só precisa alterar em um lugar.*
+6. Por que a "Segurança do Dado" é vital no cadastro?
+    - [ ] Para o computador não esquentar
+    - [x] Para proteger segredos comerciais e dados sensíveis de clientes (LGPD)
+    - [ ] Para o Windows não travar
+    - [ ] Para economizar energia elétrica
+    *Explicação: Vazamento de dados pode gerar multas pesadas e falência da marca.*
 
-7. O que é um DTO (Data Transfer Object)?
-    - [ ] Um tipo de cabo para conectar servidores
-    - [x] Um objeto simples usado para transportar dados entre camadas sem expor a lógica interna
-    - [ ] O nome do motor de busca do Google
-    - [ ] Um comando do terminal Linux
-    *Explicação: DTOs ajudam a filtrar campos sensíveis (como senhas) antes de enviá-los ao mundo externo.*
+7. O que caracteriza a etapa de "Processamento"?
+    - [ ] Guardar o papel na gaveta
+    - [x] A transformação do dado bruto em informação útil através de cálculos e filtros
+    - [ ] O ato de desligar o computador
+    - [ ] A contratação de novos estagiários
+    *Explicação: É o "trabalho" que o sistema faz sobre o dado inserido.*
 
-8. O que significa "Separation of Concerns" (Separação de Preocupações)?
-    - [ ] Cada desenvolvedor deve trabalhar sozinho
-    - [x] Cada camada do sistema deve ter uma responsabilidade única e bem definida
-    - [ ] O banco de dados deve ficar em outro país
-    - [ ] O site deve ter várias cores diferentes
-    *Explicação: Dividir o sistema em Controller, Service e Repository é aplicar esse princípio fundamental.*
+8. Na gestão documental, o que é "Indexação"?
+    - [ ] Colocar os papéis no lixo
+    - [x] Organizar documentos por tags ou palavras-chave para busca rápida
+    - [ ] Aumentar o preço dos produtos
+    - [ ] Traduzir contratos
+    *Explicação: Um documento digital só é útil se for encontrado em segundos.*
 
-9. Qual o momento ideal para chamar o Service dentro de uma rota?
-    - [ ] Antes de receber a requisição
-    - [x] Após o Controller validar os parâmetros básicos de entrada
-    - [ ] Depois que a resposta já foi enviada ao cliente
-    - [ ] Nunca, o Controller deve fazer tudo
-    *Explicação: O Controller "limpa" a entrada e passa os dados "puros" para o Service processar.*
+9. Um "Gargalo" no fluxo de informação é:
+    - [ ] Um tipo de cabo de rede
+    - [x] Um ponto onde a informação trava e causa atrasos (ex: espera de aprovação)
+    - [ ] O local onde os dados são salvos
+    - [ ] O nome do servidor principal
+    *Explicação: Gargalos matam a produtividade da empresa.*
 
-10. Como o Controller deve tratar o retorno de um Service?
-    - [ ] Ignorando o resultado
-    - [x] Capturando o dado retornado e devolvendo em um JSON com Status 200/201
-    - [ ] Pedindo para o usuário reiniciar o computador
-    - [ ] Exibindo o código fonte na tela
-    *Explicação: O Controller é o tradutor final que comunica o sucesso ou erro do Service para o cliente HTTP.*
+10. O armazenamento na nuvem (Cloud) ajuda o fluxo porque:
+    - [ ] É imune a qualquer tipo de erro
+    - [x] Permite acesso à informação de qualquer lugar com internet
+    - [ ] Os dados ficam guardados em satélites
+    - [ ] Não precisa de senhas
+    *Explicação: A nuvem traz mobilidade e disponibilidade total ao administrador.*

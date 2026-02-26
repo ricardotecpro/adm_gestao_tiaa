@@ -1,22 +1,35 @@
-# Exercícios 15 - Navegação com React Router 🚦
+# Exercícios 15 - E-commerce e Marketing Digital 🛒
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Conceito**: Por que usamos o React Router em vez de links `<a>` comuns em uma SPA?
-2.  **Componentes**: Para que servem os componentes `<BrowserRouter>` e `<Routes>`?
+1. **Marketplace vs Loja Própria**: Explique a diferença entre esses dois modelos de e-commerce e cite um exemplo real de Marketplace.
 
-## 🟡 Médios
+2. **Marketing Digital (SEO)**: O que é SEO e por que ele é importante para que uma loja virtual venda de forma orgânica (sem pagar anúncios)?
 
-3.  **Navegação**:
-    Qual a diferença entre usar o componente `<Link>` e o hook `useNavigate`? Em quais situações você usaria cada um?
-4.  **Rota 404**:
-    Como configuramos uma rota que deve ser exibida quando o usuário digita uma URL que não existe no site?
-5.  **Parâmetros**:
-    Dada a rota `<Route path="/usuario/:nome" element={<Perfil />} />`, como o componente `Perfil` pode descobrir qual o nome que foi digitado na URL?
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Recuperação de Carrinho**: Como o rastreamento do comportamento do usuário permite que o sistema tente "salvar" uma venda que foi abandonada no meio do checkout?
 
-6.  **Proteção de Rotas**:
-    Imagine que você tem uma página `/admin` que só pode ser acessada se o usuário estiver logado.
-    *   Como você usaria o `useNavigate` dentro de um `useEffect` para redirecionar o usuário para a página de `/login` caso ele não tenha um token salvo no `localStorage`?
-    *   O que acontece se o usuário clicar no botão "Voltar" do navegador após ser redirecionado?
+4. **Dropshipping**: Explique como funciona o modelo de Dropshipping. Qual o papel do sistema de informação na integração entre o vendedor e o fornecedor final?
+
+## 🔴 Exercício Desafio
+
+5. **Planejamento de Lançamento Digital**:
+    Uma loja de roupas está saindo do físico para o digital.
+    - Desenhe o **Fluxo da Jornada de Compra**, desde o anúncio no Instagram até a entrega do produto na casa do cliente.
+    - Como o uso de **Analytics** ajudaria o administrador a descobrir em qual etapa do site os clientes estão indo embora?
+    - Se a empresa já usa um **ERP**, por que é vital que a loja virtual (E-commerce) esteja integrada a ele em tempo real?
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Analisar a infraestrutura tecnológica do comércio eletrônico e a importância do marketing orientado a dados para a sobrevivência e crescimento das empresas na internet.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-15.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 16](exercicio-16.md)

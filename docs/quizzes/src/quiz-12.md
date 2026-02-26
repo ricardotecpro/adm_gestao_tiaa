@@ -1,71 +1,71 @@
-# Quiz 12 - Introdução ao React ⚛️
+# Quiz 12 - E-mail e Comunicação Corporativa 📧
 
-1. O que é o React?
-    - [ ] Uma linguagem de programação nova
-    - [x] Uma biblioteca Javascript para criar interfaces de usuário (UIs)
-    - [ ] Um banco de dados que roda no navegador
-    - [ ] Uma ferramenta para editar imagens
-    *Explicação: O React ajuda a criar sites dinâmicos e rápidos através de componentes.*
+1. Por que o e-mail corporativo é considerado um "Registro Oficial"?
+    - [ ] Porque é pago
+    - [x] Porque gera uma trilha documental datada com valor administrativo e jurídico
+    - [ ] Porque só chefes podem usar
+    - [ ] Porque não permite emojis
+    *Explicação: No mundo dos negócios, o que está no e-mail "está escrito" e serve como prova.*
 
-2. O que caracteriza uma Single Page Application (SPA)?
-    - [ ] O site tem apenas uma página de texto simples
-    - [x] O site carrega apenas uma vez e troca o conteúdo dinamicamente sem recarregar a página inteira
-    - [ ] É um app que só funciona em celulares antigos
-    - [ ] É um site que não usa CSS
-    *Explicação: SPAs dão uma experiência fluida de "navegação instantânea" ao usuário.*
+2. O que deve conter um "Assunto de E-mail" eficiente?
+    - [ ] "Oi" ou "Dúvida"
+    - [x] Um resumo claro e objetivo do conteúdo (ex: "Aprovação Pedido #123")
+    - [ ] Apenas o nome de quem envia
+    - [ ] O texto completo do e-mail
+    *Explicação: Ajuda o destinatário a priorizar e encontrar a mensagem depois.*
 
-3. No React, o que é um "Componente"?
-    - [ ] Uma peça física do computador
-    - [x] Uma função Javascript que retorna uma parte da interface (Botão, Menu, Card)
-    - [ ] Um erro que acontece no código
-    - [ ] A cor de fundo do site
-    *Explicação: Pensar em componentes é como pensar em peças de LEGO que se encaixam.*
+3. Sobre o campo CC (*Cópia Carbono*), ele serve para:
+    - [ ] Esconder os destinatários
+    - [x] Manter pessoas informadas que não precisam agir, mas precisam saber do assunto
+    - [ ] Enviar vírus
+    - [ ] Substituir o destinatário principal
+    *Explicação: Serve para dar visibilidade ao fluxo da informação.*
 
-4. Qual a função do Vite no desenvolvimento moderno?
-    - [ ] Traduzir o site para chinês
-    - [x] Rodar um servidor de desenvolvimento ultra rápido e preparar o projeto para publicação
-    - [ ] Criar logotipos automaticamente
-    - [ ] Gerenciar a folha de pagamento da empresa
-    *Explicação: O Vite substituiu ferramentas mais lentas, tornando o dia a dia do dev muito melhor.*
+4. Quando usar o CCO (*Cópia Carbono Oculta*)?
+    - [ ] Para fofocar sobre o chefe
+    - [x] Para enviar avisos a muitos destinatários externos sem que um veja o endereço do outro
+    - [ ] Jamais deve ser usado
+    - [ ] Para enviar e-mails para o futuro
+    *Explicação: Segurança de dados e privacidade dos contatos.*
 
-5. O que significa JSX?
-    - [ ] Java Syntax eXtension
-    - [x] JavaScript XML: uma extensão de sintaxe que permite escrever algo parecido com HTML dentro do JS
-    - [ ] Uma nova marca de TV
-    - [ ] JavaScript Xtreme
-    *Explicação: O JSX torna a criação de interfaces muito mais visual e fácil de ler.*
+5. Escrever em CAIXA ALTA (MAIÚSCULAS) na internet equivale a:
+    - [ ] Falar baixo
+    - [x] Gritar
+    - [ ] Estar feliz
+    - [ ] Erro de teclado
+    *Explicação: É uma regra de etiqueta digital (Netiqueta) fundamental.*
 
-6. Qual a regra fundamental ao retornar conteúdo de um componente React?
-    - [ ] Deve ter no máximo 10 linhas
-    - [x] Deve retornar apenas um único elemento pai (ou usar um Fragment)
-    - [ ] Deve estar todo escrito em letras maiúsculas
-    - [ ] Não pode conter números
-    *Explicação: O React precisa de uma raiz única para conseguir montar a árvore de elementos corretamente.*
+6. Ferramentas como Slack ou Microsoft Teams são focadas em:
+    - [ ] Substituir o e-mail em 100% das vezes
+    - [x] Comunicação rápida, chats por equipe e colaboração em tempo real
+    - [ ] Apenas entretenimento dos funcionários
+    - [ ] Backup de arquivos pesados
+    *Explicação: Agilizam o dia a dia e reduzem o volume de e-mails internos.*
 
-7. Para que servem as "Props" em um componente?
-    - [ ] Para aumentar a performance do site
-    - [x] Para passar informações de um componente pai para um componente filho
-    - [ ] Para salvar dados no banco de dados
-    - [ ] Para mudar a senha do administrador
-    *Explicação: Props são como "argumentos" que tornam o componente dinâmico e reutilizável.*
+7. Um sistema de Gestão de Tarefas (ex: Trello, Jira) ajuda a:
+    - [ ] Jogar paciência
+    - [x] Organizar o fluxo de trabalho (Kanban) e delegar responsabilidades de forma clara
+    - [ ] Ver quem está navegando no Facebook
+    - [ ] Substituir o RH
+    *Explicação: Tira a discussão do "quem faz o quê" do e-mail e coloca em um quadro visual.*
 
-8. Por que usamos `className` em vez de `class` no JSX?
-    - [ ] Porque `className` é mais bonito
-    - [x] Porque `class` é uma palavra reservada do Javascript para criar classes de objetos
-    - [ ] Porque o HTML mudou de nome
-    - [ ] Para economizar memória
-    *Explicação: Como o JSX é Javascript, precisamos evitar conflitos com nomes que o JS já usa.*
+8. Qual o maior risco de usar apenas Apps de Mensagem (WhatsApp) para decisões de trabalho?
+    - [ ] O celular ficar sem bateria
+    - [x] Perda de formalidade, falta de histórico centralizado e mistura de vida pessoal/profissional
+    - [ ] O aplicativo ser gratuito demais
+    - [ ] As mensagens sumirem após 24h apenas
+    *Explicação: Decisões formais exigem canais formais para segurança institucional.*
 
-9. O que é o "Virtual DOM" (Conceito)?
-    - [ ] Uma simulação de videogame
-    - [x] Uma cópia em memória da interface que o React usa para saber exatamente o que atualizar na tela real
-    - [ ] O nome do servidor da Microsoft
-    - [ ] Um tipo de vírus de computador
-    *Explicação: O Virtual DOM é o segredo da velocidade do React, evitando redesenhar a página toda sem necessidade.*
+9. Uma "Assinatura de E-mail" profissional deve conter:
+    - [ ] Links para vídeos engraçados
+    - [x] Nome, Cargo, Departamento e Contatos da empresa
+    - [ ] Apenas o primeiro nome
+    - [ ] Poemas motivacionais
+    *Explicação: Identifica quem fala pela empresa e passa credibilidade.*
 
-10. Como exibimos uma variável Javascript dentro do JSX?
-    - [ ] Usando aspas duplas: "variavel"
-    - [ ] Usando parênteses: (variavel)
-    - [x] Usando chaves: {variavel}
-    - [ ] Usando um ponto de interrogação: ?variavel
-    *Explicação: Tudo que estiver entre chaves { } no JSX será tratado como código Javascript puro.*
+10. A "Comunicação Interna" eficiente evita:
+    - [ ] O pagamento de impostos
+    - [x] Retrabalho, fofocas (Rádio Peão) e erros por falta de instrução
+    - [ ] O uso de computadores à noite
+    - [ ] Que os funcionários tirem férias
+    *Explicação: Informação clara é a base da produtividade de qualquer equipe.*

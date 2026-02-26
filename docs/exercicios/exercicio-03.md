@@ -1,25 +1,35 @@
-# Exercícios 03 - Modelagem REST 📡
+# Exercícios 03 - Características e Funções do ERP ⚙️
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **URI Design**: Corrija as URIs abaixo para seguirem as boas práticas REST:
-    *   `GET /listar_todos_usuarios`
-    *   `POST /criarNovoPedido`
-    *   `DELETE /remover-produto-por-id/123`
-2.  **Verbos**: Qual o verbo HTTP mais adequado para atualizar a senha de um usuário? Por que?
+1. **Modularidade**: O que significa dizer que um sistema ERP é "modular"? Cite 3 módulos que você considera essenciais para qualquer empresa.
 
-## 🟡 Médios
+2. **Auditabilidade**: Por que a função de auditoria ("quem", "quando" e "o quê") é vital em um módulo financeiro de um ERP profissional?
 
-3.  **Status Codes**: Escolha o código de status ideal para as situações:
-    *   Usuário tentou deletar um arquivo, mas ele não tem permissão de administrador.
-    *   O cadastro foi realizado com sucesso e o sistema retornou os dados do novo usuário.
-    *   O servidor caiu por falta de memória.
-4.  **Idempotência**: Explique por que o `POST` não é idempotente e o `GET` é.
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Não Duplicidade de Dados**: Explique o conceito de "não duplicidade" em um ERP. Como a centralização em um banco de dados único evita que o setor de Compras e o setor Financeiro tenham informações diferentes sobre o mesmo fornecedor?
 
-5.  **Design de Contrato**:
-    Desenhe as rotas para um sistema de **E-commerce**.
-    *   Como seria a URI para listar todos os itens de um carrinho específico?
-    *   Como seria a URI para adicionar um item a este carrinho?
-    *   Escreva o JSON que representaria um "Item de Carrinho" com: `produto_id`, `nome`, `quantidade` e `preco_unitario`.
+4. **Segurança por Níveis**: Em um sistema ERP, por que um vendedor não deve ter acesso ao módulo de folha de pagamento do RH? Como o sistema gerencia essas restrições?
+
+## 🔴 Exercício Desafio
+
+5. **Fluxo Transacional Integrado**:
+    Uma empresa de e-commerce recebe um pedido de compra de 10 unidades de um produto.
+    - Descreva o "caminho" da informação desde a venda no **Módulo Comercial** até o **Módulo de Estoque** e o **Módulo Financeiro**.
+    - O que aconteceria se essa integração falhasse e o estoque não fosse baixado automaticamente?
+    - Como o conceito de **Integridade de Dados** garante que o saldo bancário da empresa reflita a realidade das vendas feitas?
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Estes exercícios visam aprofundar o conhecimento técnico sobre a estrutura interna de um ERP, focando em suas características de segurança, integridade e modularidade.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-03.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 04](exercicio-04.md)

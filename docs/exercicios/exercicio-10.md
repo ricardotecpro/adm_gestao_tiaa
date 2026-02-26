@@ -1,20 +1,35 @@
-# Exercícios 10 - Controle de Acesso (RBAC) 🛡️
+# Exercícios 10 - Sistemas de Transações Comerciais 🛒
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Conceito**: No sistema RBAC, o que é uma "Role"?
-2.  **Status Code**: Se um usuário comum tenta acessar uma área de administrador, qual o código de erro HTTP (Status Code) mais apropriado?
+1. **Definição de PDV**: O que é um Ponto de Venda (PDV) e qual sua função principal na interação com o cliente final?
 
-## 🟡 Médios
+2. **Documentos Fiscais**: O que significam as siglas **NF-e** e **NFC-e**? Qual a importância de converter cada venda em um arquivo XML para o governo?
 
-3.  **Diferença**:
-    Explique a diferença fundamental entre erro 401 e erro 403. Em qual desses casos o usuário deve ser redirecionado para a tela de login?
-4.  **Middleware**:
-    Imagine que você tem uma rota `/admin/dashboard`. Quais seriam os dois middlewares (nesta ordem) que o usuário deveria passar antes de chegar no Controller final?
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Integração Backoffice**: Quando uma venda é finalizada no PDV de um supermercado, quais outros 3 departamentos/módulos do ERP são atualizados automaticamente?
 
-5.  **Hierarchy (Hierarquia)**:
-    Implemente (em pseudocódigo) uma lógica onde a função `autorizar(['EDITOR', 'ADMIN'])` permita a passagem se o usuário logado tiver QUALQUER um desses dois perfis.
-    *   Como você garantiria que um `ADMIN` sempre consiga acessar rotas de `USER` e `EDITOR` sem precisar listar o `ADMIN` em todas as rotas do sistema?
-    *   Qual a vantagem dessa abordagem centralizada?
+4. **Automação Comercial**: Explique por que a automação comercial (leitura de código de barras + balança integrada) é vital para reduzir erros no fechamento de caixa de uma padaria.
+
+## 🔴 Exercício Desafio
+
+5. **Planejamento de checkout para Pet Shop**:
+    Você está configurando o sistema de vendas de um novo **Pet Shop**.
+    - Liste os hardware (periféricos) necessários para que o PDV funcione de forma ágil e legalizada.
+    - Descreva o fluxo de uma venda de um "Saco de Ração de 15kg" no sistema, desde o bipe do leitor até a autorização da Sefaz.
+    - Se a internet cair, o que é o sistema **SAT/MFE** e como ele garante que o Pet Shop continue vendendo legalmente?
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Compreender a complexidade por trás de uma simples venda no balcão, focando na integração sistêmica e nas obrigatoriedades fiscais que sustentam o varejo moderno.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-10.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 11](exercicio-11.md)

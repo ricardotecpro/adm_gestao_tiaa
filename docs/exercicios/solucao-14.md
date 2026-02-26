@@ -1,87 +1,45 @@
-# Solução 14 - useEffect e Ciclo de Vida ⏳
+# Solução 14 - Gestão de BD: Saída e Feedback 📊
 
 !!! tip "Navegação"
-[← Exercício 14](exercicio-14.md) | [Próxima Solução →](solucao-15.md)
+    [← Exercício 14](exercicio-14.md) | [Próxima Solução →](solucao-15.md)
 
-## 🟢 Respostas Fáceis
+## 🟢 Respostas Básicas
 
-### 1. useEffect Hook
+### 1. Relatório Sintético vs Analítico
 
 !!! success "Resposta 1"
-**useEffect executa efeitos colaterais:**
+    - **Sintético**: É um resumo (ex: Faturamento Total). Indicado para o **Diretor Geral**, que precisa de uma visão rápida e macro do negócio.
+    - **Analítico**: Apresenta os detalhes (ex: Venda por venda, com hora e item). Indicado para o **Supervisor Operacional**, que precisa identificar erros ponto a ponto.
 
-    ```jsx
-    useEffect(() => {
-        // Código que executa após render
-        fetchDados();
-    }, [dependencias]);
-    ```
-
-### 2. Array de Dependências
+### 2. Conceito de Feedback (Retroalimentação)
 
 !!! success "Resposta 2"
-**Controla quando o efeito executa:**
+    O **Feedback** é o uso da saída do sistema para corrigir a entrada. Se o relatório (saída) mostra que os clientes estão devolvendo muito um produto, a administração usa esse feedback para mudar de fornecedor ou treinar a equipe (nova entrada), reiniciando o ciclo com mais qualidade.
 
-    - `[]` = Apenas uma vez (componente montou)
-    - `[count]` = Quando count mudar
-    - Sem array = A cada render
+## 🟡 Respostas Intermediárias
 
-## 🟡 Respostas Médias
+### 3. Eficiência dos Semáforos (KPIs)
 
-### 3. Cleanup Function
+!!! success "Resposta 3"
+    As cores permitem a **Gestão por Exceção**. O gestor não perde tempo olhando o que está "Verde" (dentro da meta). Ele foca imediatamente no que está "Vermelho" (Crítico), economizando energia mental e agindo onde realmente é necessário.
 
-!!! warning "Resposta 3"
-```jsx
-useEffect(() => {
-const timer = setInterval(() => {
-console.log("tick");
-}, 1000);
+### 4. Alertas como Saída de Sistema
 
-        // ✅ Cleanup para evitar memory leak
-        return () => clearInterval(timer);
-    }, []);
-    ```
-
-### 4. API Call no useEffect
-
-!!! warning "Resposta 4"
-```jsx
-useEffect(() => {
-const fetchDados = async () => {
-const response = await api.get('/usuarios');
-setUsuarios(response.data);
-};
-
-        fetchDados();
-    }, []); // Array vazio = executa uma vez
-    ```
+!!! success "Resposta 4"
+    Uma saída é qualquer dado que o sistema "entrega" ao mundo externo após processar. Ao processar que "Saldo = 5" e a "Regra Mínima = 10", o sistema gera a ação de enviar o e-mail. Isso é um resultado útil e acionável do processamento.
 
 ## 🔴 Resposta Desafio
 
-### 5. Múltiplos useEffects
+### 5. Consultoria em BI: Farmácia
 
 !!! danger "Resposta 5"
-**Separar responsabilidades em diferentes efeitos:**
-
-    ```jsx
-    // ✅ Efeito para dados iniciais
-    useEffect(() => {
-        fetchUsuarios();
-    }, []);
-
-    // ✅ Efeito para filtros
-    useEffect(() => {
-        filtrarUsuarios(filtro);
-    }, [filtro]);
-
-    // ✅ Efeito para timer
-    useEffect(() => {
-        const timer = setInterval(atualizarDados, 30000);
-        return () => clearInterval(timer);
-    }, []);
-    ```
+    - **Dashboard Sugerido**: 
+        1. **Velocímetro de Meta**: Mostra o % de alcance da meta de Vitaminas em tempo real.
+        2. **Gráfico de Barras Comparativo**: "Vendas de Vitaminas Mês Atual vs Mês Anterior".
+    - **Uso do Feedback**: O feedback de vendas baixas faz o marketing decidir investir em anúncios (Entrada) ou mudar a posição das vitaminas nas prateleiras da loja física, buscando reverter o resultado.
+    - **Risco do Relatório Apenas Sintético**: O resumo pode dizer "Vendas estão ótimas!", mas o analítico mostraria que "O lucro é zero porque demos desconto demais". O excesso de resumo pode esconder problemas graves que só os detalhes revelam.
 
 ---
 
 !!! tip "Navegação"
-[← Exercício 14](exercicio-14.md) | [Próxima Solução →](solucao-15.md)
+    [← Exercício 14](exercicio-14.md) | [Próxima Solução →](solucao-15.md)

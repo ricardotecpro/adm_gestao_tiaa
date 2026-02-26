@@ -1,101 +1,74 @@
-# Aula 10 - Controle de Acesso (RBAC) 🛡️
-## Hierarquia e Segurança em Camadas
+# Aula 10 - Sistemas de Transações Comerciais 🛒
+## Do Balcão ao Backoffice: O Fluxo da Venda
 
 ---
 
 ## Agenda 📅
 
-1. O que é RBAC? (Roles) { .fragment }
-2. Autenticação vs Autorização { .fragment }
-3. O Fluxo do Middleware { .fragment }
-4. Erros 401 vs 403 { .fragment }
-5. Protegendo rotas na prática { .fragment }
-6. Hierarquia de Perfis { .fragment }
+1. O que é um PDV (Ponto de Venda)? <!-- .element: class="fragment" -->
+2. Automação Comercial e Periféricos <!-- .element: class="fragment" -->
+3. Documentos Fiscais: NF-e e NFC-e <!-- .element: class="fragment" -->
+4. Integração: PDV 🤝 Financeiro/Estoque <!-- .element: class="fragment" -->
+5. Simulação de Venda e Fiscal <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Role-Based Access Control 👑
+## 1. O Ponto de Venda (PDV) 💵
 
-- Permissões ligadas a **Perfis** (Roles). { .fragment }
-- Ex: ADMIN, EDITOR, VIEWER. { .fragment }
-- Facilita a gestão de milhares de usuários. { .fragment }
-
----
-
-## 2. A Cancela (Middleware) 🚧
-
-- O middleware checa se o usuário tem a "chave" certa. { .fragment }
-- Se não tiver -> 403 Forbidden. { .fragment }
-- Se tiver -> `next()`. { .fragment }
+- Interface de contato direto com o cliente. <!-- .element: class="fragment" -->
+- Funções: Registro de itens e recebimento. <!-- .element: class="fragment" -->
+- Periféricos: Leitor, Impressora e PinPad. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. O Fluxo de Segurança 🌊
+## 2. A Integração é a Chave 🏗️
 
 ```mermaid
-graph LR
-    Req[Request] --> Auth[Autenticação]
-    Auth --> |OK| Role[Autorização]
-    Role --> |OK| Controller[Recurso Final]
+graph TD
+    V[Venda PDV] --> E[Baixa de Estoque]
+    V --> F[Lançamento Financeiro]
+    V --> TAX[Autorização SEFAZ]
+    V --> C[Histórico CRM]
 ```
 
 ---
 
-## 4. 401 vs 403: Não confunda! ❌
+## 3. Fiscal: NFC-e e o XML 📄
 
-- **401 (Unauthorized)**: "Quem é você?". Token inválido ou ausente. { .fragment }
-- **403 (Forbidden)**: "Eu sei quem você é, mas não deixo entrar". Falta de permissão. { .fragment }
+- Vendas reportadas em tempo real ao governo. <!-- .element: class="fragment" -->
+- **XML**: O documento oficial (não é o papel!). <!-- .element: class="fragment" -->
+- **SAT/MFE**: Venda garantida mesmo sem internet. <!-- .element: class="fragment" -->
 
 ---
 
-## 5. Implementação Dinâmica 🔒
+## 4. Prática: Fechando uma Venda 🚀
 
-```javascript
-// Middleware genérico
-router.delete('/usuario/:id', 
-    autenticar, 
-    autorizar(['ADMIN']), 
-    userController.remover
-);
+```termynal
+$ pdv-registrar-item --sku "10020-A"
+ITEM: Chocolate | VALOR: R$ 15,00.
+$ pdv-finalizar-pagamento --metodo "PIX"
+[SINCRONIZANDO] Banco confirmou recebimento.
+[SEFAZ] NFC-e Autorizada (Protocolo 1352...).
+[ESTOQUE] Unidade baixada automaticamente.
 ```
-
----
-
-## 6. Hierarquia de Acesso 🏛️
-
-- Um Admin deve poder acessar rotas de User? { .fragment }
-- Design de sistema: Roles "Pai" e "Filho". { .fragment }
-
----
-
-## 7. Melhores Práticas 🏆
-
-- Centralize a lógica em Middlewares. { .fragment }
-- Nunca exponha permissões sensíveis no frontend (segurança do lado do servidor). { .fragment }
-
----
-
-## Desafio: Segurança ⚡
-
-Em um sistema escolar, o Diretor e o Professor podem ver notas. O Aluno só vê as dele. Como você configuraria a Role da rota `GET /notas`?
 
 ---
 
 ## Resumo ✅
 
-- RBAC organiza permissões por grupos. { .fragment }
-- Middlewares são os guardiões das rotas. { .fragment }
-- Diferenciar 401 de 403 é vital para Debug. { .fragment }
+- O PDV move a empresa e os tributos. <!-- .element: class="fragment" -->
+- Automação reduz filas e erros de caixa. <!-- .element: class="fragment" -->
+- O XML é a prova legal da transação. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Segurança Avançada 🏗️
+## Próxima Aula: SAC e Suporte 🎧
 
-### Session vs Token e Refresh Tokens
-
-- O que fazer quando o token expira? { .fragment }
-- Protegendo contra ataques comuns (XSS, CSRF). { .fragment }
+- Atendimento Omnichannel e FAQs. <!-- .element: class="fragment" -->
+- Como resolver problemas sem humanos (Self-Service). <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🛡️
+## Dúvidas? 🤔
+
+> "Uma venda não termina quando o cliente paga, mas quando ele volta."

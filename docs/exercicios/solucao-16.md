@@ -1,149 +1,42 @@
-# Solução 16 - Context API e Gerenciamento Global 🌐
+# Solução 16 - Revisão e Futuro da TIAA 🚀
 
 !!! tip "Navegação"
-[← Exercício 16](exercicio-16.md) | [Voltar ao Índice](index.md)
+    [← Exercício 16](exercicio-16.md) | [Voltar ao Início](index.md)
 
-## 🟢 Respostas Fáceis
+## 🟢 Respostas Básicas
 
-### 1. Context API
+### 1. Resumo da TIAA na Administração
 
 !!! success "Resposta 1"
-**Context compartilha dados globalmente sem prop drilling:**
+    "A Tecnologia da Informação na Administração serve para transformar dados brutos em inteligência estratégica, eliminando o achismo e otimizando os resultados de cada processo organizacional."
 
-    ```jsx
-    const AuthContext = createContext();
-
-    const AuthProvider = ({ children }) => {
-        const [usuario, setUsuario] = useState(null);
-
-        return (
-            <AuthContext.Provider value={{ usuario, setUsuario }}>
-                {children}
-            </AuthContext.Provider>
-        );
-    };
-    ```
-
-### 2. Prop Drilling
+### 2. O que é e por que usar Cloud Computing (Nuvem)
 
 !!! success "Resposta 2"
-**Passar props através de múltiplos níveis:**
+    Nuvem significa rodar sistemas e guardar dados em servidores remotos (ex: Google, Amazon) acessados via internet. Vantagem: A empresa não precisa comprar servidores caros e o administrador acessa tudo (ERP/BI) de qualquer lugar do mundo com segurança e baixo custo.
 
-    ```jsx
-    // ❌ Prop drilling
-    <App> → <Header> → <Menu> → <UserIcon usuario={usuario} />
+## 🟡 Respostas Intermediárias
 
-    // ✅ Context API
-    const { usuario } = useContext(AuthContext); // Direto em UserIcon
-    ```
+### 3. IA de Passiva para Preditiva
 
-## 🟡 Respostas Médias
+!!! success "Resposta 3"
+    Enquanto o sistema comum diz: "Você vendeu 100 hoje", a **IA Preditiva** analisa anos de dados e clima para dizer: "Amanhã você venderá 150 porque vai chover e é feriado". Isso permite que o gestor se antecipe e não perca vendas por falta de estoque.
 
-### 3. useContext Hook
+### 4. Blockchain fora das Criptomoedas
 
-!!! warning "Resposta 3"
-```jsx
-const { usuario, login, logout } = useContext(AuthContext);
-
-    // Acesso direto aos dados do context
-    if (!usuario) return <LoginButton onClick={login} />;
-    return <WelcomeMessage nome={usuario.nome} onLogout={logout} />;
-    ```
-
-### 4. Multiple Contexts
-
-!!! warning "Resposta 4"
-`jsx
-    const App = () => (
-        <AuthProvider>
-            <ThemeProvider>
-                <NotificationProvider>
-                    <Router />
-                </NotificationProvider>
-            </ThemeProvider>
-        </AuthProvider>
-    );
-    `
+!!! success "Resposta 4"
+    O **Blockchain** cria um registro imutável. Na logística, ele garante a origem real de um alimento (ex: Carne Orgânica) registrando cada passo do gado sem que ninguém possa apagar ou mentir a informação. Isso traz ética e confiança para o consumidor final.
 
 ## 🔴 Resposta Desafio
 
-### 5. Context vs Estado Local
+### 5. O Administrador do Futuro
 
 !!! danger "Resposta 5"
-**Quando usar cada um:**
-
-    **Context API** para:
-    - ✅ Autenticação de usuário
-    - ✅ Tema da aplicação
-    - ✅ Idioma/internacionalização
-    - ✅ Carrinho de compras
-
-    **Estado Local** para:
-    - ✅ Dados de formulário
-    - ✅ Estado de loading específico
-    - ✅ Modals abertos/fechados
-    - ✅ Filtros de uma página específica
-
-    **Regra**: Context para dados que **muitos componentes** precisam acessar.
-
-!!! example "Implementação Completa"
-```jsx
-// AuthContext.jsx
-export const AuthContext = createContext();
-
-    export const AuthProvider = ({ children }) => {
-        const [usuario, setUsuario] = useState(null);
-        const [loading, setLoading] = useState(true);
-
-        const login = async (email, senha) => {
-            setLoading(true);
-            try {
-                const response = await api.post('/login', { email, senha });
-                setUsuario(response.data.usuario);
-                localStorage.setItem('token', response.data.token);
-            } catch (error) {
-                throw error;
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        const logout = () => {
-            setUsuario(null);
-            localStorage.removeItem('token');
-        };
-
-        const value = {
-            usuario,
-            login,
-            logout,
-            loading,
-            isAuthenticated: !!usuario
-        };
-
-        return (
-            <AuthContext.Provider value={value}>
-                {children}
-            </AuthContext.Provider>
-        );
-    };
-
-    // Hook customizado
-    export const useAuth = () => {
-        const context = useContext(AuthContext);
-        if (!context) {
-            throw new Error('useAuth deve ser usado dentro de AuthProvider');
-        }
-        return context;
-    };
-    ```
+    - **3 Habilidades**: 1. **Data Literacy** (Saber ler e questionar dados). 2. **Pensamento Crítico** para supervisionar IAs. 3. **Gestão de Mudanças** para adaptar a equipe às constantes trocas tecnológicas.
+    - **Visão Sistêmica e Marketing/Produção**: Se o Marketing faz uma campanha incrível (Sucesso!) mas a Produção não aguenta a demanda (Falha de visão), a empresa entrega atrasado, perde imagem e gasta com multas. A visão sistêmica garante que o Marketing só acelere se a Produção puder acompanhar.
+    - **Impacto do Vazamento de Dados**: Além de multas milionárias da LGPD, a empresa perde a **confiança** do mercado. Clientes abandonam a marca por medo de seus dados financeiros serem roubados, o que pode levar o negócio à falência em poucos meses.
 
 ---
 
-!!! tip "Dicas para Próximos Estudos" - Explore **Redux Toolkit** para estados complexos - Use **React Query** para gerenciamento de servidor state - Pratique **Custom Hooks** para lógica reutilizável - Configure **TypeScript** para type safety
-
-!!! success "Parabéns! 🎉"
-Você completou todos os exercícios do curso. Continue praticando e explorando o ecossistema React!
-
 !!! tip "Navegação"
-[← Exercício 16](exercicio-16.md) | [Voltar ao Índice](index.md)
+    [← Exercício 16](exercicio-16.md) | [Voltar ao Início](index.md)

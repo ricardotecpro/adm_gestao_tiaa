@@ -1,24 +1,35 @@
-# Exercícios 08 - Boas Práticas e Validação de Dados ✅
+# Exercícios 08 - Comunicação Empresarial e Comercial 📞
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Conceito**: Por que nunca devemos confiar 100% nos dados vindos do frontend?
-2.  **Validação**: Dê um exemplo de uma regra de validação para um campo de "Senha".
+1. **Modelos de Negócio**: Diferencie, com um exemplo prático para cada, os modelos **B2B**, **B2C** e **C2C**.
 
-## 🟡 Médios
+2. **Definição de EDI**: O que significa a sigla EDI e qual sua principal função na comunicação entre empresas e fornecedores?
 
-3.  **Sanitização**:
-    Qual a diferença prática entre validar um campo e sanitizar um campo? Quando usamos cada um?
-4.  **Clean Code**:
-    Refatore o nome da função abaixo para seguir as boas práticas:
-    ```javascript
-    function usr_ch(a, b) { ... } // Recebe e-mail e id, checa se e-mail já existe
-    ```
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Automação e Erros**: Como a tecnologia EDI ajuda a eliminar o "erro humano" e a duplicidade de digitação na recepção de mercadorias?
 
-5.  **Tratamento de Erros**:
-    Imagine que o banco de dados caiu. O Service lança um erro técnico.
-    *   Como o **Middleware Global de Erros** deve reagir?
-    *   O que ele deve enviar para o usuário final? (Erro 500 com mensagem técnica ou mensagem genérica?)
-    *   Por que é importante logar o erro real apenas no console do servidor?
+4. **Feedback e SAC**: Por que o "caminho de volta" da informação (do consumidor para a empresa) é vital para o ajuste de estratégias no CRM?
+
+## 🔴 Exercício Desafio
+
+5. **Otimização de Cadeia de Suprimentos**:
+    Uma fábrica de automóveis utiliza EDI para se conectar a 50 fornecedores de peças.
+    - Se o sistema da fábrica detectar que a produção vai aumentar 20% semana que vem, como o **EDI** agiliza a chegada das peças necessárias?
+    - No lado do consumidor final (**B2C**), como a integração entre o site de vendas e o WhatsApp (via API) pode aumentar a taxa de conversão de vendas?
+    - Descreva o risco de uma empresa que ignora a "comunicação digital" e mantém seus processos comerciais baseados apenas em telefone e papel.
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Analisar a integração tecnológica entre os diferentes atores do mercado (Fornecedores, Empresas e Consumidores) e o impacto da velocidade da informação no sucesso comercial.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-08.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 09](exercicio-09.md)

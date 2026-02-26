@@ -1,92 +1,75 @@
-# Aula 11 - Refresh Token e Segurança Avançada 🏗️
-## Blindando sua API contra o mundo
+# Aula 11 - Suporte ao Cliente: SAC e FAQ 🎧
+## Omnichannel e a Base de Conhecimento
 
 ---
 
 ## Agenda 📅
 
-1. O Problema do Token Curto ⏰ { .fragment }
-2. Refresh Tokens (O que são?) { .fragment }
-3. CORS: Origens e Destinos { .fragment }
-4. Helmet: Headers de Aço { .fragment }
-5. Rate Limit: Contra Brute Force { .fragment }
-6. Ataques Comuns (XSS, Injection) { .fragment }
+1. SAC 4.0: O Atendimento Omnichannel <!-- .element: class="fragment" -->
+2. FAQ e o Autoatendimento (Self-Service) <!-- .element: class="fragment" -->
+3. Gestão de Tickets e Prazos (SLA) <!-- .element: class="fragment" -->
+4. Base de Conhecimento: Inteligência Coletiva <!-- .element: class="fragment" -->
+5. Operação de Suporte no Terminal <!-- .element: class="fragment" -->
 
 ---
 
-## 1. Por que Tokens Expiram? ⏰
+## 1. O Que é Omnichannel? 📱
 
-- Segurança! Se roubarem o token, ele dura pouco. { .fragment }
-- **Problema**: O usuário odeia fazer login toda hora. { .fragment }
-
----
-
-## 2. Refresh Token 🔁
-
-- Um token de longa duração (7 dias+). { .fragment }
-- Serve apenas para trocar por um novo Access Token. { .fragment }
-- Deve ser invalidado se o usuário deslogar. { .fragment }
+- Integração total de canais (Whats, E-mail, Fone). <!-- .element: class="fragment" -->
+- O cliente nunca repete a mesma história. <!-- .element: class="fragment" -->
+- Visão única do cliente no CRM. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. CORS: Cross-Origin Resource Sharing 🌍
+## Fluxo de Atendimento Moderno
 
-- "Quem pode me chamar?". { .fragment }
-- Resolvido via Headers no Servidor. { .fragment }
-- **Nunca** use `origin: '*'` em ambientes reais! { .fragment }
-
----
-
-## 4. Helmet: Proteção de Headers 🪖
-
-- Remove o `X-Powered-By` (não diz que é Express). { .fragment }
-- Adiciona proteção contra Clickjacking e XSS. { .fragment }
+```mermaid
+graph TD
+    C[Cliente] --> CH[Chatbot]
+    CH -- "Fácil" --> FAQ[Autoajuda]
+    CH -- "Difícil" --> HUM[Humano]
+    HUM -- "Consulta" --> KB[Base Conhecimento]
+```
 
 ---
 
-## 5. Rate Limiting 🔨
+## 2. Help Desk e SLAs 🎫
 
-- 5 tentativas de login por minuto? Sim. { .fragment }
-- Evita que robôs tentem descobrir senhas via "força bruta". { .fragment }
-
----
-
-## 6. Onde salvar os Tokens? 🛡️
-
-- **Frontend**: LocalStorage? Seguro? { .fragment }
-- **Melhor Prática**: Cookies `HttpOnly` + `Secure`. { .fragment }
+- **Ticket**: O número de rastreio do problema. <!-- .element: class="fragment" -->
+- **SLA**: O compromisso de tempo para resposta. <!-- .element: class="fragment" -->
+- Priorização baseada na gravidade da falha. <!-- .element: class="fragment" -->
 
 ---
 
-## 7. Melhores Práticas de Segurança 🏆
+## 3. Prática: Atendimento via Sistema 🚀
 
-1. Use HTTPS sempre. { .fragment }
-2. Valide TODAS as entradas do usuário. { .fragment }
-3. Mantenha as bibliotecas atualizadas. { .fragment }
-
----
-
-## Desafio de Segurança ⚡
-
-Qual a diferença entre 401 e 403 no contexto de Refresh Tokens? Se eu recebo 401, eu tento o refresh ou deslogo o usuário?
+```termynal
+$ sac-listar-tickets --prioridade "Alta"
+[ID-990] Cliente: João | Assunto: "Atraso Entrega".
+$ sac-assumir --id 990
+[OK] Atendente Ricardo logado no caso.
+$ sac-consultar-kb --termo "logistica atraso"
+[SUGESTÃO] Enviar cupom 'DESC5' e pedir desculpas.
+$ sac-responder --status "Resolvido"
+```
 
 ---
 
 ## Resumo ✅
 
-- Refresh Token equilibra UX e Segurança. { .fragment }
-- CORS e Helmet são as portas do seu castelo. { .fragment }
-- Proteja-se contra robôs com Rate Limit. { .fragment }
+- Omnichannel é o padrão de excelência. <!-- .element: class="fragment" -->
+- FAQ reduz custos e empodera o cliente. <!-- .element: class="fragment" -->
+- Base de conhecimento agiliza o treinamento da equipe. <!-- .element: class="fragment" -->
 
 ---
 
-## Próximo Módulo: Front-End Moderno 🎨
+## Próxima Aula: Comunicação Corporativa 📧
 
-### Saindo das APIs e indo para a Web!
-
-- Introdução ao React/Vite. { .fragment }
-- Consumindo nossas APIs no navegador. { .fragment }
+- Boas práticas no E-mail e Chat. <!-- .element: class="fragment" -->
+- Trello e Asana: O fim do "caos" de e-mails. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🏗️
+## Dúvidas? 🤔
+
+> "O bom atendimento é invisível. O mau atendimento é inesquecível."

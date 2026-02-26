@@ -1,20 +1,35 @@
-# Exercícios 05 - Implementação de APIs ⚙️
+# Exercícios 05 - Tomada de Decisão e Qualidade de Dados 📈
 
-## 🟢 Fáceis
+## 🟢 Exercícios Básicos
 
-1.  **Responsabilidade**: Qual a principal função de um Controller em uma arquitetura de camadas?
-2.  **Mapeamento**: O que é um "Handler" no contexto de rotas backend?
+1. **Fases da Decisão**: Liste as 4 fases do processo de tomada de decisão no SIG e explique brevemente o que ocorre na fase de "Inteligência".
 
-## 🟡 Médios
+2. **GIGO**: O que significa o conceito *"Garbage In, Garbage Out"* aplicado aos sistemas de informações gerenciais?
 
-3.  **Parâmetros**: Diferencie, com exemplos de URIs, o uso de **Path Params** e **Query Params**.
-4.  **Erros**: Por que o Controller nunca deve retornar uma resposta sem um Status Code explícito?
+## 🟡 Exercícios Intermediários
 
-## 🔴 Desafio
+3. **Níveis de Decisão**: Diferencie o foco de um SIG no Nível Estratégico em relação ao Nível Operacional. Qual o horizonte de tempo de cada um?
 
-5.  **Cenário Real**:
-    Imagine que você está implementando a rota de `PUT /produtos/123`.
-    *   Como você capturaria o `123`?
-    *   Como você capturaria o novo nome do produto?
-    *   Em qual objeto (`req.params`, `req.query` ou `req.body`) cada um desses dados estaria?
-    *   O que você faria se o cliente enviasse o `id` no Body diferente do `id` na URL?
+4. **Checks de Qualidade**: Por que a precisão e a pontualidade são consideradas regras de ouro para um bom cadastro no SIG? Dê um exemplo de prejuízo causado por um dado impreciso.
+
+## 🔴 Exercício Desafio
+
+5. **Simulação de Gestão de Crise**:
+    Uma rede de supermercados detecta, via SIG, que o tempo médio de espera nas filas dobrou na última hora.
+    - Como a fase de **Design** ajudaria o gerente a criar alternativas antes de tomar uma decisão?
+    - Se o dado de "funcionários presentes" no sistema estivesse desatualizado (erro de cadastro), como isso afetaria a fase de **Escolha**?
+    - Proponha uma regra de validação no sistema para evitar que um novo produto seja cadastrado sem o "Preço de Custo".
+
+---
+
+## 🎯 Objetivo dos Exercícios
+
+Aprofundar a compreensão sobre como a qualidade da informação impacta diretamente a eficácia das decisões tomadas pelos gestores em diferentes níveis da organização.
+
+---
+
+[:material-lightbulb: Ver Soluções Detalhadas](solucao-05.md){ .md-button .md-button--primary }
+
+---
+
+[:material-arrow-left: Voltar ao Índice](index.md) | [:material-arrow-right: Próximo: Exercício 06](exercicio-06.md)

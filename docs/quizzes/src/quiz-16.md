@@ -1,71 +1,71 @@
-# Quiz 16 - Projeto Final e Carreira 🎓
+# Quiz 16 - Revisão Final e Futuro da TIAA 🚀
 
-1. Qual o principal objetivo do "Trabalho de Conclusão de Curso (TCC)" no TecPro?
-    - [ ] Ganhar um prêmio em dinheiro
-    - [x] Consolidar o aprendizado em um projeto Full-Stack real para servir de portfólio para o mercado
-    - [ ] Escrever o código mais longo do mundo
-    - [ ] Criar um site que não use internet
-    *Explicação: O projeto final prova que você sabe conectar o Frontend ao Backend com segurança.*
+1. O que resume o conceito de "Padrão Ouro" na TIAA?
+    - [ ] Ter computadores feitos de ouro
+    - [x] Alinhamento total entre infraestrutura agnóstica e conteúdo técnico preciso
+    - [ ] Cobrar o curso mais caro do mercado
+    - [ ] Não usar diagramas
+    *Explicação: É o equilíbrio perfeito entre tecnologia moderna e didática administrativa.*
 
-2. Por que o `README.md` no seu GitHub é considerado seu "Cartão de Visitas"?
-    - [ ] Porque ele tem as cores da sua empresa
-    - [x] Porque é a primeira coisa que um recrutador ou tech lead olha para entender seu projeto
-    - [ ] Porque ele apaga o resto do código
-    - [ ] Porque o GitHub cobra se você não tiver um
-    *Explicação: Um bom README com prints e tecnologias demonstra profissionalismo e clareza.*
+2. Qual a tendência da "Indústria 4.0" na gestão?
+    - [ ] Voltar ao uso de máquinas manuais
+    - [x] Integração total entre sistemas, IA, IoT e dados em tempo real
+    - [ ] Focar apenas em marketing
+    - [ ] Proibir o uso de nuvem
+    *Explicação: A fábrica inteligente decide e se ajusta sozinha através de dados.*
 
-3. Como você pode tornar seu projeto "impecável" para o mercado?
-    - [ ] Colocando o máximo de animações possível, mesmo que trave
-    - [x] Usando rotas seguras, código limpo, tratamento de erros e um design organizado
-    - [ ] Cobrando caro para as pessoas verem o código
-    - [ ] Copiando o código de outro site sem mudar nada
-    *Explicação: Qualidade técnica e atenção aos detalhes são o que diferenciam um júnior de um pleno.*
+3. Sobre a Segurança da Informação, o que é a LGPD?
+    - [ ] Uma nova linguagem de programação
+    - [x] Lei Geral de Proteção de Dados (Regras sobre privacidade de dados pessoais)
+    - [ ] Um tipo de disco rígido
+    - [ ] Um imposto sobre computadores
+    *Explicação: Lei brasileira que obriga empresas a tratarem dados de clientes com rigor.*
 
-4. O que é o `TypeScript` (citado como próximo passo)?
-    - [ ] Um novo tipo de processador
-    - [x] Uma linguagem que adiciona "tipos" ao Javascript, evitando erros comuns em tempo de desenvolvimento
-    - [ ] O sucessor do HTML
-    - [ ] Uma ferramenta para criar foguetes em 3D
-    *Explicação: TypeScript é o padrão em grandes empresas para projetos robustos.*
+4. O papel do Administrador no futuro será:
+    - [ ] Digitar dados manualmente
+    - [x] Atuar como analista estratégico, interpretando o que a IA e o SIG entregam
+    - [ ] Consertar cabos de rede
+    - [ ] Evitar o uso de tecnologia
+    *Explicação: O humano cuida da estratégia; o sistema cuida do processamento.*
 
-5. O que significa ser um desenvolvedor `T-Shaped`?
-    - [ ] Ter uma camiseta com estampa de código
-    - [x] Ter conhecimento amplo em várias áreas (Backend, Frontend, UX) e profundo em uma (ex: Node.js)
-    - [ ] Programar apenas com a mão esquerda
-    - [ ] Saber usar apenas uma linguagem de programação
-    *Explicação: É o perfil mais valorizado pelas empresas modernas de tecnologia.*
+5. O que significa "Agnosticismo de Infraestrutura"?
+    - [ ] Não acreditar em tecnologia
+    - [x] O conteúdo deve funcionar em qualquer servidor ou sistema sem depender de marcas
+    - [ ] Usar apenas produtos da Microsoft
+    - [ ] Criar sistemas que não precisam de internet
+    *Explicação: Flexibilidade para mudar de tecnologia sem perder o valor do negócio.*
 
-6. Qual a importância das `Soft Skills` para um desenvolvedor Full-Stack?
-    - [ ] Nenhuma, dev só precisa falar com o computador
-    - [x] Essencial para trabalhar em equipe, entender o cliente e explicar decisões técnicas
-    - [ ] Serve apenas para quem trabalha no RH
-    - [ ] É o nome de uma biblioteca de animação suave
-    *Explicação: Software é feito por pessoas para pessoas. Saber se comunicar é vital.*
+6. No futuro, a "IA Generativa" na administração ajudará a:
+    - [ ] Demitir todos os funcionários
+    - [x] Criar relatórios, prever crises e automatizar comunicações complexas
+    - [ ] Jogar games de estratégia pela empresa
+    - [ ] Substituir o dono da empresa
+    *Explicação: IA como um "copiloto" de alta performance para o gestor.*
 
-7. O que é o `Next.js`?
-    - [ ] Um curso para aprender Javascript em 5 minutos
-    - [x] O framework React mais popular que permite criar sites rápidos com renderização no servidor (SSR)
-    - [ ] O nome do navegador do Google
-    - [ ] Uma versão do Javascript que roda apenas em smartwatches
-    *Explicação: Next.js é a evolução natural para quem já domina os fundamentos do React.*
+7. A "Sustentabilidade Digital" (Green IT) foca em:
+    - [ ] Pintar o datacenter de verde
+    - [x] Reduzir o consumo de energia e o lixo eletrônico da tecnologia
+    - [ ] Desligar a internet nos finais de semana
+    - [ ] Plantar árvores dentro da empresa
+    *Explicação: Tecnologia eficiente que respeita o meio ambiente.*
 
-8. Como se manter atualizado em um mercado que muda todo mês?
-    - [ ] Lendo livros de 20 anos atrás
-    - [x] Acompanhando documentações oficiais, comunidades, newsletters e praticando sempre
-    - [ ] Esperando o chefe mandar estudar
-    - [ ] Decorando todos os comandos de uma vez
-    *Explicação: Estudo contínuo é parte fundamental da rotina de um desenvolvedor.*
+8. Qual o maior aprendizado sobre ERP neste curso?
+    - [ ] Que ele é um programa simples de usar
+    - [x] Que ele é o coração da empresa e exige processos e pessoas alinhadas
+    - [ ] Que ele resolve todos os problemas sozinho
+    - [ ] Que ele nunca precisa de atualização
+    *Explicação: ERP é ferramenta; a gestão vem das pessoas e processos.*
 
-9. O que fazer ao encontrar um bug impossível no seu código?
-    - [ ] Chorar e desistir da carreira
-    - [x] Consultar a documentação, fóruns como StackOverflow, usar IA (com sabedoria) e debugar passo a passo
-    - [ ] Apagar o Windows e reinstalar tudo
-    - [ ] Ignorar o erro e avisar o usuário para não clicar ali
-    *Explicação: Resolver problemas complexos é a alma do trabalho do programador.*
+9. O que caracteriza um "Gestor Data-Driven"?
+    - [ ] Ele gosta muito de tecnologia
+    - [x] Suas decisões são baseadas em evidências e dados, não em palpites
+    - [ ] Ele sabe programar em todas as linguagens
+    - [ ] Ele nunca erra
+    *Explicação: Decisões guiadas por dados reduzem riscos e aumentam o lucro.*
 
-10. Qual a mensagem final do curso para o aluno?
-    - [ ] Que agora você já sabe tudo e não precisa mais estudar
-    - [x] Que você construiu uma base sólida e agora tem o poder de criar soluções web completas
-    - [ ] Que o mercado de programação vai acabar amanhã
-    - [ ] Que o PHP é a única linguagem que existe
-    *Explicação: O curso é apenas o início de uma carreira incrível e cheia de inovação.*
+10. A TIAA é uma disciplina:
+    - [ ] Apenas técnica para programadores
+    - [x] Interdisciplinar, unindo Administração, Gestão e Tecnologia
+    - [ ] Que vai acabar em breve
+    - [ ] Focada apenas em planilhas
+    *Explicação: É a ponte fundamental entre o que o negócio precisa e o que a TI entrega.*
