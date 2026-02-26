@@ -57,12 +57,14 @@
 - [x] Atualização da navegação para 4 abas principais
 - [x] Criação do arquivo .mailmap
 - [x] Atualização do pyproject.toml com dependências necessárias
+- [x] **Correção de dependências**: Removido `mkdocs-tags-plugin` inexistente (tags é nativo do Material)
 - [x] Criação do diretório /logs para organização
 - [x] Auditoria completa de todos os arquivos index.md
 - [x] Homepage seguindo o Gold Standard
 - [x] Atualização de URLs no README e configurações
 - [x] Correção de configuração do plugin mkdocs-revealjs
 - [x] Teste de build com sucesso (mkdocs build --strict)
+- [x] **CI/CD Fix**: Corrigido erro que causava falha no pipeline de deploy
 
 ### 🔄 Próximos Passos Recomendados
 
