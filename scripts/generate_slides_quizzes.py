@@ -2,6 +2,7 @@ import pathlib
 import re
 import sys
 import io
+import yaml
 
 # Fix for Windows encoding issues with emojis
 if sys.platform == "win32":
@@ -11,8 +12,16 @@ if sys.platform == "win32":
 from rich import print
 from rich.progress import track
 
+def load_config():
+    """Carrega configuração do mkdocs.yml"""
+    with open("mkdocs.yml", "r", encoding="utf-8") as f:
+        # Usamos UnsafeLoader pois mkdocs.yml pode conter tags !!python/name
+        return yaml.load(f, Loader=yaml.UnsafeLoader)
 
-def generate_slide_html(lesson_number: int, course_title: str = "Curso") -> str:
+CONFIG = load_config()
+SITE_NAME = CONFIG.get("site_name", "Curso")
+
+def generate_slide_html(lesson_number: int) -> str:
     """Gera HTML para um slide específico"""
     return f'''<!doctype html>
 <html lang="pt-BR">

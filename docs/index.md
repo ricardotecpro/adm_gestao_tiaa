@@ -81,24 +81,6 @@ _O futuro digital do comércio e da gestão de informações._
 
 **Pronto para modernizar sua gestão?** [:material-rocket: Ir para Aula 01](aulas/aula-01.md){ .md-button .md-button--primary }
 
----
-
-## 🎯 Jornada de Aprendizado Estruturada
-
-<div class="learning-modules" markdown>
-
-!!! info "📚 Módulo 1: Fundamentos de Sistemas de Gestão"
-
-    **🏢 Base Empresarial Sólida**
-
-    Explore os conceitos fundamentais de **ERP**, **CRM** e **Business Intelligence**, compreendendo como esses sistemas revolucionam a gestão empresarial moderna.
-
-    [:fontawesome-solid-building: Aulas 01-04](aulas/aula-01.md){ .md-button }
-
-!!! tip "📈 Módulo 2: SIG e Decisão Estratégica"
-
-    **🎯 Inteligência de Negócios**
-
     Domine os **Sistemas de Informações Gerenciais** como ferramentas de tomada de decisão, aprendendo a transformar dados em inteligência de negócios.
 
     [:fontawesome-solid-chart-line: Aulas 05-08](aulas/aula-05.md){ .md-button }
