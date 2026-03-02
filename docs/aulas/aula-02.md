@@ -55,7 +55,8 @@ Para uma administração de alta performance, essas três ferramentas devem trab
 
 Como um gestor acessa essas informações de forma agregada:
 
-```termynal
+<!-- termynal -->
+```bash
 $ dashboard-comercial --resumo-semanal
 [CARREGANDO] Sincronizando ERP (Vendas) e CRM (Leads)...
 --------------------------------------------------
@@ -92,4 +93,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos mergulhar nas [Características e Funções Básicas do ERP](./aula-03.md)! 📡
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 02](../slides/slide-02.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 02](../quizzes/quiz-02.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 02](../exercicios/exercicio-02.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 02](../projetos/projeto-02.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 03](./aula-03.md){ .md-button .md-button--primary }

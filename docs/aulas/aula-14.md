@@ -51,7 +51,8 @@ Ver uma tabela com 1.000 linhas é difícil. Por isso, os sistemas modernos foca
 
 Visualize como o sistema solicita e entrega informações de saída:
 
-```termynal
+<!-- termynal -->
+```bash
 $ bd-gerar-saida --tipo "Alerta_Estoque"
 [CONSULTANDO] Verificando níveis mínimos...
 [SAÍDA] 05 Itens encontrados abaixo do estoque de segurança.
@@ -85,4 +86,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos explorar o mundo do [E-commerce e Marketing Digital](./aula-15.md)! 🛒
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 14](../slides/slide-14.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 14](../quizzes/quiz-14.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 14](../exercicios/exercicio-14.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 14](../projetos/projeto-14.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 15](./aula-15.md){ .md-button .md-button--primary }

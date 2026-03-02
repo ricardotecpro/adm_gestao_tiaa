@@ -56,7 +56,8 @@ A TIAA é um campo vasto. Para se destacar, foque em:
 
 Visualize como uma IA integrada ao SIG opera:
 
-```termynal
+<!-- termynal -->
+```bash
 $ tiaa-previsao-mensal --setor "Vendas"
 [ANALISANDO] Processando dados históricos dos últimos 5 anos...
 [INSIGHT] Detectada tendência de alta em 'Produtos Veganos'.
@@ -89,3 +90,49 @@ Parabéns por concluir esta jornada pela **Tecnologia da Informação Aplicada �
 
 **FIM DO CURSO** 🎓🚀
 Desejamos muito sucesso na sua trajetória profissional!
+
+---
+
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 16](../slides/slide-16.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 16](../quizzes/quiz-16.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 16](../exercicios/exercicio-16.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 16](../projetos/projeto-16.md)
+
+</div>
+
+---
+
+!!! success "Parabéns!"
+    Você concluiu todas as aulas deste curso!
+
+[🏆 Voltar à Trilha de Aulas](./index.md){ .md-button .md-button--primary }

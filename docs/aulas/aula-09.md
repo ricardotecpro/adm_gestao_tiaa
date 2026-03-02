@@ -49,7 +49,8 @@ graph TD
 
 Visualize como um administrador logístico opera o sistema:
 
-```termynal
+<!-- termynal -->
+```bash
 $ logistica-rastreio --carga "ID-4420"
 [LOCALIZANDO] Conectando via GPS ao caminhão Placa ABC-1234...
 [DISTÂNCIA] Falta: 120km | Tempo Estimado: 01h 45min
@@ -84,4 +85,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos mergulhar nos [Sistemas de Transações Comerciais](./aula-10.md)! 🛒
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 09](../slides/slide-09.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 09](../quizzes/quiz-09.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 09](../exercicios/exercicio-09.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 09](../projetos/projeto-09.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 10](./aula-10.md){ .md-button .md-button--primary }

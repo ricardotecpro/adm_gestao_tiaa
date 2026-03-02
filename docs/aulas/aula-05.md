@@ -57,7 +57,8 @@ graph TD
 
 Como um gestor operacional utiliza o SIG para decidir sobre reposição:
 
-```termynal
+<!-- termynal -->
+```bash
 $ sig-checar-produtividade --servidor "Frente de Loja"
 [OK] Analisando 1.200 atendimentos hoje...
 [ALERTA] Tempo médio de espera: 8 minutos (Meta: 5 min)
@@ -89,4 +90,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos aprender sobre o [Cadastro, Fluxo e Gestão de Informações no SIG](./aula-06.md)! 💾
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 05](../slides/slide-05.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 05](../quizzes/quiz-05.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 05](../exercicios/exercicio-05.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 05](../projetos/projeto-05.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 06](./aula-06.md){ .md-button .md-button--primary }

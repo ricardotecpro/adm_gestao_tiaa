@@ -58,7 +58,8 @@ Um SIG moderno também deve gerenciar documentos digitais (documentos de identid
 
 Visualize como o sistema move a informação entre as camadas:
 
-```termynal
+<!-- termynal -->
+```bash
 $ sig-mover-dados --origem "Vendas_Local" --destino "Sede_Nuvem"
 [TRANSFERINDO] 1.500 registros detectados...
 [VALIDANDO] Verificando integridade dos CPFs e Valores...
@@ -91,4 +92,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos ver como criar [Sistemas de Informações Gerenciais Adequados às Atividades Específicas](./aula-07.md)! 🧪
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 06](../slides/slide-06.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 06](../quizzes/quiz-06.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 06](../exercicios/exercicio-06.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 06](../projetos/projeto-06.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 07](./aula-07.md){ .md-button .md-button--primary }

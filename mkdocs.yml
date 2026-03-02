@@ -91,13 +91,13 @@ markdown_extensions:
 plugins:
   - social:
       cards: false
-  - tags:
+  - tags
   - mkdocs-revealjs
   - search:
       lang: pt
   - mkdocs-jupyter
   - glightbox
-  - awesome-pages:
+  - awesome-pages
   - git-authors:
       show_contribution: true
       show_line_count: true
@@ -174,7 +174,7 @@ extra:
     default: estavel
 
 nav:
-  - Informações:
+  - Principal:
     - Curso: index.md
     - Sobre: sobre.md
     - Plano: plano.md
@@ -201,8 +201,7 @@ nav:
       - 'Aula 15 - E-commerce e Marketing': aulas/aula-15.md
       - 'Aula 16 - Segurança e Lojas': aulas/aula-16.md
   - Materiais:
-    - Materiais: materiais.md
-    - Roadmap: project_roadmap.md
+    - materiais.md
     - Slides:
         - slides/index.md
         - 'Slide 01': slides/slide-01.html
@@ -221,12 +220,85 @@ nav:
         - 'Slide 14': slides/slide-14.html
         - 'Slide 15': slides/slide-15.html
         - 'Slide 16': slides/slide-16.html
-    - Exercícios: exercicios/index.md
-    - Quizzes: quizzes/index.md
-    - Projetos: projetos/index.md
+    - Exercícios:
+        - exercicios/index.md
+        - 'Exercicio 01': exercicios/exercicio-01.md
+        - 'Solução 01': exercicios/solucao-01.md
+        - 'Exercicio 02': exercicios/exercicio-02.md
+        - 'Solução 02': exercicios/solucao-02.md
+        - 'Exercicio 03': exercicios/exercicio-03.md
+        - 'Solução 03': exercicios/solucao-03.md
+        - 'Exercicio 04': exercicios/exercicio-04.md
+        - 'Solução 04': exercicios/solucao-04.md
+        - 'Exercicio 05': exercicios/exercicio-05.md
+        - 'Solução 05': exercicios/solucao-05.md
+        - 'Exercicio 06': exercicios/exercicio-06.md
+        - 'Solução 06': exercicios/solucao-06.md
+        - 'Exercicio 07': exercicios/exercicio-07.md
+        - 'Solução 07': exercicios/solucao-07.md
+        - 'Exercicio 08': exercicios/exercicio-08.md
+        - 'Solução 08': exercicios/solucao-08.md
+        - 'Exercicio 09': exercicios/exercicio-09.md
+        - 'Solução 09': exercicios/solucao-09.md
+        - 'Exercicio 10': exercicios/exercicio-10.md
+        - 'Solução 10': exercicios/solucao-10.md
+        - 'Exercicio 11': exercicios/exercicio-11.md
+        - 'Solução 11': exercicios/solucao-11.md
+        - 'Exercicio 12': exercicios/exercicio-12.md
+        - 'Solução 12': exercicios/solucao-12.md
+        - 'Exercicio 13': exercicios/exercicio-13.md
+        - 'Solução 13': exercicios/solucao-13.md
+        - 'Exercicio 14': exercicios/exercicio-14.md
+        - 'Solução 14': exercicios/solucao-14.md
+        - 'Exercicio 15': exercicios/exercicio-15.md
+        - 'Solução 15': exercicios/solucao-15.md
+        - 'Exercicio 16': exercicios/exercicio-16.md
+        - 'Solução 16': exercicios/solucao-16.md
+    - Quizzes:
+        - quizzes/index.md
+        - 'Quiz 01': quizzes/quiz-01.md
+        - 'Quiz 02': quizzes/quiz-02.md
+        - 'Quiz 03': quizzes/quiz-03.md
+        - 'Quiz 04': quizzes/quiz-04.md
+        - 'Quiz 05': quizzes/quiz-05.md
+        - 'Quiz 06': quizzes/quiz-06.md
+        - 'Quiz 07': quizzes/quiz-07.md
+        - 'Quiz 08': quizzes/quiz-08.md
+        - 'Quiz 09': quizzes/quiz-09.md
+        - 'Quiz 10': quizzes/quiz-10.md
+        - 'Quiz 11': quizzes/quiz-11.md
+        - 'Quiz 12': quizzes/quiz-12.md
+        - 'Quiz 13': quizzes/quiz-13.md
+        - 'Quiz 14': quizzes/quiz-14.md
+        - 'Quiz 15': quizzes/quiz-15.md
+        - 'Quiz 16': quizzes/quiz-16.md
+    - Projetos:
+        - projetos/index.md
+        - 'Projeto 01': projetos/projeto-01.md
+        - 'Projeto 02': projetos/projeto-02.md
+        - 'Projeto 03': projetos/projeto-03.md
+        - 'Projeto 04': projetos/projeto-04.md
+        - 'Projeto 05': projetos/projeto-05.md
+        - 'Projeto 06': projetos/projeto-06.md
+        - 'Projeto 07': projetos/projeto-07.md
+        - 'Projeto 08': projetos/projeto-08.md
+        - 'Projeto 09': projetos/projeto-09.md
+        - 'Projeto 10': projetos/projeto-10.md
+        - 'Projeto 11': projetos/projeto-11.md
+        - 'Projeto 12': projetos/projeto-12.md
+        - 'Projeto 13': projetos/projeto-13.md
+        - 'Projeto 14': projetos/projeto-14.md
+        - 'Projeto 15': projetos/projeto-15.md
+        - 'Projeto 16': projetos/projeto-16.md
     - Configuração:
         - setups/index.md
         - 'Ambiente Windows': setups/setup-01.md
         - 'Ambiente Linux': setups/setup-02.md
         - 'Ambiente macOS': setups/setup-03.md
-  - Impressão: print_page.md
+  - Impresso: print_page.md
+  - Legado:
+    - Início: _legado/README.md
+    - Tópicos:
+      - Índice: _legado/topicos/indice.md
+      - Markdown: _legado/topicos/09_markdown.md
+      - Plugins: _legado/topicos/10_plugins.md

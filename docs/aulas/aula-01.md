@@ -68,7 +68,8 @@ A Tecnologia da Informação (TI) deixou de ser apenas um "suporte técnico" par
 
 Imagine o processo de venda de um produto em um sistema moderno:
 
-```termynal
+<!-- termynal -->
+```bash
 $ iniciar-venda --cliente "João Silva" --item "Laptop"
 [OK] Verificando estoque... Disponível (15 unidades)
 [OK] Processando pagamento... Autorizado (NFe gerada)
@@ -100,4 +101,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos explorar o ecossistema estratégico de [CRM e BI](./aula-02.md)! 🏗️
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 01](../slides/slide-01.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 01](../quizzes/quiz-01.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 01](../exercicios/exercicio-01.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 01](../projetos/projeto-01.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 02](./aula-02.md){ .md-button .md-button--primary }

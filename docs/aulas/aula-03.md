@@ -58,7 +58,8 @@ As **funções básicas** são aquelas que ocorrem no nível operacional da empr
 
 Veja como a informação viaja entre os módulos de forma automática:
 
-```termynal
+<!-- termynal -->
+```bash
 $ pedido-compra --fornecedor "TechCorp" --item "Servidor" --qtd 1
 [STATUS] Pedido Gerado (Aguardando Aprovação Gerencial)
 $ aprovar-pedido --id 450
@@ -89,4 +90,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos iniciar o estudo dos [Fundamentos do Sistema de Informações Gerenciais (SIG)](./aula-04.md)! 📄
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 03](../slides/slide-03.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 03](../quizzes/quiz-03.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 03](../exercicios/exercicio-03.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 03](../projetos/projeto-03.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 04](./aula-04.md){ .md-button .md-button--primary }

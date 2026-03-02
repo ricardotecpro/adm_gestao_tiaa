@@ -48,7 +48,8 @@ graph LR
 
 Visualize como o sistema integra e-mail e tarefas:
 
-```termynal
+<!-- termynal -->
+```bash
 $ comunicacao-enviar-aviso --setor "Financeiro" --msg "Reunião de metas amanhã às 09h"
 [E-MAIL] Enviando para 15 destinatários... [OK]
 [SLACK] Postando no canal #financeiro-avisos... [OK]
@@ -80,4 +81,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Vamos iniciar o estudo técnico sobre [Entrada de Dados e Processamento](./aula-13.md)! 🗄️
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 12](../slides/slide-12.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 12](../quizzes/quiz-12.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 12](../exercicios/exercicio-12.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 12](../projetos/projeto-12.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 13](./aula-13.md){ .md-button .md-button--primary }

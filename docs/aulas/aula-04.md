@@ -52,7 +52,8 @@ Sem um SIG eficiente, a empresa opera "no escuro". O SIG traz clareza para:
 
 Como o sistema transforma dados operacionais em visão gerencial:
 
-```termynal
+<!-- termynal -->
+```bash
 $ sig-analisar --vendas-junho
 [PROCESSANDO] Lendo 5.000 transações do ERP...
 [CONTROLANDO] Aplicando regras de negócio e metas...
@@ -90,4 +91,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: Entraremos no Módulo 2 para ver o [SIG como Ferramenta para a Tomada de Decisão](./aula-05.md)! 📈
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 04](../slides/slide-04.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 04](../quizzes/quiz-04.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 04](../exercicios/exercicio-04.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 04](../projetos/projeto-04.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 05](./aula-05.md){ .md-button .md-button--primary }

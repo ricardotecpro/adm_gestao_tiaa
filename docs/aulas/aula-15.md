@@ -50,7 +50,8 @@ Para o administrador, não basta ter o site; é preciso atrair pessoas e medir o
 
 Visualize como o sistema apresenta dados de e-commerce e marketing:
 
-```termynal
+<!-- termynal -->
+```bash
 $ e-commerce-status --vendas-hoje
 TOTAL: R$ 12.500,00 | PEDIDOS: 45 | TICKET MÉDIO: R$ 277,00
 $ marketing-analisar-campanha --id "BlackFriday_2"
@@ -82,4 +83,43 @@ Responda em seu caderno/arquivo de notas:
 
 ---
 
-**Próxima Aula**: O grande final! [Revisão e Novas Fronteiras da TIAA](./aula-16.md) 🏆
+## 🔗 Materiais da Aula
+
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
+
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 15](../slides/slide-15.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 15](../quizzes/quiz-15.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 15](../exercicios/exercicio-15.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 15](../projetos/projeto-15.md)
+
+</div>
+
+---
+
+[➡️ Próxima Aula: Aula 16](./aula-16.md){ .md-button .md-button--primary }
