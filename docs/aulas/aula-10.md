@@ -28,8 +28,8 @@ graph TD
     P[Cliente no PDV] --> V((Venda Realizada))
     V -- "Baixa Automática" --> E[Estoque Central]
     V -- "Lançamento Contábil" --> F[Financeiro]
-    V -- "Registro de Compra" --> C[CRM (Fidelidade)]
-    V -- "Envio em 1s" --> TAX[Sefaz (Nota Fiscal)]
+    V -- "Registro de Compra" --> C["CRM (Fidelidade)"]
+    V -- "Envio em 1s" --> TAX["Sefaz (Nota Fiscal)"]
     style V fill:#f96,stroke:#333
     style TAX fill:#6f9,stroke:#333
 ```

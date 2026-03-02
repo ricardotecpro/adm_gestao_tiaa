@@ -151,8 +151,8 @@ O Markdown original de John Gruber era bastante limitado. Com o tempo, várias p
 
 ```mermaid
 graph TD;
-    A[Markdown Original] --> B[CommonMark (Padronização)];
-    B --> C[GitHub Flavored Markdown (GFM)];
+    A[Markdown Original] --> B["CommonMark (Padronização)"];
+    B --> C["GitHub Flavored Markdown (GFM)"];
     subgraph "Extensões do GFM"
         C -- Adiciona --> D[Tabelas];
         C -- Adiciona --> E[Listas de Tarefas: `- [x] Item`];

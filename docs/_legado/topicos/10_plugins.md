@@ -338,13 +338,13 @@ A[Start] --> B[Criar objeto Aluno]
 
 B --> C[Capturar nome, idade, matrícula]
 
-C --> D[Chamar aluno.cadastrarDados()]
+C --> D["Chamar aluno.cadastrarDados()"]
 
 D --> E[Capturar média]
 
-E --> F[Chamar aluno.cadastrarMediaNotas()]
+E --> F["Chamar aluno.cadastrarMediaNotas()"]
 
-F --> G[Chamar aluno.exibirInformacoes()]
+F --> G["Chamar aluno.exibirInformacoes()"]
 
 G --> H[End]
 
