@@ -43,6 +43,7 @@ dev = [
 slides = "python scripts/generate_slides_quizzes.py"
 quizzes = "python scripts/convert_quizzes.py"
 exercises = "python scripts/build_exercises.py"
+build = "mkdocs build --strict"
 audit = "python d:/SourceCode/REPOS/_prompts/scripts/unified_audit.py ."
 test = "pytest tests/ -v"
 serve = "mkdocs serve"
