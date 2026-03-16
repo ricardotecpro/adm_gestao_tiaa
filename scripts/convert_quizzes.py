@@ -38,7 +38,7 @@ def parse_quiz_markdown(content: str) -> list:
         
         # Parse opções
         options = []
-        option_pattern = r'-\s+\[([ x])\]\s+(.+?)(?=\n\s*-|\n\n|\Z)'
+        option_pattern = r'-\s+\[([ x])\]\s+(.+?)(?=\n\s*-|\n\s*>|\n\n|\Z)'
         
         for opt_match in re.finditer(option_pattern, options_text, re.DOTALL):
             is_correct = opt_match.group(1) == 'x'
@@ -47,12 +47,16 @@ def parse_quiz_markdown(content: str) -> list:
                 'text': option_text,
                 'correct': is_correct
             })
+            
+        expl_match = re.search(r'>\s*Explicação:\s*(.+?)(?=\n\n|\Z)', options_text, re.DOTALL)
+        explanation = expl_match.group(1).strip() if expl_match else ""
         
         if options:  # Só adiciona se encontrou opções
             questions.append({
                 'number': question_num,
                 'text': question_text,
-                'options': options
+                'options': options,
+                'explanation': explanation
             })
     
     return questions
@@ -74,7 +78,8 @@ def generate_quiz_html(quiz_number: int, questions: list) -> str:
         
         for opt in q['options']:
             correct_attr = 'true' if opt['correct'] else 'false'
-            feedback = f"✅ Correto! {opt['text']}" if opt['correct'] else f"Incorreto. Tente novamente."
+            expl_html = f"<br><br><strong>Explicação:</strong> {q.get('explanation', '')}" if q.get('explanation') else ""
+            feedback = f"✅ Correto! {opt['text']}{expl_html}" if opt['correct'] else f"Incorreto. {expl_html}"
             
             html_parts.append(
                 f'  <div class="quiz-option" data-correct="{correct_attr}" '

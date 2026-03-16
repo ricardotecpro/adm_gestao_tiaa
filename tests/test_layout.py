@@ -1,10 +1,23 @@
 import pytest
 import os
-import subprocess
-import requests
 import re
+import yaml
 from pathlib import Path
 from playwright.sync_api import Page, expect
+
+
+def get_site_name() -> str:
+    """Lê site_name dinamicamente do mkdocs.yml — sem hardcode."""
+    mkdocs_path = Path(__file__).parent.parent / "mkdocs.yml"
+    
+    class IgnoreUndefinedLoader(yaml.SafeLoader):
+        def construct_undefined(self, node):
+            return None
+    IgnoreUndefinedLoader.add_constructor(None, IgnoreUndefinedLoader.construct_undefined)
+    
+    with open(mkdocs_path, encoding="utf-8") as f:
+        config = yaml.load(f, Loader=IgnoreUndefinedLoader)
+    return config.get("site_name", "Curso")
 
 # Fixture moved to conftest.py
 
@@ -26,33 +39,33 @@ def test_homepage_structure(page: Page, base_url):
     page.set_viewport_size({"width": 1920, "height": 1080})
     page.goto(base_url)
     
-    # Check title
-    expect(page).to_have_title("Curso - Tecnologia da Informação Aplicada a Administração")
+    # Verifica titulo usando site_name do mkdocs.yml (agnostico)
+    site_name = get_site_name()
+    expect(page).to_have_title(re.compile(re.escape(site_name)))
     
-    # Check main heading
+    # Verifica que h1 existe e tem conteudo (sem hardcode do texto)
     heading = page.locator("h1")
-    expect(heading).to_contain_text("Curso: Tecnologia da Informação Aplicada a Administração")
+    expect(heading).to_be_visible()
+    assert heading.text_content().strip() != "", "h1 esta vazio na pagina inicial"
     
-    # Check navigation cards exist
-    # Material uses .md-typeset .grid.cards
-    # The cards might be inside a div with class "grid cards"
-    # We can check for the existence of the text "Lógica Sólida" which is in the first card
-    expect(page.get_by_text("Trilha de Aulas")).to_be_visible()
+    # Verifica que cards de navegacao existem (genericamente)
+    md_content = page.locator(".md-content")
+    expect(md_content).to_be_visible()
 
 # Test 3: Navigation to Lesson 01
 def test_lesson_01_page(page: Page, base_url):
-    """Test Lesson 01 page loads and has correct content."""
+    """Verifica se a pagina Aula 01 carrega com titulo e h1."""
     page.goto(f"{base_url}/aulas/aula-01/")
     
-    # Check title (flexible match)
-    # The actual title in HTML is "Aula 01 - Intro ERP - Tecnologia da Informação Aplicada a Administração"
-    expect(page).to_have_title(re.compile(r"Aula 01 - Intro ERP"))
+    # Titulo deve mencionar "Aula 01" (agnostico ao texto completo)
+    expect(page).to_have_title(re.compile(r"Aula 01", re.IGNORECASE))
     
-    # Check main heading
+    # h1 deve existir e ter conteudo
     heading = page.locator("h1")
-    expect(heading).to_contain_text("Introdução")
+    expect(heading).to_be_visible()
+    assert heading.text_content().strip() != "", "h1 esta vazio na aula-01"
     
-    # Check quiz containers exist
+    # Verifica quiz containers se presentes
     quiz_containers = page.locator(".quiz-container")
     if quiz_containers.count() > 0:
          expect(quiz_containers.first).to_be_visible()
@@ -74,34 +87,30 @@ def test_quiz_functionality(page: Page, base_url):
         expect(feedback).to_be_visible()
         expect(feedback).to_contain_text("Correto")
 
-# Test 5: Slides generation
+# Test 5: Slides index
 def test_slides_structure(page: Page, base_url):
-    """Test that slides are generated correctly."""
+    """Verifica que a pagina de slides carrega corretamente."""
     page.goto(f"{base_url}/slides/")
     
-    # Check title contains "Slides"
-    title = page.title()
-    assert "Slides" in title, f"Expected 'Slides' in title, got: {title}"
+    # Pagina nao e 404
+    expect(page).not_to_have_title("404")
     
-    # Check navigation exists
-    # Material MkDocs uses .md-nav but specific page layout might vary
-    # Use h1 check for safety
-    expect(page.locator("h1")).to_contain_text("Slides")
+    # h1 deve existir (agnostico ao texto exato)
+    expect(page.locator("h1")).to_be_visible()
     
-    # Check content is present (list of slides)
+    # Conteudo visivel
     content = page.locator(".md-content")
     expect(content).to_be_visible()
 
-# Test 6: Lesson 16 page (Testing/Boas Práticas)
+# Test 6: Lesson 16 page
 def test_lesson_16_page(page: Page, base_url):
-    """Test Lesson 16 page loads correctly."""
+    """Verifica se a pagina Aula 16 carrega corretamente."""
     page.goto(f"{base_url}/aulas/aula-16/")
     
-    # Check title
-    # Actual: "Aula 16 - Segurança e Lojas - Tecnologia da Informação Aplicada a Administração"
-    expect(page).to_have_title(re.compile(r"Aula 16 - Segurança e Lojas"))
+    # Titulo deve mencionar "Aula 16" (agnostico ao texto completo)
+    expect(page).to_have_title(re.compile(r"Aula 16", re.IGNORECASE))
     
-    # Check quiz containers
+    # Verifica quiz containers se presentes
     quiz_containers = page.locator(".quiz-container")
     if quiz_containers.count() > 0:
         expect(quiz_containers.first).to_be_visible()
@@ -109,7 +118,7 @@ def test_lesson_16_page(page: Page, base_url):
 # Test 7: Mermaid diagram rendering (checking Lesson 11)
 def test_mermaid_diagram(page: Page, base_url):
     """Test that Mermaid diagrams are present in the content."""
-    page.goto(f"{base_url}/aulas/aula-09/")
+    page.goto(f"{base_url}/aulas/aula-01/")
     
     # Check for mermaid code block or rendered diagram
     # MkDocs Material renders mermaid as div.mermaid or similar

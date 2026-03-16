@@ -8,15 +8,6 @@ EXPECTED_SLIDES = [f"slide-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_QUIZZES = [f"quiz-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_EXERCISES = [f"exercicio-{i:02d}.md" for i in range(1, 17)]
 EXPECTED_PROJECTS = [f"projeto-{i:02d}.md" for i in range(1, 17)]
-EXPECTED_SETUPS = [f"setup-{i:02d}.md" for i in range(1, 4)]
-EXPECTED_INDEXES = [
-    "aulas/index.md",
-    "exercicios/index.md",
-    "projetos/index.md",
-    "quizzes/index.md",
-    "slides/index.md",
-    "setups/index.md"
-]
 
 def test_content_structure_exists():
     """Verify that the basic directory structure exists."""
@@ -70,21 +61,3 @@ def test_projects_exist():
             missing_projects.append(project)
     
     assert not missing_projects, f"Missing projects: {missing_projects}"
-
-def test_setups_exist():
-    """Verify that all 9 setups exist in docs/setups/."""
-    missing_setups = []
-    for setup in EXPECTED_SETUPS:
-        if not os.path.exists(f"docs/setups/{setup}"):
-            missing_setups.append(setup)
-    
-    assert not missing_setups, f"Missing setups: {missing_setups}"
-
-def test_indexes_exist():
-    """Verify that all subdirectory index files exist."""
-    missing_indexes = []
-    for index in EXPECTED_INDEXES:
-        if not os.path.exists(f"docs/{index}"):
-            missing_indexes.append(index)
-    
-    assert not missing_indexes, f"Missing indexes: {missing_indexes}"

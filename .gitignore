@@ -48,7 +48,6 @@ Thumbs.db
 poetry.lock
 
 # Logs
-\logs
 *.log
 
 # Database

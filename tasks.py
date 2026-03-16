@@ -31,21 +31,23 @@ def build_all(c):
     """Build completo: slides + site"""
     console.print("[blue]🚀 Iniciando build completo...[/blue]")
     
-    # Gerar slides
-    console.print("[cyan]📊 Gerando slides HTML...[/cyan]")
-    result = c.run("poetry run task slides", warn=True)
-    if result and result.ok:
-        console.print("[green]  ✓ Slides gerados[/green]")
-    else:
-        console.print("[yellow]  ⚠ Erro ao gerar slides[/yellow]")
-
-    # Gerar quizzes
-    console.print("[cyan]📝 Gerando quizzes interativos...[/cyan]")
-    result_quiz = c.run("poetry run task quizzes", warn=True)
-    if result_quiz and result_quiz.ok:
-        console.print("[green]  ✓ Quizzes gerados[/green]")
-    else:
-        console.print("[yellow]  ⚠ Erro ao gerar quizzes[/yellow]")
+    # Gerar slides (se houver scripts)
+    if Path("scripts/generate_slides_quizzes.py").exists():
+        console.print("[cyan]📊 Gerando slides HTML...[/cyan]")
+        result = c.run("poetry run task slides", warn=True)
+        if result and result.ok:
+            console.print("[green]  ✓ Slides gerados[/green]")
+        else:
+            console.print("[yellow]  ⚠ Erro ao gerar slides[/yellow]")
+    
+    # Gerar quizzes (se houver scripts)
+    if Path("scripts/convert_quizzes.py").exists():
+        console.print("[cyan]📝 Gerando quizzes interativos...[/cyan]")
+        result_quiz = c.run("poetry run task quizzes", warn=True)
+        if result_quiz and result_quiz.ok:
+            console.print("[green]  ✓ Quizzes gerados[/green]")
+        else:
+            console.print("[yellow]  ⚠ Erro ao gerar quizzes[/yellow]")
     
     # Build site
     console.print("[cyan]🏗️  Building site com MkDocs...[/cyan]")

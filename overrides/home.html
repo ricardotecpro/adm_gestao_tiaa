@@ -1,4 +1,7 @@
-{% extends "main.html" %} {% block tabs %} {{ super() }}
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
 <style>
   /* Hide the hero section from index.md if present, or handle via CSS */
   .md-content__inner {
@@ -10,16 +13,20 @@
 <section class="hero-container">
   <div class="hero-content">
     <div class="hero-overlay">
-      <h1 class="hero-title">Tecnologia da Informação</h1>
-      <p class="hero-subtitle">Aplicada à Administração</p>
+      <h1 class="hero-title">Fundamentos da Computação</h1>
+      <p class="hero-subtitle">Bases Numéricas, Hardware, Software e Lógica</p>
       <div class="hero-actions">
-        <a href="aulas/" class="md-button md-button--primary">Começar Agora</a>
-        <a href="sobre/" class="md-button">Sobre o Curso</a>
+        <a href="aulas/aula-01.md" class="md-button md-button--primary">Começar Agora</a>
+        <a href="aulas/" class="md-button">Ver Módulos</a>
       </div>
     </div>
   </div>
 </section>
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 <!-- Render the rest of index.md content below the parallax header -->
-<div class="mdx-container">{{ super() }}</div>
+<div class="mdx-container">
+  {{ super() }}
+</div>
 {% endblock %}

@@ -47,17 +47,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Gera conteúdo (slides e quizzes)
+          # Gera conteudo (slides e quizzes)
           poetry run task slides
           poetry run task quizzes
-          # Build do site (dispara hooks de cópia)
+          # Build do site (dispara hooks de copia)
           poetry run mkdocs build
-          # Servidor em background para testes
-          poetry run mkdocs serve &
-          PID=$!
-          sleep 10
-          # Roda testes para garantir qualidade
-          poetry run task test
-          kill $PID
+          # Roda testes para garantir qualidade (conftest.py inicia o servidor na porta 8766)
+          poetry run task test || (ls -R site; exit 1)
           # Deploy direto para gh-pages (sem Mike)
           poetry run mkdocs gh-deploy --force
