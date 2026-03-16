@@ -153,6 +153,11 @@ extra:
     link: https://www.youtube.com/@ricardotecpro
   - icon: fontawesome/brands/x-twitter
     link: https://twitter.com/ricardotecpro
+validation:
+  nav:
+    omitted_files: ignore
+  links:
+    unrecognized_links: warn
 nav:
 - Principal:
   - Curso: index.md
