@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 11 - Tecnologia da Informação Aplicada a Administração</title>
+    <title>SLIDE-11 - Tecnologia da Informação Aplicada a Administração</title>
     
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
@@ -21,15 +21,41 @@
         </div>
     </div>
     
-    <!-- Dicas de Atalhos -->
-    <div class="reveal-shortcuts">
-        Atalhos: F (Tela Cheia) | S (Speaker View)
-    </div>
+    <style>
+        /* Modern Reveal.js tweaks */
+        .reveal .slides section { padding: 20px; text-align: left; }
+        .reveal .slides h1, .reveal .slides h2, .reveal .slides h3 { text-align: center; }
+        
+        /* Admonitions Simulation */
+        .admonition {
+            margin: 1em 0;
+            padding: 0.6em 1em;
+            border-left: 0.4em solid #448aff;
+            background-color: rgba(68, 138, 255, 0.1);
+            font-size: 0.8em;
+        }
+        .admonition-title {
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .admonition.info { border-left-color: #00b0ff; background-color: rgba(0, 176, 255, 0.1); }
+        .admonition.warning { border-left-color: #ff9100; background-color: rgba(255, 145, 0, 0.1); }
+        .admonition.success { border-left-color: #00e676; background-color: rgba(0, 230, 118, 0.1); }
+        
+        /* Grid Cards Simulation */
+        .grid-cards-pro { display: flex; gap: 10px; flex-wrap: wrap; }
+        .card { 
+            flex: 1; min-width: 200px; padding: 15px; 
+            border: 1px solid #444; border-radius: 8px; background: #222; 
+        }
+    </style>
 
     <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js"></script>
     <script>
         Reveal.initialize({
             hash: true,
@@ -37,23 +63,52 @@
             showSlideNumber: 'all',
             controls: true,
             progress: true,
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            transition: 'slide',
+            center: false,
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
+            mathjax3: {
+                mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+                tex: {
+                    inlineMath: [ [ '$', '$' ], [ '\(', '\)' ] ]
+                }
+            }
+        }).then(() => {
+            // Inicialização Pós-Load
+            initializePlugins();
         });
 
-        function updateShortcutsVisibility() {
-            const isFullscreen = document.fullscreenElement || 
-                                 document.webkitFullscreenElement || 
-                                 document.mozFullScreenElement || 
-                                 document.msFullscreenElement;
-            
-            const shortcuts = document.querySelector('.reveal-shortcuts');
-            if (shortcuts) {
-                shortcuts.style.display = isFullscreen ? 'none' : 'block';
+        Reveal.on('slidechanged', event => { initializePlugins(); });
+
+        function initializePlugins() {
+            // Mermaid
+            if (window.mermaid) {
+                document.querySelectorAll('.mermaid, pre code.language-mermaid').forEach(el => {
+                    if (el.getAttribute('data-processed')) return;
+                    
+                    // Se for um bloco de código, extraímos o texto
+                    const code = el.tagName === 'CODE' ? el.textContent : el.innerText;
+                    const div = document.createElement('div');
+                    div.className = 'mermaid';
+                    div.textContent = code;
+                    el.closest('pre')?.replaceWith(div) || el.replaceWith(div);
+                });
+                mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+                mermaid.run({ querySelector: '.mermaid' });
+            }
+            // MathJax
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+            // Termynal
+            if (window.Termynal) {
+                document.querySelectorAll('[data-termynal]').forEach(el => {
+                    if (!el.getAttribute('data-termynal-initialized')) {
+                        new Termynal(el);
+                        el.setAttribute('data-termynal-initialized', 'true');
+                    }
+                });
             }
         }
-
-        document.addEventListener('fullscreenchange', updateShortcutsVisibility);
-        document.addEventListener('webkitfullscreenchange', updateShortcutsVisibility);
     </script>
 </body>
 </html>
